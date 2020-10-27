@@ -1,0 +1,48 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  width: 380px;
+  height: 64px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+
+  user-select: none;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: $style-change-duration;
+
+  &--orange {
+    color: $font-color-white;
+    background-color: $bg-color-orange;
+  }
+}
+
+
+@include desktop {
+  .btn {
+    width: 327px;
+  }
+}
+
+@include desktop-small {
+  .btn {
+    width: 304px;
+    padding: 0 24px;
+  }
+}
+
+@include mobile {
+  .btn {
+    width: 100%;
+  }
+}

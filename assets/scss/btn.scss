@@ -37,7 +37,10 @@
 @include desktop-small {
   .btn {
     width: 304px;
+    height: 56px;
     padding: 0 24px;
+
+    font-size: 15px;
   }
 }
 

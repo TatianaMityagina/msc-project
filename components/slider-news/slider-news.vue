@@ -28,7 +28,7 @@
       </svg>
     </button>
 
-    <a class="slider-news__byn-more" href="">смотреть все новости</a>
+    <a class="slider-news__btn-more" href="">смотреть все новости</a>
   </section>
 </template>
 
@@ -77,6 +77,12 @@
           navigation: {
             nextEl: '.slider-news__button--next',
             prevEl: '.slider-news__button--prev'
+          },
+          breakpoints: {
+            320: {
+              slidesPerView: 'auto',
+              loop: true
+            }
           }
         })
       }
@@ -100,6 +106,8 @@
     max-width: 1163px;
     overflow: hidden;
     margin-bottom: 40px;
+
+    background-color: transparent;
   }
 
   .slider-news__container .swiper-wrapper {
@@ -199,7 +207,7 @@
     }
   }
 
-  .slider-news__byn-more {
+  .slider-news__btn-more {
     position: relative;
 
     font-weight: bold;
@@ -219,6 +227,109 @@
       height: 1px;
 
       background-color: $main-bg-color;
+    }
+  }
+
+  @include desktop-small {
+    .slider-news__container {
+      max-width: 1084px;
+    }
+
+    .slider-news__container .swiper-slide {
+      padding: 24px;
+      max-width: 354px;
+      height: 194px;
+
+      h3 {
+        font-size: 17px;
+      }
+
+      p {
+        max-width: 295px;
+        margin-bottom: auto;
+
+        font-size: 12px;
+      }
+    }
+
+    .slider-news__button {
+      height: 194px;
+    }
+
+    .swiper-slide__btn { 
+      font-size: 15px;
+    }
+  }
+
+  @include tablet-large {
+    .slider-news {
+      align-items: flex-start;
+    }
+
+    .slider-news__container {
+      max-width: 100%;
+    }
+
+    .slider-news__button {
+      display: none;
+    }
+
+    .slider-news__container .swiper-slide {
+      max-width: 340px;
+
+      p {
+        max-width: 280px;
+      }
+    }
+
+    .slider-news__btn-more {
+      margin: 0 auto;
+      font-size: 15px;
+    }
+  }
+
+  @include tablet {
+    .slider-news__container .swiper-slide {
+      max-width: 359px;
+      min-width: 359px;
+
+      p {
+        max-width: 300px;
+      }
+    }
+  }
+
+  @include mobile {
+    .slider-news {
+      padding: 80px 0 20px 15px;
+      background-color: $bg-color-light-gray;
+    }
+
+    .slider-news__container .swiper-slide {
+      padding: 24px 16px;
+      max-width: 270px;
+      min-width: 270px;
+      height: 202px;;
+
+      h3 {
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
+
+      p {
+        -webkit-line-clamp: 5;
+        max-width: 100%;
+
+        font-size: 14px;
+      }
+    }
+
+    .slider-news__btn-more {
+      color: $font-color-gray;
+
+      &::after {
+        background-color: $font-color-gray;
+      }
     }
   }
 </style>

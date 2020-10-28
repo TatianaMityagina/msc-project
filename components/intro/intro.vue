@@ -33,6 +33,7 @@
     justify-content: center;
     padding: 135px 40px 40px 40px;
     width: 100%;
+    overflow: hidden;
 
     background-image: url("../../assets/img/intro/intro-bg@1x.webp"), url("../../assets/img/intro/intro-bg@1x.jpg");
     background-size: cover;
@@ -65,5 +66,61 @@
     font-size: 42px;
     line-height: 140%;
     color: $font-color-white;
+  }
+
+  @include desktop-small {
+    .intro {
+      padding: 140px 40px 40px 40px;
+    }
+
+    .intro__slogan-wrapper {
+      padding-left: 0;
+      margin-bottom: 185px
+    }
+
+    .intro__slogan {
+      max-width: 600px;
+      margin-bottom: 80px;
+
+      font-size: 34px;
+    }
+  }
+
+  @include tablet-large {
+    .intro {
+      padding: 140px 0 40px 40px;
+
+      background-image: url("../../assets/img/intro/intro-bg-1024@1x.webp"), url("../../assets/img/intro/intro-bg-1024@1x.jpg");
+
+      @include retina {
+        background-image: url("../../assets/img/intro/intro-bg-1024@2x.webp"), url("../../assets/img/intro/intro-bg-1024@2x.jpg");
+      }
+    }
+  }
+
+  @include mobile {
+    .intro {
+      padding: 80px 0 0 0;
+
+      background-image: url("../../assets/img/intro/intro-bg-320@1x.webp"), url("../../assets/img/intro/intro-bg-320@1x.jpg");
+      background-size: 100% auto;
+
+      @include retina {
+        background-image: url("../../assets/img/intro/intro-bg-320@2x.webp"), url("../../assets/img/intro/intro-bg-320@2x.jpg");
+      }
+    }
+
+    .intro__slogan-wrapper {
+      padding: 0 15px;
+      margin-bottom: 85px;
+    }
+
+    .intro__slogan {
+      max-width: 100%;
+      margin-bottom: 165px;
+
+      font-size: 24px;
+      text-align: center;
+    }
   }
 </style>

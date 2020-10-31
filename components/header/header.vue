@@ -73,7 +73,10 @@
 
 <style lang="scss" scoped>
   .main-header {
+    position: fixed;
+    z-index: 1;
     display: flex;
+    
     justify-content: center;
     width: 100%;
     padding: 0 40px;

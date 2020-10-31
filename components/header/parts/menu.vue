@@ -31,7 +31,7 @@
       </li>
 
       <li class="menu__list-item">
-        <a class="menu__list-link" href="">Новости</a>
+        <nuxt-link to="/news" class="menu__list-link" href="">Новости</nuxt-link>
       </li>
 
       <li class="menu__list-item">
@@ -80,6 +80,13 @@
     }
   }
 
+  // focus-within polyfill
+  .menu__list-item:hover .menu__sublist,
+  .menu__list-item[focus-within] .menu__sublist {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .menu__icon-open {
     transition: $style-change-duration;
   }
@@ -87,6 +94,7 @@
   .menu__list-link {
     position: relative;
     display: block;
+    padding: 21px 0;
 
     font-weight: 600;
     font-size: 18px;
@@ -96,10 +104,46 @@
 
     cursor: pointer;
     transition: $style-change-duration;
+    user-select: none;
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+      margin-bottom: 10px;
+
+      background-color: $bg-color-orange;
+      transition: transform 0.4s;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    &:focus::after{
+      transform: scaleX(1);
+    }
+
+    &:hover:not(.focus-visible)::after {
+      transform: scaleX(1);
+    }
+
+    &:focus:not(.focus-visible)::after {
+      transform: scaleX(0);
+    }
+
+    &:active:not(.focus-visible)::after {
+      transform: scaleX(1);
+    }
   }
 
   .menu .menu__sublist {
     position: absolute;
+    z-index: 3;
+    top: 65px;
 
     display: flex;
     flex-direction: column;

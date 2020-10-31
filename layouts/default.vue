@@ -19,5 +19,20 @@
 </script>
 
 <style lang="scss" scoped>
+  .default-layout {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+
+    font-family: $main-font-family;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $main-font-color;
+
+    scroll-behavior: smooth;
+  }
 
 </style>

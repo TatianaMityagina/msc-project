@@ -45,7 +45,7 @@
 
         <ul class="main-footer__list">
           <li class="main-footer__list-item">
-            <a href="">Новости</a>
+            <nuxt-link to="/news">Новости</nuxt-link>
           </li>
         </ul>
       </div>

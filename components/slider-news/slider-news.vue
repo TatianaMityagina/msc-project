@@ -28,7 +28,7 @@
       </svg>
     </button>
 
-    <a class="slider-news__btn-more" href="">смотреть все новости</a>
+    <nuxt-link class="slider-news__btn-more" to="/news">смотреть все новости</nuxt-link>
   </section>
 </template>
 

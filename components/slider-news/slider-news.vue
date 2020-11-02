@@ -6,63 +6,49 @@
         <div class="swiper-slide" v-for="item in sliderItem" :key="item.id">
           <h3> {{ item.title }} </h3>
           <p> {{ item.text }} </p>
-          <a class="swiper-slide__btn" href="">
+          <nuxt-link class="swiper-slide__btn" :to="item.path">
             <span>Читать дальше</span>
             <svg width="18" height="12" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L7 7L1 13" stroke="#A3A3A3" stroke-width="2"/>
               <path d="M7 1L13 7L7 13" stroke="#A3A3A3" stroke-width="2"/>
               <path d="M13 1L19 7L13 13" stroke="#A3A3A3" stroke-width="2"/>
             </svg>
-          </a>
+          </nuxt-link>
         </div>
       </div>
     </div>
-    <button class="slider-news__button slider-news__button--next" type="button">
+    <button class="slider-news__button slider-news__button--next" type="button" v-show="showButton">
       <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 1L12 12L1 23" stroke="white" stroke-width="2"/>
       </svg>
     </button>
-    <button class="slider-news__button slider-news__button--prev" type="button">
+    <button class="slider-news__button slider-news__button--prev" type="button" v-show="showButton">
       <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13 1L2 12L13 23" stroke="white" stroke-width="2"/>
       </svg>
     </button>
 
-    <nuxt-link class="slider-news__btn-more" to="/news">смотреть все новости</nuxt-link>
+    <nuxt-link class="slider-news__btn-more" to="/news" v-show="showButton">смотреть все новости</nuxt-link>
   </section>
 </template>
 
 <script>
   import Swiper from 'swiper/js/swiper.esm.bundle'
   import 'swiper/css/swiper.min.css'
+  import newsContent from '../../static/mock/newsContent.json'
   
   export default {
     name: 'SliderNews',
+     props: {
+      showButton: {
+        type: Boolean,
+        required: false
+      }
+    },
     data() {
       return {
         swiper: null,
-        sliderItem: [
-          {
-            id: 0,
-            title: 'Новость №1',
-            text: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.'
-          },
-          {
-            id: 1,
-            title: 'Новость №2',
-            text: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.'
-          },
-          {
-            id: 2,
-            title: 'Новость №3',
-            text: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.'
-          },
-          {
-            id: 3,
-            title: 'Новость №4',
-            text: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.'
-          }
-        ]
+        sliderItem: newsContent
       }
     },
     mounted() {
@@ -230,6 +216,22 @@
     }
   }
 
+  //ARTICLE SLIDER
+  .page-main__border .slider-news {
+    padding: 0;
+  }
+
+  .page-main__border .slider-news__container {
+    max-width: 1282px;
+    margin-bottom: 0;
+  }
+
+  .page-main__border .swiper-slide {
+    min-width: 417px;
+    height: 220px;
+    margin-right: 15px;
+  }
+
   @include desktop-small {
     .slider-news__container {
       max-width: 1084px;
@@ -259,6 +261,16 @@
     .swiper-slide__btn { 
       font-size: 15px;
     }
+
+    //ARTICLE SLIDER
+    .page-main__border .slider-news__container {
+      max-width: 1200px;
+    }
+
+    .page-main__border .swiper-slide {
+      min-width: 390px;
+      height: 194px;
+    }
   }
 
   @include tablet-large {
@@ -285,6 +297,11 @@
     .slider-news__btn-more {
       margin: 0 auto;
       font-size: 15px;
+    }
+
+    //ARTICLE SLIDER
+    .page-main__border .swiper-slide {
+      min-width: 340px;
     }
   }
 

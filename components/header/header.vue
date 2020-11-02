@@ -1,7 +1,7 @@
 <template>
   <header class="main-header">
     <div class="main-header__container">
-      <nuxt-link to="/">
+      <nuxt-link class="main-header__logotype-link" to="/">
         <svg class="main-header__logotype" width="98" height="29" viewBox="0 0 98 29" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.5 14.5C16.5 18.2864 13.2241 21.5 9 21.5C4.77593 21.5 1.5 18.2864 1.5 14.5C1.5 10.7136 4.77593 7.5 9 7.5C13.2241 7.5 16.5 10.7136 16.5 14.5Z" stroke="#3F3F3F" stroke-width="3"/>
           <path d="M14 23C18 23 21 19.3783 21 14.5C21 9.62169 18 6 14 6C20.9706 6 24 9.80558 24 14.5C24 19.1944 20.9706 23 14 23Z" fill="#3F3F3F"/>
@@ -57,7 +57,6 @@
     },
     methods: {
       openMenu() {
-        console.log(1213213)
         let menu = document.querySelector('.menu');
         menu.classList.remove('menu--open');
         this.showButton = true;
@@ -95,7 +94,7 @@
     width: 100%;
   }
 
-  .main-header__logotype {
+  .main-header__logotype-link {
     margin-right: 142px;
   }
 
@@ -135,7 +134,7 @@
       position: relative;
     }
 
-    .main-header__logotype {
+    .main-header__logotype-link {
       margin-right: auto;
     }
 

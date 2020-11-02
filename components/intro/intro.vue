@@ -12,7 +12,7 @@
         </a>
       </div>
 
-      <SliderNews />
+      <SliderNews v-bind:show-button="true"/>
     </div>
   </section>
 </template>

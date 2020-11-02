@@ -17,9 +17,9 @@
           </li>
 
           <li class="menu__sublist-item">
-            <a class="menu__sublist-link">
+            <nuxt-link class="menu__sublist-link" to="/screen">
               <span>Шумозащитные экраны</span>
-            </a>
+            </nuxt-link>
           </li>
 
           <li class="menu__sublist-item">

@@ -1,16 +1,28 @@
 <template>
   <main class="page-main">
+    <subtitle v-bind:subtitles="subtitles" />
     <NewsInfo />
   </main>
 </template>
 
 <script>
   import NewsInfo from '../../components/news-info/news-info'
+  import subtitle from '../../components/subtitle/subtitle'
 
   export default {
     name: 'News',
     components: {
-      NewsInfo
+      NewsInfo,
+      subtitle
+    },
+    data () {
+      return {
+        subtitles: {
+          href: '/',
+          title: 'Новости ООО «МСК»',
+          text: ''
+        }
+      }
     }
   }
 </script>
@@ -23,5 +35,6 @@
     padding-top: 64px;
     width: 100%;
     flex-grow: 1;
+    background-color: $bg-color-light-gray;
   }
 </style>

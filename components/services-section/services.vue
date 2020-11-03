@@ -1,5 +1,5 @@
 <template>
-  <section class="services">
+  <section class="services" id="services">
     <div class="services__container">
       <h2 class="services__title">Мы предлагаем</h2>
       <div class="services__items-wrapper">
@@ -10,7 +10,7 @@
           <div class="services__item-content">
             <h3> {{ item.title }} </h3>
             <p> {{ item.text }} </p>
-            <a class="service__btn" href="">
+            <a class="service__btn" href="#">
               <span>Подробнее</span>
               <svg width="18" height="12" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L7 7L1 13" stroke="#A3A3A3" stroke-width="2"/>
@@ -256,7 +256,7 @@
         display: none;
       }
     }
-    
+
     .services__item-steel {
       display: flex;
       margin-bottom: 20px;

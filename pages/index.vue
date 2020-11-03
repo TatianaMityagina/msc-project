@@ -9,7 +9,7 @@
 
 <script>
   import Intro from '../components/intro/intro'
-  import Services from '../components/services/services'
+  import Services from '../components/services-section/services'
   import Benefits from '../components/benefits/benefits'
   import Contacts from '../components/contacts/contacts'
 

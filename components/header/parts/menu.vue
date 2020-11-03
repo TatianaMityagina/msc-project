@@ -11,13 +11,13 @@
 
         <ul class="menu__sublist">
           <li class="menu__sublist-item">
-            <a class="menu__sublist-link">
+            <nuxt-link class="menu__sublist-link" to="/fence" :class="{'menu__sublist-link--active' : $route.path === '/fence' }">
               <span>Барьерное ограждение</span>
-            </a>
+            </nuxt-link>
           </li>
 
           <li class="menu__sublist-item">
-            <nuxt-link class="menu__sublist-link" to="/screen">
+            <nuxt-link class="menu__sublist-link" to="/screen" :class="{'menu__sublist-link--active' : $route.path === '/screen' }">
               <span>Шумозащитные экраны</span>
             </nuxt-link>
           </li>
@@ -31,11 +31,13 @@
       </li>
 
       <li class="menu__list-item">
-        <nuxt-link to="/news" class="menu__list-link" href="">Новости</nuxt-link>
+        <nuxt-link to="/news" class="menu__list-link" :class="{'menu__list-link--active' : $route.path === '/news' }">
+          Новости
+        </nuxt-link>
       </li>
 
       <li class="menu__list-item">
-        <a class="menu__list-link" href="">Контакты</a>
+        <a class="menu__list-link" href="#contacts">Контакты</a>
       </li>
     </ul>
   </nav>
@@ -43,7 +45,7 @@
 
 <script>
   export default {
-    name: 'Menu',
+    name: 'Menu'
   }
 </script>
 
@@ -134,9 +136,11 @@
     &:focus:not(.focus-visible)::after {
       transform: scaleX(0);
     }
+  }
 
-    &:active:not(.focus-visible)::after {
-      transform: scaleX(1);
+  .menu .menu__list-link--active {
+    &::after  {
+      transform: scaleX(1)
     }
   }
 
@@ -151,7 +155,7 @@
     width: 300px;
     opacity: 0;
 
-    box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08), 
+    box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08),
       0px 20px 30px -12px rgba(32, 75, 69, 0.08);
     border-radius: 12px;
     background-color: $main-bg-color;
@@ -171,7 +175,7 @@
   .menu__sublist-link::before {
     position: absolute;
     content: "";
-    top: 5px;
+    top: 4px;
     left: 0;
 
     width: 18px;
@@ -193,6 +197,16 @@
     }
   }
 
+  .menu .menu__sublist-link--active {
+    padding-left: 25px;
+    color: $font-color-orange;
+
+    &::before {
+      opacity: 1;
+      transition: $style-change-duration;
+    }
+  }
+
   .menu__sublist-link {
     display: block;
     align-items: center;
@@ -202,7 +216,7 @@
     line-height: 18px;
     color: inherit;
     text-decoration: none;
-    
+
     cursor: pointer;
     transition: $style-change-duration;
   }
@@ -220,7 +234,7 @@
 
       opacity: 1;
 
-      box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08), 
+      box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08),
         0px 20px 30px -12px rgba(32, 75, 69, 0.08);
       border-radius: 12px;
       background-color: $main-bg-color;
@@ -293,8 +307,18 @@
     .menu {
       top: 64px;
       width: 100vw;
+      height: auto;
       border-radius: 0;
     }
+
+    .menu__list-link {
+      display: inline;
+      padding: 0;
+
+      &::after {
+        position: unset;
+      }
+    }
   }
-  
+
 </style>

@@ -5,6 +5,8 @@
     <CentralContent v-bind:text-content="text1"/>
     <ScreenStructure />
     <ScreenTypes />
+    <ScreenPanel />
+    <ScreenProduction />
     <CentralContent v-bind:text-content="text2"/>
   </main>
 </template>
@@ -15,6 +17,8 @@
   import CentralContent from '../../components/central-content/central-content'
   import ScreenStructure from '../../components/screen-structure/screen-structure'
   import ScreenTypes from '../../components/screen-types/screen-types'
+  import ScreenPanel from '../../components/screen-panel/screen-panel'
+  import ScreenProduction from '../../components/screen-production/screen-production'
 
   export default {
     name: 'Screen',
@@ -23,7 +27,9 @@
       AboutScreen,
       CentralContent,
       ScreenStructure,
-      ScreenTypes
+      ScreenTypes,
+      ScreenProduction,
+      ScreenPanel
     },
     data () {
       return {

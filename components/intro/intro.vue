@@ -3,7 +3,7 @@
     <div class="intro__container">
       <div class="intro__slogan-wrapper">
         <h1 class="intro__slogan">Комплексный подход к благоустройству дорожной инфраструктуры</h1>
-        <a class="btn btn--orange" href="">
+        <a class="btn btn--orange" href="#services">
           <span>перейти к услугам</span>
 
           <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,5 @@
 <template>
-  <section class="contacts">
+  <section class="contacts" id="contacts">
     <div class="contacts__container">
       <h2 class="contacts__title">Контакты</h2>
       <div class="contacts__content">
@@ -177,5 +177,5 @@
       }
     }
   }
-  
+
 </style>

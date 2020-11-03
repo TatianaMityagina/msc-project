@@ -20,7 +20,7 @@
                 <a href="mailto:msk-18@list.ru" target="_blank" rel="noopener">msk-18@list.ru</a>
               </li>
               <li class="main-footer__sublist-item">
-                г. Краснодар, <br>ул. Маяковского 123, оф. 3,5 
+                г. Краснодар, <br>ул. Маяковского 123, оф. 3,5
               </li>
             </ul>
           </li>
@@ -118,6 +118,14 @@
     a {
       text-decoration: none;
       color: rgba(255, 255, 255, 0.8);
+      transition: $style-change-duration;
+    }
+  }
+
+  .main-footer__sublist-item a {
+    &:hover {
+      color: $font-color-white;
+      transition: $style-change-duration;
     }
   }
 
@@ -145,7 +153,7 @@
       margin-right: 85px;
     }
   }
-  
+
   @include mobile {
     .main-footer {
       padding: 60px 15px 10px;

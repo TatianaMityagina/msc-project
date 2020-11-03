@@ -3,7 +3,7 @@
     <picture class="screen-structure__image">
       <source media="(max-width: 1279px)" srcset="../../assets/img/screen-structure/screen-768.webp">
       <source media="(max-width: 1919px)" srcset="../../assets/img/screen-structure/screen-1280.webp">
-      <img src="../../assets/img/screen-structure/screen-1920.webp" width="960" height="800" alt="Photo screen"> 
+      <img src="../../assets/img/screen-structure/screen-1920.webp" width="960" height="900" alt="Photo screen">
     </picture>
 
     <div class="screen-structure__content-wrapper">
@@ -119,7 +119,7 @@
 
     .screen-structure__image {
       margin: 0;
-      
+
       img {
         width: 100%;
         height: auto;

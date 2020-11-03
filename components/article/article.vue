@@ -3,9 +3,9 @@
     <div class="article__container">
       <h2 class="article__title"> {{ contentArticle.subtitle }} </h2>
       <p class="article__text"> {{ contentArticle.text1 }} </p>
-      <img class="article__image" :src="require(`../../assets/img/article/${contentArticle.image1}`)" width="1120" height="360" :alt="content.title"/>
+      <img class="article__image" :src="require(`../../assets/img/article/${contentArticle.image1}`)" width="1120" height="360" alt="Photo article"/>
       <p class="article__text"> {{ contentArticle.text2 }} </p>
-      <img class="article__image" :src="require(`../../assets/img/article/${contentArticle.image2}`)" width="1120" height="747" :alt="content.title"/>
+      <img class="article__image" :src="require(`../../assets/img/article/${contentArticle.image2}`)" width="1120" height="747" alt="Photo article"/>
     </div>
   </article>
 </template>

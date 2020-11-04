@@ -31,13 +31,13 @@
             <span>Услуги</span>
             <ul class="main-footer__sublist">
               <li class="main-footer__sublist-item">
-                <a href="">Барьерное ограждение</a>
+                <nuxt-link to="/fence">Барьерное ограждение</nuxt-link>
               </li>
               <li class="main-footer__sublist-item">
-                <a href="">Шумозащитные экраны</a>
+                <nuxt-link to="/screen">Шумозащитные экраны</nuxt-link>
               </li>
               <li class="main-footer__sublist-item">
-                <a href="">Трубы спиральновитые</a>
+                <nuxt-link to="/pipe">Трубы спиральновитые</nuxt-link>
               </li>
             </ul>
           </li>

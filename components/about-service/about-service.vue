@@ -3,8 +3,8 @@
     <div class="about-service__container">
       <div class="about-service__content">
         <h2 class="about-service__title">{{ aboutService.title }}</h2>
-        <p class="about-service__text" v-html="aboutService.text1"></p>
-        <p class="about-service__text">{{ aboutService.text2 }}</p>
+        <p class="about-service__text">{{ aboutService.text1 }}</p>
+        <p class="about-service__text" v-show="aboutService.text2 != ''">{{ aboutService.text2 }}</p>
       </div>
     </div>
     <img class="about-service__image" :src="require(`../../assets/img/about-service/${aboutService.src}`)" :srcset="require(`../../assets/img/about-service/${aboutService.srcset}`)" width="900" height="628" alt="Photo fence">

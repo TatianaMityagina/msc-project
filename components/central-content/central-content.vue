@@ -1,6 +1,6 @@
 <template>
-  <section class="central-content">
-    <p class="central-content__text">{{ textContent }}</p>
+  <section class="central-content" :style="{'background-color': contentOptions.color}">
+    <p class="central-content__text">{{ contentOptions.text }}</p>
   </section>
 </template>
 
@@ -8,8 +8,8 @@
   export default {
     name: 'CentralContent',
     props: {
-      textContent: {
-        type: String,
+      contentOptions: {
+        type: Object,
         required: false
       }
     }

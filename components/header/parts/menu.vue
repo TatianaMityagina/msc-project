@@ -23,9 +23,9 @@
           </li>
 
           <li class="menu__sublist-item">
-            <a class="menu__sublist-link">
+            <nuxt-link class="menu__sublist-link" to="/pipe" :class="{'menu__sublist-link--active' : $route.path === '/pipe' }">
               <span>Трубы спиральновитые</span>
-            </a>
+            </nuxt-link>
           </li>
         </ul>
       </li>

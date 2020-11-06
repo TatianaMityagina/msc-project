@@ -36,7 +36,7 @@
   import Swiper from 'swiper/js/swiper.esm.bundle'
   import 'swiper/css/swiper.min.css'
   import newsContent from '../../static/mock/newsContent.json'
-  
+
   export default {
     name: 'SliderNews',
      props: {
@@ -109,7 +109,7 @@
     height: 220px;
 
     background: $main-bg-color;
-    box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08), 
+    box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08),
     0px 20px 30px -12px rgba(32, 75, 69, 0.08);
     border-radius: 12px;
 
@@ -138,7 +138,7 @@
     }
   }
 
-  .swiper-slide__btn { 
+  .swiper-slide__btn {
     display: flex;
     align-items: center;
 
@@ -202,6 +202,7 @@
     color: $font-color-white;
     text-transform: uppercase;
     text-decoration: none;
+    transition: $style-change-duration;
 
     &::after {
       position: absolute;
@@ -213,6 +214,17 @@
       height: 1px;
 
       background-color: $main-bg-color;
+      transition: $style-change-duration;
+    }
+
+    &:hover {
+      color: $font-color-orange;
+      transition: $style-change-duration;
+
+      &::after {
+        background-color: $bg-color-orange;
+        transition: $style-change-duration;
+      }
     }
   }
 
@@ -258,7 +270,7 @@
       height: 194px;
     }
 
-    .swiper-slide__btn { 
+    .swiper-slide__btn {
       font-size: 15px;
     }
 
@@ -284,6 +296,16 @@
 
     .slider-news__button {
       display: none;
+    }
+
+    .swiper-slide__btn {
+      span {
+        color: $font-color-orange;
+      }
+
+      svg > path {
+        stroke: $font-color-orange;
+      }
     }
 
     .slider-news__container .swiper-slide {

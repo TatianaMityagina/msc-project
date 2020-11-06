@@ -1,7 +1,7 @@
 <template>
   <nav class="menu menu--open">
     <ul class="menu__list">
-      <li class="menu__list-item">
+      <li class="menu__list-item" @click="close">
         <a class="menu__list-link">
           <span>Услуги</span>
           <svg class="menu__icon-open" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,19 +10,19 @@
         </a>
 
         <ul class="menu__sublist">
-          <li class="menu__sublist-item">
+          <li class="menu__sublist-item" @click="close">
             <nuxt-link class="menu__sublist-link" to="/fence" :class="{'menu__sublist-link--active' : $route.path === '/fence' }">
               <span>Барьерное ограждение</span>
             </nuxt-link>
           </li>
 
-          <li class="menu__sublist-item">
+          <li class="menu__sublist-item" @click="close">
             <nuxt-link class="menu__sublist-link" to="/screen" :class="{'menu__sublist-link--active' : $route.path === '/screen' }">
               <span>Шумозащитные экраны</span>
             </nuxt-link>
           </li>
 
-          <li class="menu__sublist-item">
+          <li class="menu__sublist-item" @click="close">
             <nuxt-link class="menu__sublist-link" to="/pipe" :class="{'menu__sublist-link--active' : $route.path === '/pipe' }">
               <span>Трубы спиральновитые</span>
             </nuxt-link>
@@ -30,14 +30,14 @@
         </ul>
       </li>
 
-      <li class="menu__list-item">
+      <li class="menu__list-item" @click="close">
         <nuxt-link to="/news" class="menu__list-link" :class="{'menu__list-link--active' : $route.path === '/news' }">
           Новости
         </nuxt-link>
       </li>
 
-      <li class="menu__list-item">
-        <a class="menu__list-link" href="#contacts">Контакты</a>
+      <li class="menu__list-item" @click="close">
+        <a class="menu__list-link" href="#contacts" v-show="$route.path === '/'">Контакты</a>
       </li>
     </ul>
   </nav>
@@ -45,7 +45,12 @@
 
 <script>
   export default {
-    name: 'Menu'
+    name: 'Menu',
+    methods: {
+      close() {
+        this.$emit('close')
+      }
+    }
   }
 </script>
 
@@ -242,6 +247,7 @@
       transition: $style-change-duration;
     }
 
+
     .main-header__container .menu--open {
       opacity: 0;
       pointer-events: none;
@@ -258,6 +264,15 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    .menu__list-link {
+      display: inline;
+      padding: 0;
+
+      &::after {
+        position: unset;
       }
     }
 
@@ -309,15 +324,6 @@
       width: 100vw;
       height: auto;
       border-radius: 0;
-    }
-
-    .menu__list-link {
-      display: inline;
-      padding: 0;
-
-      &::after {
-        position: unset;
-      }
     }
   }
 

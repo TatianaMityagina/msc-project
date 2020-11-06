@@ -27,7 +27,7 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     'normalize.css',
-    '../assets/scss/global-styles.scss'
+    './assets/scss/global-styles.scss'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -56,10 +56,10 @@ export default {
   },
   styleResources: {
     scss: [
-      '../assets/scss/reset.scss',
-      '../assets/scss/global-variables.scss',
-      '../assets/scss/global-mixins.scss',
-      '../assets/scss/btn.scss'
+      './assets/scss/reset.scss',
+      './assets/scss/global-variables.scss',
+      './assets/scss/global-mixins.scss',
+      './assets/scss/btn.scss'
     ],
     less: [],
     stylus: []

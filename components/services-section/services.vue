@@ -10,14 +10,14 @@
           <div class="services__item-content">
             <h3> {{ item.title }} </h3>
             <p> {{ item.text }} </p>
-            <a class="service__btn" href="#">
+            <nuxt-link class="service__btn" :to="item.path">
               <span>Подробнее</span>
               <svg width="18" height="12" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L7 7L1 13" stroke="#A3A3A3" stroke-width="2"/>
                 <path d="M7 1L13 7L7 13" stroke="#A3A3A3" stroke-width="2"/>
                 <path d="M13 1L19 7L13 13" stroke="#A3A3A3" stroke-width="2"/>
               </svg>
-            </a>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -44,6 +44,7 @@
             id: 0,
             src: require('../../assets/img/services/fencing-img@1x.jpg'),
             srcset: require('../../assets/img/services/fencing-img@2x.jpg'),
+            path: '/fence',
             title: 'Барьерное ограждение',
             text: 'Металлическое ограждение снижает риск непреднамеренного съезда и столкновения встречных автомашин при многополосном движении, а значит, сокращает аварийность в целом'
           },
@@ -51,6 +52,7 @@
             id: 1,
             src: require('../../assets/img/services/screen-img@1x.jpg'),
             srcset: require('../../assets/img/services/screen-img@2x.jpg'),
+            path: '/screen',
             title: 'Шумозащитные экраны',
             text: 'Мы	производим	шумозащитные экраны,	в состав	которых входят звукопоглощающие и звукоизолирующие (антивандальные) панели, светопрозрачные звукоизолирующие панели и металлоконструкции'
           },
@@ -58,6 +60,7 @@
             id: 2,
             src: require('../../assets/img/services/pipe-img@1x.jpg'),
             srcset: require('../../assets/img/services/pipe-img@2x.jpg'),
+            path: '/pipe',
             title: 'Трубы спиральновитые',
             text: 'Из спиралевитых труб возводят своеобразный тоннель под насыпями автомобильных дорог, по которому беспрепятственно проходит поток воды'
           },
@@ -65,6 +68,7 @@
             id: 3,
             src: require('../../assets/img/services/steel-img@1x.jpg'),
             srcset: require('../../assets/img/services/steel-img@2x.jpg'),
+            path: '/',
             title: 'Металлоконструкции',
             text: ''
           }

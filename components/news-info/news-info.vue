@@ -7,7 +7,7 @@
           <div class="news-info__item-content">
             <h3> {{ news.title }} </h3>
             <p> {{ news.text }} </p>
-            <nuxt-link class="news-info__item-btn" :to="news.path">
+            <nuxt-link class="news-info__item-btn" :to="`/article${news.path}`">
               <span>Читать дальше</span>
               <svg width="18" height="12" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L7 7L1 13" stroke="#A3A3A3" stroke-width="2"/>
@@ -24,7 +24,7 @@
 
 <script>
   import newsContent from '../../static/mock/newsContent.json'
-  
+
   export default {
     data () {
       return {

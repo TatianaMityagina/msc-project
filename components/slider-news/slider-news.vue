@@ -6,7 +6,7 @@
         <div class="swiper-slide" v-for="item in sliderItem" :key="item.id">
           <h3> {{ item.title }} </h3>
           <p> {{ item.text }} </p>
-          <nuxt-link class="swiper-slide__btn" :to="item.path">
+          <nuxt-link class="swiper-slide__btn" :to="`/article${item.path}`">
             <span>Читать дальше</span>
             <svg width="18" height="12" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L7 7L1 13" stroke="#A3A3A3" stroke-width="2"/>
@@ -17,18 +17,18 @@
         </div>
       </div>
     </div>
-    <button class="slider-news__button slider-news__button--next" type="button" v-show="showButton">
-      <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1L12 12L1 23" stroke="white" stroke-width="2"/>
-      </svg>
-    </button>
-    <button class="slider-news__button slider-news__button--prev" type="button" v-show="showButton">
-      <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13 1L2 12L13 23" stroke="white" stroke-width="2"/>
-      </svg>
-    </button>
+<!--    <button class="slider-news__button slider-news__button&#45;&#45;next" type="button" v-show="showButton">-->
+<!--      <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--        <path d="M1 1L12 12L1 23" stroke="white" stroke-width="2"/>-->
+<!--      </svg>-->
+<!--    </button>-->
+<!--    <button class="slider-news__button slider-news__button&#45;&#45;prev" type="button" v-show="showButton">-->
+<!--      <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--        <path d="M13 1L2 12L13 23" stroke="white" stroke-width="2"/>-->
+<!--      </svg>-->
+<!--    </button>-->
 
-    <nuxt-link class="slider-news__btn-more" to="/news" v-show="showButton">смотреть все новости</nuxt-link>
+<!--    <nuxt-link class="slider-news__btn-more" to="/news" v-show="showButton">смотреть все новости</nuxt-link>-->
   </section>
 </template>
 
@@ -48,7 +48,7 @@
     data() {
       return {
         swiper: null,
-        sliderItem: newsContent
+        sliderItem: []
       }
     },
     mounted() {

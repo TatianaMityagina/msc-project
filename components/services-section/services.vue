@@ -323,6 +323,8 @@
 
     .services__item-install {
        span {
+        max-width: 280px;
+
         font-size: 18px;
         text-align: center;
       }
@@ -332,8 +334,6 @@
       margin-bottom: 10px;
 
       span {
-        max-width: 280px;
-
         font-size: 18px;
         text-align: center;
       }

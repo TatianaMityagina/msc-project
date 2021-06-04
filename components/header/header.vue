@@ -24,9 +24,9 @@
       <div class="main-header__button-menu">
         <button class="main-header__button" type="button" v-if="!showButton"  @click="openMenu">
           <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="16" height="2" fill="white"/>
-            <rect y="6" width="16" height="2" fill="white"/>
-            <rect y="12" width="16" height="2" fill="white"/>
+            <rect width="16" height="2" fill="white" />
+            <rect y="6" width="16" height="2" fill="white" />
+            <rect y="12" width="16" height="2" fill="white" />
           </svg>
         </button>
 
@@ -41,142 +41,141 @@
 </template>
 
 <script>
-  import Menu from './parts/menu'
+import Menu from './parts/menu'
 
-  export default {
-    name: 'Header',
-    components: {
-      Menu
+export default {
+  name: 'Header',
+  components: {
+    Menu
+  },
+  data() {
+    return {
+      showButton: false
+    }
+  },
+  mounted() {
+    this.openMenu()
+    this.closedMenu()
+  },
+  methods: {
+    openMenu() {
+      const menu = document.querySelector('.menu')
+      menu.classList.remove('menu--open')
+      this.showButton = true
     },
-    data() {
-      return {
-        showButton: false
-      }
-    },
-    mounted() {
-      this.openMenu()
-      this.closedMenu()
-    },
-    methods: {
-      openMenu() {
-        let menu = document.querySelector('.menu');
-        menu.classList.remove('menu--open');
-        this.showButton = true;
-      },
-      closedMenu() {
-        let menu = document.querySelector('.menu');
-        menu.classList.add('menu--open');
-        this.showButton = false;
-      }
+    closedMenu() {
+      const menu = document.querySelector('.menu')
+      menu.classList.add('menu--open')
+      this.showButton = false
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  .main-header {
-    position: fixed;
-    z-index: 100;
-    display: flex;
+.main-header {
+  position: fixed;
+  z-index: 100;
+  display: flex;
 
-    justify-content: center;
-    width: 100%;
-    padding: 0 40px;
-    height: 64px;
+  justify-content: center;
+  width: 100%;
+  padding: 0 40px;
+  height: 64px;
 
-    background-color: $main-bg-color;
-    box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08),
-      0px 20px 30px -12px rgba(32, 75, 69, 0.08);
+  background-color: $main-bg-color;
+  box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08),
+    0px 20px 30px -12px rgba(32, 75, 69, 0.08);
+}
+
+.main-header__container {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.main-header__logotype-link {
+  margin-right: 142px;
+}
+
+.main-header__phone-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.main-header__phone {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  span {
+    margin-right: 16px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: $font-color-orange;
   }
+}
 
+.main-header__button-menu {
+  display: none;
+}
+
+.main-header__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  outline: none;
+  background: $bg-color-dark;
+  border-radius: 9px;
+}
+
+@include tablet-large {
   .main-header__container {
-    display: flex;
-    align-items: center;
-    max-width: 1280px;
-    width: 100%;
+    position: relative;
   }
 
   .main-header__logotype-link {
-    margin-right: 142px;
+    margin-right: auto;
   }
 
   .main-header__phone-wrapper {
-    display: flex;
-    align-items: center;
+    margin-right: 24px;
   }
 
-  .main-header__phone {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-
-    span {
-      margin-right: 16px;
-
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
-      color: $font-color-orange;
-    }
+  .main-header__phone-icon {
+    width: 40px;
+    height: 40px;
   }
 
   .main-header__button-menu {
-    display: none;
-  }
-
-  .main-header__button {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
+  }
+}
 
-    border: none;
-    outline: none;
-    background: $bg-color-dark;
-    border-radius: 9px;
+@include mobile {
+  .main-header {
+    padding: 0;
   }
 
-  @include tablet-large {
-    .main-header__container {
-      position: relative;
-    }
-
-    .main-header__logotype-link {
-      margin-right: auto;
-    }
-
-    .main-header__phone-wrapper {
-      margin-right: 24px;
-    }
-
-    .main-header__phone-icon {
-      width: 40px;
-      height: 40px;
-    }
-
-    .main-header__button-menu {
-      display: flex;
-    }
+  .main-header__container {
+    padding: 0 15px;
   }
 
-  @include mobile {
-    .main-header {
-      padding: 0;
-    }
-
-    .main-header__container {
-      padding: 0 15px;
-    }
-
-    .main-header__phone-wrapper {
-      margin-right: 16px;
-    }
-
-    .main-header__phone {
-      span {
-        display: none;
-      }
-    }
+  .main-header__phone-wrapper {
+    margin-right: 16px;
   }
 
+  .main-header__phone {
+    span {
+      display: none;
+    }
+  }
+}
 </style>

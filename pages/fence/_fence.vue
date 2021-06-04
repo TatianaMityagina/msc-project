@@ -1,51 +1,68 @@
 <template>
   <main class="page-main">
-    <subtitle v-bind:subtitles="subtitles" />
-    <AboutService v-bind:about-service="aboutService" />
-    <CentralContent v-bind:content-options="contentOptions"/>
-    <FenceInstallation />
-    <FenceTypes />
-    <FenceGallary />
+    <subtitle :subtitles="subtitles" />
+    <about-product :content-text="getContent"/>
+    <order-form />
   </main>
 </template>
 
 <script>
+  import productContent from '../../static/mock/productContent.json'
   import subtitle from '../../components/subtitle/subtitle'
-  import AboutService from '../../components/about-service/about-service'
-  import CentralContent from '../../components/central-content/central-content'
-  import FenceInstallation from '../../components/fence-installation/fence-installation'
-  import FenceTypes from '../../components/fence-types/fence-types'
-  import FenceGallary from '../../components/fence-gallary/fence-gallary'
-
+  import AboutProduct from '../../components/about-product/about-product'
+  import OrderForm from '../../components/odrder-form/order-form'
 
   export default {
     name: 'Fence',
     components: {
       subtitle,
-      AboutService,
-      CentralContent,
-      FenceInstallation,
-      FenceTypes,
-      FenceGallary
+      AboutProduct,
+      OrderForm
+    },
+    head() {
+      return {
+        title: this.getContent.meta.og_title,
+        meta: [
+          {
+            hid: 'title',
+            name: 'title',
+            content: this.getContent.meta.og_title
+          },
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.getContent.meta.description
+          },
+          {
+            hid: 'og:title',
+            property: 'og:title',
+            content: this.getContent.meta.og_title
+          },
+          {
+            hid: 'og:description',
+            property: 'og:description',
+            content: this.getContent.meta.og_description
+          },
+          { hid: 'og:url', property: 'og:url', content: `https://msk23.ru${this.getContent.path}` }
+        ],
+        link: [
+          { rel: 'canonical', href: `https://msk23.ru${this.getContent.path}` }
+        ]
+      }
     },
     data () {
       return {
         subtitles: {
-          href: '/',
-          title: 'Барьерные ограждения',
-          text: 'Компания ООО «МСК» осуществляет монтаж и демонтаж дорожных, мостовых, пешеходных ограждений и других производимых предприятием металлоконструкций'
+          href: '/fence',
+          title: '',
+          text: ''
         },
-        aboutService: {
-          title: 'Для чего Барьерные ограждения?',
-          text1: 'Барьерные ограждения используются на дорогах населенных пунктов и автотрассах,а также на мостах и путепроводах.',
-          text2: 'Металлическое ограждение снижает риск непреднамеренного съезда и столкновения встречных автомашин при многополосном движении, а значит, сокращает аварийность в целом.',
-          src: 'fence-image@1x.webp',
-          srcset: 'fence-image@2x.webp'
-        },
-        contentOptions: {
-          color: '#ff6231',
-          text: 'Выезд и базирование бригад осуществляется в короткие сроки. Скорость работы бригад ООО «МСК» - до 600 погонных метров ограждений в смену. Высокая квалификация и опыт сотрудников на всех этапах — залог надежности изготавливаемой продукции: лучшие специалисты, лучшее оборудование, самый пристальный контроль качества'
-        }
+        productContent
+      }
+    },
+    computed: {
+      getContent(){
+        return this.productContent.find(e => e.path === this.$route.path);
       }
     }
   }
@@ -59,6 +76,5 @@
     padding-top: 64px;
     width: 100%;
     flex-grow: 1;
-    background-color: $bg-color-light-gray;
   }
 </style>

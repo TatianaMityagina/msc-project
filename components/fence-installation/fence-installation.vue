@@ -33,7 +33,6 @@
     justify-content: center;
     width: 100%;
     padding: 290px 40px;
-
     background: $main-bg-color;
   }
 

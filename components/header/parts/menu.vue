@@ -10,10 +10,35 @@
         </a>
 
         <ul class="menu__sublist">
-          <li class="menu__sublist-item" @click="close">
-            <nuxt-link class="menu__sublist-link" to="/fence" :class="{'menu__sublist-link--active' : $route.path === '/fence' }">
+          <li class="menu__sublist-item" @click="close" :class="{'menu__sublist-item--active' : $route.path === '/fence' }">
+            <nuxt-link class="menu__sublist-link" to="/fence">
               <span>Барьерное ограждение</span>
             </nuxt-link>
+            <ul class="sublist__dropdown-list">
+              <li><nuxt-link to="/fence/barrier-fence-11DO">Барьерное ограждение 11 ДО</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-21DO">Барьерное ограждение 21 ДО</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-wave">Барьерное ограждение Волна</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-road-fence">Барьерное дорожное ограждение</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-with-separating-beam">Барьерное ограждение с отделяющейся балкой</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+            </ul>
           </li>
 
           <li class="menu__sublist-item" @click="close">
@@ -153,11 +178,10 @@
     position: absolute;
     z-index: 3;
     top: 65px;
-
+    left: -45px;
     display: flex;
     flex-direction: column;
     padding: 40px;
-    width: 300px;
     opacity: 0;
 
     box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08),
@@ -174,6 +198,26 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:hover {
+      .menu__sublist-link {
+        padding-left: 25px;
+        color: $font-color-orange;
+
+        &::before {
+          opacity: 1;
+          transition: $style-change-duration;
+        }
+      }
+
+      .sublist__dropdown-list {
+        opacity: 1;
+        padding-top: 15px;
+        height: auto;
+        transition: all 0.5s ease-in-out;
+        pointer-events: auto;
+      }
     }
   }
 
@@ -192,30 +236,21 @@
     background-repeat: no-repeat;
   }
 
-  .menu__sublist-link:hover {
-    padding-left: 25px;
-    color: $font-color-orange;
+  .menu .menu__sublist-item--active {
+    .menu__sublist-link {
+      padding-left: 25px;
+      color: $font-color-orange;
 
-    &::before {
-      opacity: 1;
-      transition: $style-change-duration;
-    }
-  }
-
-  .menu .menu__sublist-link--active {
-    padding-left: 25px;
-    color: $font-color-orange;
-
-    &::before {
-      opacity: 1;
-      transition: $style-change-duration;
+      &::before {
+        opacity: 1;
+        transition: $style-change-duration;
+      }
     }
   }
 
   .menu__sublist-link {
-    display: block;
+    display: inline-block;
     align-items: center;
-
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
@@ -224,6 +259,32 @@
 
     cursor: pointer;
     transition: $style-change-duration;
+  }
+
+  .sublist__dropdown-list {
+    @include list-reset;
+    column-count: 4;
+    padding-left: 15px;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    & li {
+      width: 240px;
+    }
+
+    & a {
+      padding: 5px 0;
+      font-size: 13px;
+      line-height: 14px;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $font-color-orange;
+        transition: $style-change-duration;
+      }
+    }
   }
 
   @include tablet-large {

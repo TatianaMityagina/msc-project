@@ -52,17 +52,21 @@
     },
     data () {
       return {
-        subtitles: {
-          href: '/fence',
-          title: '',
-          text: ''
-        },
+        //subtitles: {
+        //  href: '/fence',
+        //  title: '',
+        //  text: ''
+        //},
         productContent
       }
     },
     computed: {
       getContent(){
         return this.productContent.find(e => e.path === this.$route.path);
+      },
+      subtitles(){
+        this.getContent.href = '/fence';
+        return this.getContent
       }
     }
   }

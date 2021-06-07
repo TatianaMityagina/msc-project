@@ -20,11 +20,11 @@
               <li><nuxt-link to="/fence/barrier-fence-wave">Барьерное ограждение Волна</nuxt-link></li>
               <li><nuxt-link to="/fence/barrier-road-fence">Барьерное дорожное ограждение</nuxt-link></li>
               <li><nuxt-link to="/fence/barrier-fence-with-separating-beam">Барьерное ограждение с отделяющейся балкой</nuxt-link></li>
-              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
-              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
-              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
-              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
-              <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-U2">Барьерное ограждение У2</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-U3">Барьерное ограждение У3</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-U4">Барьерное ограждение У4</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-for-painting">Барьерные ограждения под покраску</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-with-no-console">Бесконсольное барьерное ограждение</nuxt-link></li>
               <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
               <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>
               <li><nuxt-link to="/">барьерное ограждение 11до</nuxt-link></li>

@@ -11,6 +11,7 @@
             <li v-if="contentText.row_first.list.item3 != ''">{{ contentText.row_first.list.item3 }}</li>
           </ul>
           <p>{{ contentText.row_first.text2 }}</p>
+          <p>{{ contentText.row_first.text3 }}</p>
         </div>
         <img v-if="contentText.pictures.image1 != ''" class="right-image" :src="require(`../../assets/img/about-product/${contentText.pictures.image1}`)" width="400px" height="400px" alt="Photo product">
       </div>
@@ -70,6 +71,7 @@
             <li>{{ contentText.row_fifth.list.item2 }}</li>
             <li v-if="contentText.row_fifth.list.item3 != ''">{{ contentText.row_fifth.list.item3 }}</li>
             <li v-if="contentText.row_fifth.list.item4 != ''">{{ contentText.row_fifth.list.item4 }}</li>
+            <li v-if="contentText.row_fifth.list.item5 != ''">{{ contentText.row_fifth.list.item5 }}</li>
           </ul>
           <p>{{ contentText.row_fifth.text2 }}</p>
           <p>{{ contentText.row_fifth.text3 }}</p>

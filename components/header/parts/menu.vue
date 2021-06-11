@@ -23,6 +23,8 @@
               <li><nuxt-link to="/fence/barrier-fence-U2">Барьерное ограждение У2</nuxt-link></li>
               <li><nuxt-link to="/fence/barrier-fence-U3">Барьерное ограждение У3</nuxt-link></li>
               <li><nuxt-link to="/fence/barrier-fence-U4">Барьерное ограждение У4</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-SB-1">Барьерное ограждение СБ-1</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-EC-1">Барьерное ограждение ЭК-1</nuxt-link></li>
               <li><nuxt-link to="/fence/barrier-fence-for-painting">Барьерные ограждения под покраску</nuxt-link></li>
               <li><nuxt-link to="/fence/barrier-fence-with-no-console">Бесконсольное барьерное ограждение</nuxt-link></li>
               <li><nuxt-link to="/fence/galvanized-road-barriers">Оцинкованные дорожные ограждения</nuxt-link></li>
@@ -32,13 +34,20 @@
               <li><nuxt-link to="/fence/bridge-barrier-fence-11MO">Мостовое барьерное ограждение 11МО</nuxt-link></li>
               <li><nuxt-link to="/fence/one-sided-barrier-fence">Одностороннее барьерное ограждение</nuxt-link></li>
               <li><nuxt-link to="/fence/barrier-fence-calculation">Расчет барьерного ограждения</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-SB-1">Барьерное ограждение СБ-1</nuxt-link></li>
               <li><nuxt-link to="/fence/barrier-fence-installation">Установка барьерного ограждения</nuxt-link></li>
               <li><nuxt-link to="/fence/front-barrier-fence">Фронтальное барьерное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-EC-1">Барьерное ограждение ЭК-1</nuxt-link></li>
               <li><nuxt-link to="/fence/pedestrian-fences">Пешеходные ограждения</nuxt-link></li>
               <li><nuxt-link to="/fence/metal-pedestrian-fence">Металлическое пешеходное ограждение</nuxt-link></li>
               <li><nuxt-link to="/fence/guide-pedestrian-barriers">Направляющие пешеходные ограждения</nuxt-link></li>
+              <li><nuxt-link to="/fence/restricting-pedestrian-fence">Ограничивающее пешеходное ограждение</nuxt-link></li>
+              <li><nuxt-link to="/fence/pedestrian-barrier-cross">Пешеходное ограждение Крест </nuxt-link></li>
+              <li><nuxt-link to="/fence/pedestrian-barrier-ORUD">Пешеходное ограждение ОРУД</nuxt-link></li>
+              <li><nuxt-link to="/fence/pedestrian-barrier-PO-1-cross">Пешеходное ограждение ПО-1 Крест</nuxt-link></li>
+              <li><nuxt-link to="/fence/pedestrian-barrier-PO-2">Пешеходное ограждение ПО-2</nuxt-link></li>
+              <li><nuxt-link to="/fence/pedestrian-barrier-PO-6">Пешеходное ограждение ПО-6</nuxt-link></li>
+              <li><nuxt-link to="/fence/pedestrian-railings">Пешеходное перильное ограждение</nuxt-link></li>
+              <li><nuxt-link to="/fence/retaining-pedestrian-fence">Удерживающие пешеходные ограждения</nuxt-link></li>
+              <li><nuxt-link to="/fence/installing-pedestrian-barriers">Установка пешеходных ограждений</nuxt-link></li>
             </ul>
           </li>
 

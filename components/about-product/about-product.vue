@@ -5,12 +5,17 @@
         <div class="about-product__row-text">
           <h3>{{ contentText.row_first.title }}</h3>
           <p>{{ contentText.row_first.text1 }}</p>
-          <ul v-if="contentText.row_first.list.item1 != ''">
-            <li>{{ contentText.row_first.list.item1 }}</li>
-            <li>{{ contentText.row_first.list.item2 }}</li>
-            <li v-if="contentText.row_first.list.item3 != ''">{{ contentText.row_first.list.item3 }}</li>
+          <ul v-if="contentText.row_first.list_first.item1 != ''">
+            <li>{{ contentText.row_first.list_first.item1 }}</li>
+            <li>{{ contentText.row_first.list_first.item2 }}</li>
+            <li v-if="contentText.row_first.list_first.item3 != ''">{{ contentText.row_first.list_first.item3 }}</li>
           </ul>
           <p>{{ contentText.row_first.text2 }}</p>
+          <ul v-if="contentText.row_first.list_second.item1 != ''">
+            <li>{{ contentText.row_first.list_second.item1 }}</li>
+            <li>{{ contentText.row_first.list_second.item2 }}</li>
+            <li v-if="contentText.row_first.list_second.item3 != ''">{{ contentText.row_first.list_second.item3 }}</li>
+          </ul>
           <p>{{ contentText.row_first.text3 }}</p>
         </div>
         <img v-if="contentText.pictures.image1 != ''" class="right-image" :src="require(`../../assets/img/about-product/${contentText.pictures.image1}`)" width="400px" height="400px" alt="Photo product">
@@ -20,12 +25,19 @@
         <div class="about-product__row-text">
           <h3>{{ contentText.row_second.title }}</h3>
           <p>{{ contentText.row_second.text1 }}</p>
-          <ul v-if="contentText.row_second.list.item1 != ''">
-            <li>{{ contentText.row_second.list.item1 }}</li>
-            <li>{{ contentText.row_second.list.item2 }}</li>
-            <li v-if="contentText.row_second.list.item3 != ''">{{ contentText.row_second.list.item3 }}</li>
+          <ul v-if="contentText.row_second.list_first.item1 != ''">
+            <li>{{ contentText.row_second.list_first.item1 }}</li>
+            <li>{{ contentText.row_second.list_first.item2 }}</li>
+            <li v-if="contentText.row_second.list_first.item3 != ''">{{ contentText.row_second.list_first.item3 }}</li>
+            <li v-if="contentText.row_second.list_first.item4 != ''">{{ contentText.row_second.list_first.item4 }}</li>
           </ul>
           <p>{{ contentText.row_second.text2 }}</p>
+          <ul v-if="contentText.row_second.list_second.item1 != ''">
+            <li>{{ contentText.row_second.list_second.item1 }}</li>
+            <li>{{ contentText.row_second.list_second.item2 }}</li>
+            <li v-if="contentText.row_second.list_second.item3 != ''">{{ contentText.row_second.list_second.item3 }}</li>
+            <li v-if="contentText.row_second.list_second.item4 != ''">{{ contentText.row_second.list_second.item4 }}</li>
+          </ul>
           <p>{{ contentText.row_second.text3 }}</p>
         </div>
       </div>
@@ -51,29 +63,43 @@
         <div class="about-product__row-text">
           <h3>{{ contentText.row_fourth.title }}</h3>
           <p>{{ contentText.row_fourth.text1 }}</p>
-          <ul v-if="contentText.row_fourth.list.item1 != ''">
-            <li>{{ contentText.row_fourth.list.item1 }}</li>
-            <li>{{ contentText.row_fourth.list.item2 }}</li>
-            <li v-if="contentText.row_fourth.list.item3 != ''">{{ contentText.row_fourth.list.item3 }}</li>
-            <li v-if="contentText.row_fourth.list.item4 != ''">{{ contentText.row_fourth.list.item4 }}</li>
+          <ul v-if="contentText.row_fourth.list_first.item1 != ''">
+            <li>{{ contentText.row_fourth.list_first.item1 }}</li>
+            <li>{{ contentText.row_fourth.list_first.item2 }}</li>
+            <li v-if="contentText.row_fourth.list_first.item3 != ''">{{ contentText.row_fourth.list_first.item3 }}</li>
+            <li v-if="contentText.row_fourth.list_first.item4 != ''">{{ contentText.row_fourth.list_first.item4 }}</li>
           </ul>
           <p>{{ contentText.row_fourth.text2 }}</p>
+          <ul v-if="contentText.row_fourth.list_second.item1 != ''">
+            <li>{{ contentText.row_fourth.list_second.item1 }}</li>
+            <li>{{ contentText.row_fourth.list_second.item2 }}</li>
+            <li v-if="contentText.row_fourth.list_second.item3 != ''">{{ contentText.row_fourth.list_second.item3 }}</li>
+            <li v-if="contentText.row_fourth.list_second.item4 != ''">{{ contentText.row_fourth.list_second.item4 }}</li>
+          </ul>
           <p>{{ contentText.row_fourth.text3 }}</p>
           <p>{{ contentText.row_fourth.text4 }}</p>
+          <p>{{ contentText.row_fourth.text5 }}</p>
         </div>
       </div>
       <div class="about-product__row" v-if="contentText.row_fifth.text1 != ''">
         <div class="about-product__row-text">
           <h3>{{ contentText.row_fifth.title }}</h3>
           <p>{{ contentText.row_fifth.text1 }}</p>
-          <ul v-if="contentText.row_fifth.list.item1 != ''">
-            <li>{{ contentText.row_fifth.list.item1 }}</li>
-            <li>{{ contentText.row_fifth.list.item2 }}</li>
-            <li v-if="contentText.row_fifth.list.item3 != ''">{{ contentText.row_fifth.list.item3 }}</li>
-            <li v-if="contentText.row_fifth.list.item4 != ''">{{ contentText.row_fifth.list.item4 }}</li>
-            <li v-if="contentText.row_fifth.list.item5 != ''">{{ contentText.row_fifth.list.item5 }}</li>
+          <ul v-if="contentText.row_fifth.list_first.item1 != ''">
+            <li>{{ contentText.row_fifth.list_first.item1 }}</li>
+            <li>{{ contentText.row_fifth.list_first.item2 }}</li>
+            <li v-if="contentText.row_fifth.list_first.item3 != ''">{{ contentText.row_fifth.list_first.item3 }}</li>
+            <li v-if="contentText.row_fifth.list_first.item4 != ''">{{ contentText.row_fifth.list_first.item4 }}</li>
+            <li v-if="contentText.row_fifth.list_first.item5 != ''">{{ contentText.row_fifth.list_first.item5 }}</li>
           </ul>
           <p>{{ contentText.row_fifth.text2 }}</p>
+          <ul v-if="contentText.row_fifth.list_second.item1 != ''">
+            <li>{{ contentText.row_fifth.list_second.item1 }}</li>
+            <li>{{ contentText.row_fifth.list_second.item2 }}</li>
+            <li v-if="contentText.row_fifth.list_second.item3 != ''">{{ contentText.row_fifth.list_second.item3 }}</li>
+            <li v-if="contentText.row_fifth.list_second.item4 != ''">{{ contentText.row_fifth.list_second.item4 }}</li>
+            <li v-if="contentText.row_fifth.list_second.item5 != ''">{{ contentText.row_fifth.list_second.item5 }}</li>
+          </ul>
           <p>{{ contentText.row_fifth.text3 }}</p>
         </div>
         <img v-if="contentText.pictures.image3 != ''" class="right-image" :src="require(`../../assets/img/about-product/${contentText.pictures.image3}`)" width="400px" height="400px" alt="Photo product">

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import productContent from '../../static/mock/productContent.json'
+  import productFenceContent from '../../static/mock/productFenceContent.json'
   import subtitle from '../../components/subtitle/subtitle'
   import AboutProduct from '../../components/about-product/about-product'
   import OrderForm from '../../components/odrder-form/order-form'
@@ -57,12 +57,12 @@
         //  title: '',
         //  text: ''
         //},
-        productContent
+        productFenceContent
       }
     },
     computed: {
       getContent(){
-        return this.productContent.find(e => e.path === this.$route.path);
+        return this.productFenceContent.find(e => e.path === this.$route.path);
       },
       subtitles(){
         this.getContent.href = '/fence';

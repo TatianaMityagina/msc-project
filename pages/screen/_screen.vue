@@ -1,51 +1,67 @@
 <template>
   <main class="page-main">
-    <Subtitle v-bind:subtitles="subtitles" />
-    <AboutScreen />
-    <CentralContent v-bind:content-options="contentOptionsTop"/>
-    <ScreenStructure />
-    <ScreenTypes />
-    <ScreenPanel />
-    <ScreenProduction />
-    <CentralContent v-bind:content-options="contentOptionsBottom"/>
+    <subtitle :subtitles="subtitles" />
+    <about-product :content-text="getContent"/>
+    <order-form />
   </main>
 </template>
 
 <script>
-  import Subtitle from '../../components/subtitle/subtitle'
-  import AboutScreen from '../../components/about-screen/about-screen'
-  import CentralContent from '../../components/central-content/central-content'
-  import ScreenStructure from '../../components/screen-structure/screen-structure'
-  import ScreenTypes from '../../components/screen-types/screen-types'
-  import ScreenPanel from '../../components/screen-panel/screen-panel'
-  import ScreenProduction from '../../components/screen-production/screen-production'
+  import productScreenContent from '../../static/mock/productScreenContent.json'
+  import subtitle from '../../components/subtitle/subtitle'
+  import AboutProduct from '../../components/about-product/about-product'
+  import OrderForm from '../../components/odrder-form/order-form'
 
   export default {
-    name: 'Screen',
+    name: 'ScreenProduct',
     components: {
-      Subtitle,
-      AboutScreen,
-      CentralContent,
-      ScreenStructure,
-      ScreenTypes,
-      ScreenProduction,
-      ScreenPanel
+      subtitle,
+      AboutProduct,
+      OrderForm
+    },
+    head() {
+      return {
+        title: this.getContent.meta.og_title,
+        meta: [
+          {
+            hid: 'title',
+            name: 'title',
+            content: this.getContent.meta.og_title
+          },
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.getContent.meta.description
+          },
+          {
+            hid: 'og:title',
+            property: 'og:title',
+            content: this.getContent.meta.og_title
+          },
+          {
+            hid: 'og:description',
+            property: 'og:description',
+            content: this.getContent.meta.og_description
+          },
+          { hid: 'og:url', property: 'og:url', content: `https://msk23.ru${this.getContent.path}` }
+        ],
+        link: [
+          { rel: 'canonical', href: `https://msk23.ru${this.getContent.path}` }
+        ]
+      }
     },
     data () {
       return {
-        subtitles: {
-          href: '/',
-          title: 'Шумозащитные экраны ',
-          text: 'Мы 	производим 	шумозащитные экраны, 	в 	состав которых 	входят звукопоглощающие и звукоизолирующие (антивандальные) панели, светопрозрачные звукоизолирующие панели и металлоконструкции'
-        },
-        contentOptionsTop: {
-          color: '#ff6231',
-          text: 'Наши экраны могут эксплуатироваться в условиях открытого атмосферного воздействия при температуре от минус 60 °С до плюс 55 °С и относительной влажности 75%, при температуре плюс 15 °С климатические условия УХЛ-1ГОСТ 15150-69',
-        },
-        contentOptionsBottom: {
-          color: '#ff6231',
-          text: 'Предприятие-изготовитель гарантирует соответствие панелей звукопоглощающих и звукоизолирующих, панелей светопрозрачных, а также комплектующих изделий требованиям технических условий и сохранение основных технических параметров экранов, при соблюдении потребителем условий транспортировки, хранения, монтажа, эксплуатации, а также отсутствии каких-либо механических повреждений на срок не менее 10 лет с момента установки'
-        }
+        productScreenContent
+      }
+    },
+    computed: {
+      getContent(){
+        return this.productScreenContent.find(e => e.path === this.$route.path);
+      },
+      subtitles(){
+        this.getContent.href = '/fence';
+        return this.getContent
       }
     }
   }
@@ -59,6 +75,5 @@
     padding-top: 64px;
     width: 100%;
     flex-grow: 1;
-    background-color: $bg-color-light-gray;
   }
 </style>

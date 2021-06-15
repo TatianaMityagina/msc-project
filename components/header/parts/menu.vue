@@ -48,6 +48,7 @@
               <li><nuxt-link to="/fence/pedestrian-railings">Пешеходное перильное ограждение</nuxt-link></li>
               <li><nuxt-link to="/fence/retaining-pedestrian-fence">Удерживающие пешеходные ограждения</nuxt-link></li>
               <li><nuxt-link to="/fence/installing-pedestrian-barriers">Установка пешеходных ограждений</nuxt-link></li>
+              <li><nuxt-link to="/fence/barrier-fence-end-piece">Концевой элемент барьерного ограждения</nuxt-link></li>
             </ul>
           </li>
 
@@ -55,6 +56,19 @@
             <nuxt-link class="menu__sublist-link" to="/screen" :class="{'menu__sublist-link--active' : $route.path === '/screen' }">
               <span>Шумозащитные экраны</span>
             </nuxt-link>
+            <ul class="sublist__dropdown-list">
+              <li><nuxt-link to="/screen/acoustic-screen">Акустический экран</nuxt-link></li>
+              <li><nuxt-link to="/screen/noise-barriers">Шумозащитные заборы</nuxt-link></li>
+              <li><nuxt-link to="/screen/noise-screen">Шумозащитные экраны</nuxt-link></li>
+              <li><nuxt-link to="/screen/production-of-noise-screens">Производство шумозащитных экранов</nuxt-link></li>
+              <li><nuxt-link to="/screen/noise-screens-at-russian-railways">Шумозащитные экраны на РЖД</nuxt-link></li>
+              <li><nuxt-link to="/screen/installation-of-noise-screens">Монтаж шумозащитных экранов</nuxt-link></li>
+              <li><nuxt-link to="/screen/transparent-noise-screens">Прозрачные шумозащитные экраны</nuxt-link></li>
+              <li><nuxt-link to="/screen/calculation-noise-shield">Расчет шумозащитного экрана</nuxt-link></li>
+              <li><nuxt-link to="/screen/noise-screens-top10">Шумозащитные экраны Топ 10</nuxt-link></li>
+              <li><nuxt-link to="/screen/noise-screen-made-of-polycarbonate">Шумозащитный экран из поликарбоната </nuxt-link></li>
+              <li><nuxt-link to="/screen/noise-screen-made-of-sandwich-panels">Шумозащитный экран из сэндвич-панелей</nuxt-link></li>
+            </ul>
           </li>
 
           <li class="menu__sublist-item" @click="close">

@@ -1,9 +1,9 @@
 <template>
-  <section class="about-product">
+  <section class="about-product" :class="contentText.class">
     <div class="about-product__container">
       <div class="about-product__row">
         <div class="about-product__row-text">
-          <h3>{{ contentText.row_first.title }}</h3>
+          <h3 v-if="contentText.row_first.title != ''">{{ contentText.row_first.title }}</h3>
           <p>{{ contentText.row_first.text1 }}</p>
           <ul v-if="contentText.row_first.list_first.item1 != ''">
             <li>{{ contentText.row_first.list_first.item1 }}</li>
@@ -31,7 +31,7 @@
             <li v-if="contentText.row_second.list_first.item3 != ''">{{ contentText.row_second.list_first.item3 }}</li>
             <li v-if="contentText.row_second.list_first.item4 != ''">{{ contentText.row_second.list_first.item4 }}</li>
           </ul>
-          <p>{{ contentText.row_second.text2 }}</p>
+          <p v-if="contentText.row_second.text2 != ''">{{ contentText.row_second.text2 }}</p>
           <ul v-if="contentText.row_second.list_second.item1 != ''">
             <li>{{ contentText.row_second.list_second.item1 }}</li>
             <li>{{ contentText.row_second.list_second.item2 }}</li>
@@ -82,7 +82,7 @@
         </div>
       </div>
       <div class="about-product__row" v-if="contentText.row_fifth.text1 != ''">
-        <div class="about-product__row-text">
+        <div class="about-product__row-text  about-product__row-text--fifth">
           <h3>{{ contentText.row_fifth.title }}</h3>
           <p>{{ contentText.row_fifth.text1 }}</p>
           <ul v-if="contentText.row_fifth.list_first.item1 != ''">
@@ -92,7 +92,7 @@
             <li v-if="contentText.row_fifth.list_first.item4 != ''">{{ contentText.row_fifth.list_first.item4 }}</li>
             <li v-if="contentText.row_fifth.list_first.item5 != ''">{{ contentText.row_fifth.list_first.item5 }}</li>
           </ul>
-          <p>{{ contentText.row_fifth.text2 }}</p>
+          <p v-if="contentText.row_fifth.text2 != ''">{{ contentText.row_fifth.text2 }}</p>
           <ul v-if="contentText.row_fifth.list_second.item1 != ''">
             <li>{{ contentText.row_fifth.list_second.item1 }}</li>
             <li>{{ contentText.row_fifth.list_second.item2 }}</li>
@@ -132,7 +132,7 @@ export default {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 20px;
     background: $main-bg-color;
   }
 

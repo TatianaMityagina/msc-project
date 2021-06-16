@@ -3,7 +3,9 @@
     <div class="fence-types__container">
       <h2 class="fence-types__title">Виды барьерных ограждений</h2>
       <figure class="fence-types__item">
-        <img class="fence-types__item-image" src="../../assets/img/fence-types/fence-types@1x.webp" srcset="../../assets/img/fence-types/fence-types@2x.webp 2x" width="260" height="260" alt="Photo fence type">
+        <img alt="Photo fence type" class="fence-types__item-image"
+             height="260" src="../../assets/img/fence-types/fence-types@1x.webp" srcset="../../assets/img/fence-types/fence-types@2x.webp 2x"
+             width="260">
         <div class="fence-types__item-content">
           <div class="fence-types__content">
             <h3>Дорожные односторонние (11ДО)</h3>
@@ -33,7 +35,9 @@
       </figure>
 
       <figure class="fence-types__item">
-        <img class="fence-types__item-image" src="../../assets/img/fence-types/fence-types-2@1x.webp" srcset="../../assets/img/fence-types/fence-types-2@2x.webp 2x" width="260" height="260" alt="Photo fence type">
+        <img alt="Photo fence type" class="fence-types__item-image"
+             height="260" src="../../assets/img/fence-types/fence-types-2@1x.webp" srcset="../../assets/img/fence-types/fence-types-2@2x.webp 2x"
+             width="260">
         <div class="fence-types__item-content">
           <div class="fence-types__content">
             <h3>Дорожные двухсторонние (11ДД)</h3>
@@ -61,146 +65,146 @@
 </template>
 
 <script>
-  export default {
-    name: 'FenceTypes'
-  }
+export default {
+  name: 'FenceTypes'
+}
 </script>
 
 <style lang="scss" scoped>
-  .fence-types {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 120px 40px;
+.fence-types {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 120px 40px;
+}
+
+.fence-types__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.fence-types__title {
+  margin-bottom: 60px;
+
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.fence-types__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 30px 30px 30px 10px;
+  margin-bottom: 20px;
+
+  background: $main-bg-color;
+  box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08), 0px 20px 30px -12px rgba(32, 75, 69, 0.08);
+  border-radius: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.fence-types__item-image {
+  margin-right: 30px;
+}
+
+.fence-types__item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fence-types__content {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
-  .fence-types__container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1280px;
-    width: 100%;
-  }
-
-  .fence-types__title {
-    margin-bottom: 60px;
+  h3 {
+    margin-bottom: 15px;
 
     font-weight: 600;
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 22px;
+    line-height: 27px;
     color: rgba(0, 0, 0, 0.8);
   }
 
-  .fence-types__item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 30px 30px 30px 10px;
-    margin-bottom: 20px;
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    opacity: 0.9;
+  }
+}
 
-    background: $main-bg-color;
-    box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08), 0px 20px 30px -12px rgba(32, 75, 69, 0.08);
-    border-radius: 12px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+@include tablet-large {
+  .fence-types {
+    padding: 120px 40px 100px;
   }
 
-  .fence-types__item-image {
-    margin-right: 30px;
-  }
-
-  .fence-types__item-content {
-    display: flex;
-    flex-direction: column;
+  .fence-types__title {
+    font-size: 24px;
+    line-height: 29px;
   }
 
   .fence-types__content {
-    margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 20px;
 
     h3 {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
 
-      font-weight: 600;
-      font-size: 22px;
-      line-height: 27px;
-      color: rgba(0, 0, 0, 0.8);
+      font-size: 20px;
+      line-height: 24px;
     }
 
     p {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 140%;
-      opacity: 0.9;
+      font-size: 12px;
     }
   }
+}
 
-  @include tablet-large {
-    .fence-types {
-      padding: 120px 40px 100px;
-    }
-
-    .fence-types__title {
-      font-size: 24px;
-      line-height: 29px;
-    }
-
-    .fence-types__content {
-      margin-bottom: 20px;
-
-      h3 {
-        margin-bottom: 10px;
-
-        font-size: 20px;
-        line-height: 24px;
-      }
-
-      p {
-        font-size: 12px;
-      }
-    }
+@include mobile {
+  .fence-types {
+    padding: 120px 0 30px;
   }
 
-  @include mobile {
-    .fence-types {
-      padding: 120px 0 30px;
+  .fence-types__title {
+    padding: 0 15px;
+    margin-bottom: 70px;
+
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .fence-types__item {
+    flex-direction: column;
+    padding: 10px 15px 30px 15px;
+  }
+
+  .fence-types__item-image {
+    margin-bottom: 20px;
+    width: 158px;
+    height: 158px;
+  }
+
+  .fence-types__content {
+    h3 {
+      margin-bottom: 14px;
+
+      font-size: 16px;
+      line-height: 20px;
     }
 
-    .fence-types__title {
-      padding: 0 15px;
-      margin-bottom: 70px;
-
-      font-size: 18px;
-      line-height: 22px;
-      text-align: center;
-    }
-
-    .fence-types__item {
-      flex-direction: column;
-      padding: 10px 15px 30px 15px;
-    }
-
-    .fence-types__item-image {
-      margin-bottom: 20px;
-      width: 158px;
-      height: 158px;
-    }
-
-    .fence-types__content {
-      h3 {
-        margin-bottom: 14px;
-
-        font-size: 16px;
-        line-height: 20px;
-      }
-
-      p {
-        font-size: 11px;
-      }
+    p {
+      font-size: 11px;
     }
   }
+}
 </style>

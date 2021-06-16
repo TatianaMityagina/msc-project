@@ -3,7 +3,8 @@
     <picture class="screen-production__image">
       <source media="(max-width: 1279px)" srcset="../../assets/img/screen-production/screen-production-1920.webp">
       <source media="(max-width: 1919px)" srcset="../../assets/img/screen-production/screen-production-1360.webp">
-      <img src="../../assets/img/screen-production/screen-production-1920.webp" width="960" height="900" alt="Photo screen">
+      <img alt="Photo screen" height="900" src="../../assets/img/screen-production/screen-production-1920.webp"
+           width="960">
     </picture>
 
     <div class="screen-production__content-wrapper">
@@ -29,131 +30,131 @@
 </template>
 
 <script>
-  export default {
-    name: 'ScreenProduction'
-  }
+export default {
+  name: 'ScreenProduction'
+}
 </script>
 
 <style lang="scss" scoped>
-  .screen-production {
-    display: flex;
-    align-items: center;
-    max-width: 1920px;
-    width: 100%;
+.screen-production {
+  display: flex;
+  align-items: center;
+  max-width: 1920px;
+  width: 100%;
 
-    background: $main-bg-color;
+  background: $main-bg-color;
+}
+
+.screen-production__image {
+  margin-right: 160px;
+}
+
+.screen-production__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+
+}
+
+.screen-production__content-title {
+  margin-bottom: 30px;
+
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.screen-production__content-text {
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include desktop {
+  .screen-production__image {
+    margin-right: 120px;
+
+    img {
+      width: 44vw;
+      height: 720px;
+    }
+  }
+}
+
+@include desktop-small {
+  .screen-production__image {
+    margin-right: 100px;
+
+    img {
+      width: 46.8vw;
+      height: 640px;
+    }
+  }
+}
+
+@include tablet-large {
+  .screen-production {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .screen-production__image {
-    margin-right: 160px;
+    margin: 0;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   .screen-production__content-wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 480px;
-
+    padding: 60px 40px 100px;
+    max-width: 100%;
   }
 
   .screen-production__content-title {
-    margin-bottom: 30px;
-
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 160%;
-    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    font-size: 20px;
   }
 
   .screen-production__content-text {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 160%;
+@include tablet {
+  .screen-production__image {
+    img {
+      height: 497px;
+    }
+  }
+}
 
-    &:last-child {
-      margin-bottom: 0;
+@include mobile {
+  .screen-production__image {
+    img {
+      height: auto;
     }
   }
 
-  @include desktop {
-    .screen-production__image {
-      margin-right: 120px;
-
-      img {
-        width: 44vw;
-        height: 720px;
-      }
-    }
+  .screen-production__content-wrapper {
+    padding: 40px 15px 60px;
   }
 
-  @include desktop-small {
-    .screen-production__image {
-      margin-right: 100px;
-
-      img {
-        width: 46.8vw;
-        height: 640px;
-      }
-    }
+  .screen-production__content-title {
+    font-size: 18px;
   }
 
-  @include tablet-large {
-    .screen-production {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .screen-production__image {
-      margin: 0;
-
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .screen-production__content-wrapper {
-      padding: 60px 40px 100px;
-      max-width: 100%;
-    }
-
-    .screen-production__content-title {
-      margin-bottom: 20px;
-      font-size: 20px;
-    }
-
-    .screen-production__content-text {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
+  .screen-production__content-text {
+    font-size: 13px;
   }
-
-  @include tablet {
-    .screen-production__image {
-      img {
-        height: 497px;
-      }
-    }
-  }
-
-  @include mobile {
-    .screen-production__image {
-      img {
-        height: auto;
-      }
-    }
-
-    .screen-production__content-wrapper {
-      padding: 40px 15px 60px;
-    }
-
-    .screen-production__content-title {
-      font-size: 18px;
-    }
-
-    .screen-production__content-text {
-      font-size: 13px;
-    }
-  }
+}
 </style>

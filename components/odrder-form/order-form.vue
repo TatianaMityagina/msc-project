@@ -1,30 +1,31 @@
 <template>
   <section class="order-form">
     <div class="order-form__container">
-      <form class="order-form__form-wrapper" action="">
+      <form action="" class="order-form__form-wrapper">
         <h2 class="order-form__form-title">Заполните форму и получите наш полный каталог</h2>
         <div class="order-form__form-row">
           <div class="order-form__form-col">
             <label for="name">Имя</label>
-            <input type="text" id="name" placeholder="Александр">
+            <input id="name" placeholder="Александр" type="text">
           </div>
           <div class="order-form__form-col">
             <label for="phone">Телефон</label>
-            <input type="tel" id="phone" placeholder="+7(ххх) ххх - хх - хх">
+            <input id="phone" placeholder="+7(ххх) ххх - хх - хх" type="tel">
           </div>
           <div class="order-form__form-col">
             <label for="email">Почта</label>
-            <input type="email" id="email" placeholder="info@mail.ru">
+            <input id="email" placeholder="info@mail.ru" type="email">
           </div>
         </div>
         <div class="order-form__form-row">
           <div class="order-form__form-col order-form__form-col--message">
             <label for="message">Сообщение</label>
-            <textarea type="text" id="message"></textarea>
+            <textarea id="message" type="text"></textarea>
           </div>
           <div class="order-form__form-col">
             <button class="order-form__form-btn" type="submit">Отправить заявку</button>
-            <p class="order-form__form-accept">Нажимая на кнопку я подтверждаю, что я ознакомлен с условиями <a href="">политики конфиденциальности</a></p>
+            <p class="order-form__form-accept">Нажимая на кнопку я подтверждаю, что я ознакомлен с условиями <a href="">политики
+              конфиденциальности</a></p>
           </div>
         </div>
       </form>
@@ -36,11 +37,9 @@
 
 export default {
   name: 'OrderForm',
-  components: {
-  },
-  data () {
-    return {
-    }
+  components: {},
+  data() {
+    return {}
   }
 }
 </script>
@@ -137,13 +136,13 @@ export default {
   border: none;
   outline: none;
   background: $main-bg-color;
-  box-shadow: 4px 6px 1px 0 rgba(0,0,0,0.1);
+  box-shadow: 4px 6px 1px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.4s;
 
   &:hover,
   :focus {
-    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1);
     transform: translatey(-0.65em);
     transition: 0.4s;
   }

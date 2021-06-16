@@ -4,251 +4,512 @@
       <li class="menu__list-item" @click="close">
         <a class="menu__list-link">
           <span>Услуги</span>
-          <svg class="menu__icon-open" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="menu__icon-open" fill="none" height="9" viewBox="0 0 14 9" width="14"
+               xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
           </svg>
         </a>
 
         <ul class="menu__sublist">
-          <li class="menu__sublist-item" @click="close" :class="{'menu__sublist-item--active' : $route.path === '/fence' }">
+          <li :class="{'menu__sublist-item--active' : $route.path === '/fence' }" class="menu__sublist-item"
+              @click="close">
             <nuxt-link class="menu__sublist-link" to="/fence">
               <span>Барьерное ограждение</span>
             </nuxt-link>
             <ul class="sublist__dropdown-list">
-              <li><nuxt-link to="/fence/barrier-fence-11DO">Барьерное ограждение 11 ДО</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-21DO">Барьерное ограждение 21 ДО</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-wave">Барьерное ограждение Волна</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-road-fence">Барьерное дорожное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-with-separating-beam">Барьерное ограждение с отделяющейся балкой</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-U2">Барьерное ограждение У2</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-U3">Барьерное ограждение У3</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-U4">Барьерное ограждение У4</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-SB-1">Барьерное ограждение СБ-1</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-EC-1">Барьерное ограждение ЭК-1</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-for-painting">Барьерные ограждения под покраску</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-with-no-console">Бесконсольное барьерное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/galvanized-road-barriers">Оцинкованные дорожные ограждения</nuxt-link></li>
-              <li><nuxt-link to="/fence/road-barriers-guiding-devices">Дорожные ограждения и направляющие устройства</nuxt-link></li>
-              <li><nuxt-link to="/fence/metal-barrier-fence">Металлическое барьерное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/bridge-barrier">Мостовое барьерное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/bridge-barrier-fence-11MO">Мостовое барьерное ограждение 11МО</nuxt-link></li>
-              <li><nuxt-link to="/fence/one-sided-barrier-fence">Одностороннее барьерное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-calculation">Расчет барьерного ограждения</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-installation">Установка барьерного ограждения</nuxt-link></li>
-              <li><nuxt-link to="/fence/front-barrier-fence">Фронтальное барьерное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/pedestrian-fences">Пешеходные ограждения</nuxt-link></li>
-              <li><nuxt-link to="/fence/metal-pedestrian-fence">Металлическое пешеходное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/guide-pedestrian-barriers">Направляющие пешеходные ограждения</nuxt-link></li>
-              <li><nuxt-link to="/fence/restricting-pedestrian-fence">Ограничивающее пешеходное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/pedestrian-barrier-cross">Пешеходное ограждение Крест </nuxt-link></li>
-              <li><nuxt-link to="/fence/pedestrian-barrier-ORUD">Пешеходное ограждение ОРУД</nuxt-link></li>
-              <li><nuxt-link to="/fence/pedestrian-barrier-PO-1-cross">Пешеходное ограждение ПО-1 Крест</nuxt-link></li>
-              <li><nuxt-link to="/fence/pedestrian-barrier-PO-2">Пешеходное ограждение ПО-2</nuxt-link></li>
-              <li><nuxt-link to="/fence/pedestrian-barrier-PO-6">Пешеходное ограждение ПО-6</nuxt-link></li>
-              <li><nuxt-link to="/fence/pedestrian-railings">Пешеходное перильное ограждение</nuxt-link></li>
-              <li><nuxt-link to="/fence/retaining-pedestrian-fence">Удерживающие пешеходные ограждения</nuxt-link></li>
-              <li><nuxt-link to="/fence/installing-pedestrian-barriers">Установка пешеходных ограждений</nuxt-link></li>
-              <li><nuxt-link to="/fence/barrier-fence-end-piece">Концевой элемент барьерного ограждения</nuxt-link></li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-11DO">Барьерное ограждение 11 ДО</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-21DO">Барьерное ограждение 21 ДО</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-wave">Барьерное ограждение Волна</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-road-fence">Барьерное дорожное ограждение</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-with-separating-beam">Барьерное ограждение с отделяющейся балкой
+                </nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-U2">Барьерное ограждение У2</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-U3">Барьерное ограждение У3</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-U4">Барьерное ограждение У4</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-SB-1">Барьерное ограждение СБ-1</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-EC-1">Барьерное ограждение ЭК-1</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-for-painting">Барьерные ограждения под покраску</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-with-no-console">Бесконсольное барьерное ограждение</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/galvanized-road-barriers">Оцинкованные дорожные ограждения</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/road-barriers-guiding-devices">Дорожные ограждения и направляющие устройства
+                </nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/metal-barrier-fence">Металлическое барьерное ограждение</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/bridge-barrier">Мостовое барьерное ограждение</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/bridge-barrier-fence-11MO">Мостовое барьерное ограждение 11МО</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/one-sided-barrier-fence">Одностороннее барьерное ограждение</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-calculation">Расчет барьерного ограждения</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-installation">Установка барьерного ограждения</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/front-barrier-fence">Фронтальное барьерное ограждение</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/pedestrian-fences">Пешеходные ограждения</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/metal-pedestrian-fence">Металлическое пешеходное ограждение</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/guide-pedestrian-barriers">Направляющие пешеходные ограждения</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/restricting-pedestrian-fence">Ограничивающее пешеходное ограждение</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/pedestrian-barrier-cross">Пешеходное ограждение Крест</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/pedestrian-barrier-ORUD">Пешеходное ограждение ОРУД</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/pedestrian-barrier-PO-1-cross">Пешеходное ограждение ПО-1 Крест</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/pedestrian-barrier-PO-2">Пешеходное ограждение ПО-2</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/pedestrian-barrier-PO-6">Пешеходное ограждение ПО-6</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/pedestrian-railings">Пешеходное перильное ограждение</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/retaining-pedestrian-fence">Удерживающие пешеходные ограждения</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/installing-pedestrian-barriers">Установка пешеходных ограждений</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/fence/barrier-fence-end-piece">Концевой элемент барьерного ограждения</nuxt-link>
+              </li>
             </ul>
           </li>
 
           <li class="menu__sublist-item" @click="close">
-            <nuxt-link class="menu__sublist-link" to="/screen" :class="{'menu__sublist-link--active' : $route.path === '/screen' }">
+            <nuxt-link :class="{'menu__sublist-link--active' : $route.path === '/screen' }" class="menu__sublist-link"
+                       to="/screen">
               <span>Шумозащитные экраны</span>
             </nuxt-link>
             <ul class="sublist__dropdown-list">
-              <li><nuxt-link to="/screen/acoustic-screen">Акустический экран</nuxt-link></li>
-              <li><nuxt-link to="/screen/noise-barriers">Шумозащитные заборы</nuxt-link></li>
-              <li><nuxt-link to="/screen/noise-screen">Шумозащитные экраны</nuxt-link></li>
-              <li><nuxt-link to="/screen/production-of-noise-screens">Производство шумозащитных экранов</nuxt-link></li>
-              <li><nuxt-link to="/screen/noise-screens-at-russian-railways">Шумозащитные экраны на РЖД</nuxt-link></li>
-              <li><nuxt-link to="/screen/installation-of-noise-screens">Монтаж шумозащитных экранов</nuxt-link></li>
-              <li><nuxt-link to="/screen/transparent-noise-screens">Прозрачные шумозащитные экраны</nuxt-link></li>
-              <li><nuxt-link to="/screen/calculation-noise-shield">Расчет шумозащитного экрана</nuxt-link></li>
-              <li><nuxt-link to="/screen/noise-screens-top10">Шумозащитные экраны Топ 10</nuxt-link></li>
-              <li><nuxt-link to="/screen/noise-screen-made-of-polycarbonate">Шумозащитный экран из поликарбоната </nuxt-link></li>
-              <li><nuxt-link to="/screen/noise-screen-made-of-sandwich-panels">Шумозащитный экран из сэндвич-панелей</nuxt-link></li>
+              <li>
+                <nuxt-link to="/screen/acoustic-screen">Акустический экран</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/noise-barriers">Шумозащитные заборы</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/noise-screen">Шумозащитные экраны</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/production-of-noise-screens">Производство шумозащитных экранов</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/noise-screens-at-russian-railways">Шумозащитные экраны на РЖД</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/installation-of-noise-screens">Монтаж шумозащитных экранов</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/transparent-noise-screens">Прозрачные шумозащитные экраны</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/calculation-noise-shield">Расчет шумозащитного экрана</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/noise-screens-top10">Шумозащитные экраны Топ 10</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/noise-screen-made-of-polycarbonate">Шумозащитный экран из поликарбоната
+                </nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/screen/noise-screen-made-of-sandwich-panels">Шумозащитный экран из сэндвич-панелей
+                </nuxt-link>
+              </li>
             </ul>
           </li>
 
           <li class="menu__sublist-item" @click="close">
-            <nuxt-link class="menu__sublist-link" to="/pipe" :class="{'menu__sublist-link--active' : $route.path === '/pipe' }">
+            <nuxt-link :class="{'menu__sublist-link--active' : $route.path === '/pipe' }" class="menu__sublist-link"
+                       to="/pipe">
               <span>Трубы спиральновитые</span>
             </nuxt-link>
+            <ul class="sublist__dropdown-list">
+              <li>
+                <nuxt-link to="/pipe/pipe-underneath-sidewalk">Водопропускные трубы под тротуаром</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/culvert-under-the-road">Водопропускная труба под дорогой</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/culvert-on-the-railway">Водопропускная труба на жд</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/culvert-under-embankments">Водопропускная труба под насыпями</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/corrugated-culverts">Гофрированные водопропускные трубы</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/metal-culverts">Металлические водопропускные трубы</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/metal-corrugated-culverts">Металлические гофрированные водопропускные трубы</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/metal-corrugated-all-metal-culverts">Металлические гофрированные цельновитые водопропускные трубы </nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/round-culverts">Круглые водопропускные трубы</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/culvert-installation">Монтаж водопропускных труб</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/calculation-of-culverts">Расчет водопропускных труб</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/spiral-corrugated-metal-pipes">Спиральновитые гофрированные металлические трубы</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/spiral-corrugated-metal-pipes-0.5">Спиральновитые гофрированные металлические трубы с диаметром 0,5 м</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/spiral-pipe">Спиральновитая труба</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/pipe/culvert">Водопропускная труба</nuxt-link>
+              </li>
+            </ul>
           </li>
         </ul>
       </li>
 
       <li class="menu__list-item" @click="close">
-        <nuxt-link to="/news" class="menu__list-link" :class="{'menu__list-link--active' : $route.path === '/news' }">
+        <nuxt-link :class="{'menu__list-link--active' : $route.path === '/news' }" class="menu__list-link" to="/news">
           Новости
         </nuxt-link>
       </li>
 
       <li class="menu__list-item" @click="close">
-        <a class="menu__list-link" href="#contacts" v-show="$route.path === '/'">Контакты</a>
+        <a v-show="$route.path === '/'" class="menu__list-link" href="#contacts">Контакты</a>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
-  export default {
-    name: 'Menu',
-    methods: {
-      close() {
-        this.$emit('close')
-      }
+export default {
+  name: 'Menu',
+  methods: {
+    close() {
+      this.$emit('close')
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  .menu {
-    margin-right: auto;
+.menu {
+  margin-right: auto;
+}
+
+.menu__list {
+  position: relative;
+  display: flex;
+}
+
+.menu__list-item {
+  margin-right: 48px;
+
+  transition: $style-change-duration;
+
+  &:last-child {
+    margin-right: 0;
   }
 
-  .menu__list {
-    position: relative;
-    display: flex;
-  }
-
-  .menu__list-item {
-    margin-right: 48px;
-
-    transition: $style-change-duration;
-
-    &:last-child {
-      margin-right: 0;
+  &:hover,
+  :focus-within {
+    .menu__icon-open {
+      transition: $style-change-duration;
+      transform: rotate(180deg);
     }
 
-    &:hover,
-    :focus-within {
-      .menu__icon-open {
-        transition: $style-change-duration;
-        transform: rotate(180deg);
-      }
+    .menu__sublist {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
 
-      .menu__sublist {
+// focus-within polyfill
+.menu__list-item:hover .menu__sublist,
+.menu__list-item[focus-within] .menu__sublist {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu__icon-open {
+  transition: $style-change-duration;
+}
+
+.menu__list-link {
+  position: relative;
+  display: block;
+  padding: 21px 0;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: $style-change-duration;
+  user-select: none;
+  outline: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    margin-bottom: 10px;
+
+    background-color: $bg-color-orange;
+    transition: transform 0.4s;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  &:focus::after {
+    transform: scaleX(1);
+  }
+
+  &:hover:not(.focus-visible)::after {
+    transform: scaleX(1);
+  }
+
+  &:focus:not(.focus-visible)::after {
+    transform: scaleX(0);
+  }
+}
+
+.menu .menu__list-link--active {
+  &::after {
+    transform: scaleX(1)
+  }
+}
+
+.menu .menu__sublist {
+  position: absolute;
+  z-index: 3;
+  top: 65px;
+  left: -45px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  opacity: 0;
+
+  box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08),
+  0px 20px 30px -12px rgba(32, 75, 69, 0.08);
+  border-radius: 12px;
+  background-color: $main-bg-color;
+  pointer-events: none;
+  transition: $style-change-duration;
+}
+
+.menu__sublist-item {
+  position: relative;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    .menu__sublist-link {
+      padding-left: 25px;
+      color: $font-color-orange;
+
+      &::before {
         opacity: 1;
-        pointer-events: auto;
+        transition: $style-change-duration;
       }
     }
+
+    .sublist__dropdown-list {
+      opacity: 1;
+      padding-top: 15px;
+      height: auto;
+      transition: all 0.5s ease-in-out;
+      pointer-events: auto;
+    }
+  }
+}
+
+.menu__sublist-link::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 0;
+
+  width: 18px;
+  height: 12px;
+
+  opacity: 0;
+
+  background-image: url("../../../assets/svg/icon-link.svg");
+  background-repeat: no-repeat;
+}
+
+.menu .menu__sublist-item--active {
+  .menu__sublist-link {
+    padding-left: 25px;
+    color: $font-color-orange;
+
+    &::before {
+      opacity: 1;
+      transition: $style-change-duration;
+    }
+  }
+}
+
+.menu__sublist-link {
+  display: inline-block;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: $style-change-duration;
+}
+
+.sublist__dropdown-list {
+  @include list-reset;
+  column-count: 4;
+  padding-left: 15px;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  & li {
+    width: 240px;
   }
 
-  // focus-within polyfill
-  .menu__list-item:hover .menu__sublist,
-  .menu__list-item[focus-within] .menu__sublist {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .menu__icon-open {
-    transition: $style-change-duration;
-  }
-
-  .menu__list-link {
-    position: relative;
-    display: block;
-    padding: 21px 0;
-
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+  & a {
+    padding: 5px 0;
+    font-size: 13px;
+    line-height: 14px;
     color: inherit;
     text-decoration: none;
 
-    cursor: pointer;
-    transition: $style-change-duration;
-    user-select: none;
-    outline: none;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-
-      width: 100%;
-      height: 2px;
-      margin-bottom: 10px;
-
-      background-color: $bg-color-orange;
-      transition: transform 0.4s;
-      transform: scaleX(0);
-      transform-origin: left;
-    }
-
-    &:focus::after{
-      transform: scaleX(1);
-    }
-
-    &:hover:not(.focus-visible)::after {
-      transform: scaleX(1);
-    }
-
-    &:focus:not(.focus-visible)::after {
-      transform: scaleX(0);
+    &:hover {
+      color: $font-color-orange;
+      transition: $style-change-duration;
     }
   }
+}
 
-  .menu .menu__list-link--active {
-    &::after  {
-      transform: scaleX(1)
-    }
-  }
-
-  .menu .menu__sublist {
+@include tablet-large {
+  .menu {
     position: absolute;
-    z-index: 3;
-    top: 65px;
-    left: -45px;
-    display: flex;
-    flex-direction: column;
+    top: 84px;
+    right: 0;
+
+    margin: 0;
     padding: 40px;
-    opacity: 0;
+    width: 320px;
+    height: 320px;
+
+    opacity: 1;
 
     box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08),
-      0px 20px 30px -12px rgba(32, 75, 69, 0.08);
+    0px 20px 30px -12px rgba(32, 75, 69, 0.08);
     border-radius: 12px;
     background-color: $main-bg-color;
+    pointer-events: auto;
+    transition: $style-change-duration;
+  }
+
+
+  .main-header__container .menu--open {
+    opacity: 0;
     pointer-events: none;
     transition: $style-change-duration;
   }
 
-  .menu__sublist-item {
-    position: relative;
-    margin-bottom: 15px;
+  .menu__list {
+    flex-direction: column;
+  }
+
+  .menu__list-item {
+    margin-right: 0;
+    margin-bottom: 32px;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
 
-    &:hover {
-      .menu__sublist-link {
-        padding-left: 25px;
-        color: $font-color-orange;
+  .menu__list-link {
+    display: inline;
+    padding: 0;
 
-        &::before {
-          opacity: 1;
-          transition: $style-change-duration;
-        }
-      }
-
-      .sublist__dropdown-list {
-        opacity: 1;
-        padding-top: 15px;
-        height: auto;
-        transition: all 0.5s ease-in-out;
-        pointer-events: auto;
-      }
+    &::after {
+      position: unset;
     }
   }
 
-  .menu__sublist-link::before {
+  .menu__list-link::before {
     position: absolute;
     content: "";
-    top: 4px;
+    top: 5px;
     left: 0;
 
     width: 18px;
@@ -260,156 +521,40 @@
     background-repeat: no-repeat;
   }
 
-  .menu .menu__sublist-item--active {
-    .menu__sublist-link {
-      padding-left: 25px;
-      color: $font-color-orange;
+  .menu__list-link:hover {
+    padding-left: 25px;
+    color: $font-color-orange;
 
-      &::before {
-        opacity: 1;
-        transition: $style-change-duration;
-      }
-    }
-  }
-
-  .menu__sublist-link {
-    display: inline-block;
-    align-items: center;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 18px;
-    color: inherit;
-    text-decoration: none;
-
-    cursor: pointer;
-    transition: $style-change-duration;
-  }
-
-  .sublist__dropdown-list {
-    @include list-reset;
-    column-count: 4;
-    padding-left: 15px;
-    height: 0;
-    opacity: 0;
-    pointer-events: none;
-
-    & li {
-      width: 240px;
-    }
-
-    & a {
-      padding: 5px 0;
-      font-size: 13px;
-      line-height: 14px;
-      color: inherit;
-      text-decoration: none;
-
-      &:hover {
-        color: $font-color-orange;
-        transition: $style-change-duration;
-      }
-    }
-  }
-
-  @include tablet-large {
-    .menu {
-      position: absolute;
-      top: 84px;
-      right: 0;
-
-      margin: 0;
-      padding: 40px;
-      width: 320px;
-      height: 320px;
-
+    &::before {
       opacity: 1;
-
-      box-shadow: 0px 2px 10px rgba(32, 75, 69, 0.08),
-        0px 20px 30px -12px rgba(32, 75, 69, 0.08);
-      border-radius: 12px;
-      background-color: $main-bg-color;
-      pointer-events: auto;
       transition: $style-change-duration;
     }
-
-
-    .main-header__container .menu--open {
-      opacity: 0;
-      pointer-events: none;
-      transition: $style-change-duration;
-    }
-
-    .menu__list {
-      flex-direction: column;
-    }
-
-    .menu__list-item {
-      margin-right: 0;
-      margin-bottom: 32px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    .menu__list-link {
-      display: inline;
-      padding: 0;
-
-      &::after {
-        position: unset;
-      }
-    }
-
-    .menu__list-link::before {
-      position: absolute;
-      content: "";
-      top: 5px;
-      left: 0;
-
-      width: 18px;
-      height: 12px;
-
-      opacity: 0;
-
-      background-image: url("../../../assets/svg/icon-link.svg");
-      background-repeat: no-repeat;
-    }
-
-    .menu__list-link:hover {
-      padding-left: 25px;
-      color: $font-color-orange;
-
-      &::before {
-        opacity: 1;
-        transition: $style-change-duration;
-      }
-    }
-
-    .menu__icon-open {
-      display: none;
-    }
-
-    .menu .menu__sublist {
-      position: static;
-
-      padding: 25px 0 0 0;
-      width: 100%;
-      opacity: 1;
-
-      background: none;
-      border-radius: none;
-      box-shadow: none;
-    }
   }
 
-  @include mobile {
-    .menu {
-      top: 64px;
-      width: 100vw;
-      height: auto;
-      border-radius: 0;
-    }
+  .menu__icon-open {
+    display: none;
   }
+
+  .menu .menu__sublist {
+    position: static;
+
+    padding: 25px 0 0 0;
+    width: 100%;
+    opacity: 1;
+
+    background: none;
+    border-radius: none;
+    box-shadow: none;
+  }
+}
+
+@include mobile {
+  .menu {
+    top: 64px;
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+  }
+}
 
 </style>

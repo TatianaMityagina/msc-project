@@ -6,6 +6,7 @@
     <FenceInstallation/>
     <FenceTypes/>
     <FenceGallary/>
+    <Navigation />
   </main>
 </template>
 
@@ -16,6 +17,7 @@ import CentralContent from '../../components/central-content/central-content'
 import FenceInstallation from '../../components/fence-installation/fence-installation'
 import FenceTypes from '../../components/fence-types/fence-types'
 import FenceGallary from '../../components/fence-gallary/fence-gallary'
+import Navigation from '../../components/navigation/navigation'
 
 
 export default {
@@ -26,7 +28,39 @@ export default {
     CentralContent,
     FenceInstallation,
     FenceTypes,
-    FenceGallary
+    FenceGallary,
+    Navigation
+  },
+  head() {
+    return {
+      title: 'Барьерные ограждения',
+      meta: [
+        {
+          hid: 'title',
+          name: 'title',
+          content: 'Купить барьерное ограждение и заказать установку дорожного барьера'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Купить качественные дорожные ограждения. Зачем нужны барьерные ограничители на автомобильных дорогах. Функциональность и технические аспекты барьеров для автодорог'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Купить барьерное ограждение и заказать установку дорожного барьера'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Купить качественные дорожные ограждения. Зачем нужны барьерные ограничители на автомобильных дорогах. Функциональность и технические аспекты барьеров для автодорог'
+        },
+        {hid: 'og:url', property: 'og:url', content: `https://msk23.ru/fence`}
+      ],
+      link: [
+        {rel: 'canonical', href: `https://msk23.ru/fence`}
+      ]
+    }
   },
   data() {
     return {

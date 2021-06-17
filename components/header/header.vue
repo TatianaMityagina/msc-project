@@ -110,7 +110,7 @@ export default {
 }
 
 .main-header__logotype-link {
-  margin-right: 142px;
+  margin-right: 40px;
 }
 
 .main-header__phone-wrapper {
@@ -167,7 +167,9 @@ export default {
     width: 40px;
     height: 40px;
   }
+}
 
+@include tablet-large {
   .main-header__button-menu {
     display: flex;
   }

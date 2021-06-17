@@ -1,7 +1,7 @@
 <template>
   <section :class="contentText.class" class="about-product">
     <div class="about-product__container">
-      <div class="about-product__row">
+      <div class="about-product__row about-product__row--first"  v-if="contentText.row_first.text1 != ''">
         <div class="about-product__row-text">
           <h3 v-if="contentText.row_first.title != ''">{{ contentText.row_first.title }}</h3>
           <p>{{ contentText.row_first.text1 }}</p>
@@ -160,11 +160,21 @@ export default {
   margin-bottom: 80px;
 }
 
+.culvert-operation-mode .about-product__row--first,
+.applications-for-culverts .about-product__row--first,
 .culvert-on-the-railway .about-product__row--second,
 .round-culverts .about-product__row--second,
-.calculation-of-culverts .about-product__row--fourth,
-.spiral-pipe .about-product__row--second {
+.spiral-pipe .about-product__row--second,
+.guardrail-weight .about-product__row--second,
+.calculation-of-culverts .about-product__row--fourth {
   margin-bottom: 0;
+}
+
+.culvert-operation-mode .about-product__row--first,
+.applications-for-culverts .about-product__row--first,
+.noise-screens-and-acoustic-barriers .about-product__row--second,
+.characteristics-road-culverts .about-product__row--first {
+  margin-bottom: 15px;
 }
 
 .about-product__row-text {
@@ -258,6 +268,23 @@ export default {
     }
   }
 
+  .culvert-operation-mode .about-product__row--first,
+  .applications-for-culverts .about-product__row--first,
+  .culvert-on-the-railway .about-product__row--second,
+  .round-culverts .about-product__row--second,
+  .spiral-pipe .about-product__row--second,
+  .guardrail-weight .about-product__row--second,
+  .calculation-of-culverts .about-product__row--fourth {
+    margin-bottom: 0;
+  }
+
+  .culvert-operation-mode .about-product__row--first,
+  .applications-for-culverts .about-product__row--first,
+  .noise-screens-and-acoustic-barriers .about-product__row--second,
+  .characteristics-road-culverts .about-product__row--first {
+    margin-bottom: 15px;
+  }
+
   .orange-line {
     padding-top: 60px;
     margin-bottom: 60px;
@@ -277,6 +304,23 @@ export default {
       height: auto;
       margin: 0 0 25px 0;
     }
+  }
+
+  .culvert-operation-mode .about-product__row--first,
+  .applications-for-culverts .about-product__row--first,
+  .culvert-on-the-railway .about-product__row--second,
+  .round-culverts .about-product__row--second,
+  .spiral-pipe .about-product__row--second,
+  .guardrail-weight .about-product__row--second,
+  .calculation-of-culverts .about-product__row--fourth {
+    margin-bottom: 0;
+  }
+
+  .culvert-operation-mode .about-product__row--first,
+  .applications-for-culverts .about-product__row--first,
+  .noise-screens-and-acoustic-barriers .about-product__row--second,
+  .characteristics-road-culverts .about-product__row--first {
+    margin-bottom: 10px;
   }
 
   .orange-line {

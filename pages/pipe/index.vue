@@ -37,6 +37,37 @@ export default {
     PipeApplication,
     PipeBenefit
   },
+  head() {
+    return {
+      title: 'Трубы спиральновитые',
+      meta: [
+        {
+          hid: 'title',
+          name: 'title',
+          content: 'Заказать спиральновитую трубу с доставкой по Краснодару и услугой сборки'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Купить металлические спиральновитые трубы в ООО МСК. Широкий выбор размеров элементов трубопровода. Проект, сборка, доставка  в Краснодаре. Самовывоз со склада'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Заказать спиральновитую трубу с доставкой по Краснодару и услугой сборки'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Купить металлические спиральновитые трубы в ООО МСК. Широкий выбор размеров элементов трубопровода. Проект, сборка, доставка  в Краснодаре. Самовывоз со склада'
+        },
+        {hid: 'og:url', property: 'og:url', content: `https://msk23.ru/pipe`}
+      ],
+      link: [
+        {rel: 'canonical', href: `https://msk23.ru/pipe`}
+      ]
+    }
+  },
   data() {
     return {
       subtitles: {

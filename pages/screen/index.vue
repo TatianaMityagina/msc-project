@@ -31,6 +31,37 @@ export default {
     ScreenProduction,
     ScreenPanel
   },
+  head() {
+    return {
+      title: 'Шумовые экраны и акустические барьеры',
+      meta: [
+        {
+          hid: 'title',
+          name: 'title',
+          content: 'Продажа шумовых экранов и акустических барьеров от ведущих производителей'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Реализуем шумовые экраны и акустические барьеры по выгодной цене - обращайтесь по телефону +7 (964) 907-12-77. Заказ монтажа шумозащитных конструкций вдоль дорог Краснодара с доставкой на место сборки'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Продажа шумовых экранов и акустических барьеров от ведущих производителей'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Реализуем шумовые экраны и акустические барьеры по выгодной цене - обращайтесь по телефону +7 (964) 907-12-77. Заказ монтажа шумозащитных конструкций вдоль дорог Краснодара с доставкой на место сборки'
+        },
+        {hid: 'og:url', property: 'og:url', content: `https://msk23.ru/screen`}
+      ],
+      link: [
+        {rel: 'canonical', href: `https://msk23.ru/screen`}
+      ]
+    }
+  },
   data() {
     return {
       subtitles: {

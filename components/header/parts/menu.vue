@@ -12,7 +12,7 @@
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
             <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in fenceRouterList" :key="item.id"
+                v-for="item in fenceRouterListSort" :key="item.id"
                 @click="close">
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>
@@ -33,7 +33,7 @@
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
             <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in pipeRouterList" :key="item.id"
+                v-for="item in pipeRouterListSort" :key="item.id"
                 @click="close">
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>
@@ -54,7 +54,7 @@
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
             <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in screenRouterList" :key="item.id"
+                v-for="item in screenRouterListSort" :key="item.id"
                 @click="close">
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>
@@ -75,7 +75,7 @@
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
             <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in articleRouterList" :key="item.id"
+                v-for="item in articleRouterListSort" :key="item.id"
                 @click="close">
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>
@@ -516,6 +516,36 @@ export default {
   methods: {
     close() {
       this.$emit('close')
+    }
+  },
+  computed: {
+    fenceRouterListSort() {
+      return this.fenceRouterList.sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      })
+    },
+    screenRouterListSort() {
+      return this.screenRouterList.sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      })
+    },
+    pipeRouterListSort() {
+      return this.pipeRouterList.sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      })
+    },
+    articleRouterListSort() {
+      return this.articleRouterList.sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      })
     }
   }
 }

@@ -11,6 +11,7 @@
     <CentralContent v-bind:content-options="contentOptionsMiddle"/>
     <PipeBenefit/>
     <CentralContent v-bind:content-options="contentOptionsBottom"/>
+    <Navigation :navigation-list="pipeRouterListSort"  style="padding-top: 60px"/>
   </main>
 </template>
 
@@ -23,10 +24,10 @@ import PipeTypes from '../../components/pipe-types/pipe-types'
 import PipeStructure from '../../components/pipe-structure/pipe-structure'
 import PipeApplication from '../../components/pipe-application/pipe-application'
 import PipeBenefit from '../../components/pipe-benefit/pipe-benefit'
-
+import Navigation from '../../components/navigation/navigation'
 
 export default {
-  name: 'Fence',
+  name: 'Pipe',
   components: {
     subtitle,
     AboutService,
@@ -35,7 +36,8 @@ export default {
     PipeTypes,
     PipeStructure,
     PipeApplication,
-    PipeBenefit
+    PipeBenefit,
+    Navigation
   },
   head() {
     return {
@@ -106,6 +108,92 @@ export default {
         color: '#ff6231',
         text: 'Компания «МСК» предлагает клиентам комплекс услуг по устройству конструкций из гофрированных стальных труб. Мы выполняем заказы на производство и монтаж СГМТ по готовым проектам. Каждый этап сопровождается профессиональным контролем качества. Компания реализует изделия по демократичным ценам, что объясняется изготовлением на собственном производстве из материалов надежных поставщиков.'
       },
+      pipeRouterList: [
+        {
+          id: 0,
+          path: '/pipe/pipe-underneath-sidewalk',
+          name: 'Водопропускные трубы под тротуаром'
+        },
+        {
+          id: 1,
+          path: '/pipe/culvert-under-the-road',
+          name: 'Водопропускная труба под дорогой'
+        },
+        {
+          id: 2,
+          path: '/pipe/culvert-on-the-railway',
+          name: 'Водопропускная труба на ЖД'
+        },
+        {
+          id: 3,
+          path: '/pipe/culvert-under-embankments',
+          name: 'Водопропускная труба под насыпями'
+        },
+        {
+          id: 4,
+          path: '/pipe/corrugated-culverts',
+          name: 'Гофрированные водопропускные трубы'
+        },
+        {
+          id: 5,
+          path: '/pipe/metal-culverts',
+          name: 'Металлические водопропускные трубы'
+        },
+        {
+          id: 6,
+          path: '/pipe/metal-corrugated-culverts',
+          name: 'Металлические гофрированные водопропускные трубы'
+        },
+        {
+          id: 7,
+          path: '/pipe/metal-corrugated-all-metal-culverts',
+          name: 'Металлические гофрированные цельновитые водопропускные трубы'
+        },
+        {
+          id: 8,
+          path: '/pipe/round-culverts',
+          name: 'Круглые водопропускные трубы'
+        },
+        {
+          id: 9,
+          path: '/pipe/culvert-installation',
+          name: 'Монтаж водопропускных труб'
+        },
+        {
+          id: 10,
+          path: '/pipe/calculation-of-culverts',
+          name: 'Расчет водопропускных труб'
+        },
+        {
+          id: 11,
+          path: '/pipe/spiral-corrugated-metal-pipes',
+          name: 'Спиральновитые гофрированные металлические трубы'
+        },
+        {
+          id: 12,
+          path: '/pipe/spiral-corrugated-metal-pipes-0.5',
+          name: 'Спиральновитые гофрированные металлические трубы с диаметром 0,5 м'
+        },
+        {
+          id: 13,
+          path: '/pipe/spiral-pipe',
+          name: 'Спиральновитая труба'
+        },
+        {
+          id: 14,
+          path: '/pipe/culvert',
+          name: 'Водопропускная труба'
+        }
+      ]
+    }
+  },
+  computed: {
+    pipeRouterListSort() {
+      return this.pipeRouterList.sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      })
     }
   }
 }

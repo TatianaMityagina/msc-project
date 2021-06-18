@@ -8,6 +8,7 @@
     <ScreenPanel/>
     <ScreenProduction/>
     <CentralContent v-bind:content-options="contentOptionsBottom"/>
+    <Navigation :navigation-list="screenRouterListSort" style="padding-top: 60px"/>
   </main>
 </template>
 
@@ -19,6 +20,7 @@ import ScreenStructure from '../../components/screen-structure/screen-structure'
 import ScreenTypes from '../../components/screen-types/screen-types'
 import ScreenPanel from '../../components/screen-panel/screen-panel'
 import ScreenProduction from '../../components/screen-production/screen-production'
+import Navigation from  '../../components/navigation/navigation'
 
 export default {
   name: 'Screen',
@@ -29,7 +31,8 @@ export default {
     ScreenStructure,
     ScreenTypes,
     ScreenProduction,
-    ScreenPanel
+    ScreenPanel,
+    Navigation
   },
   head() {
     return {
@@ -76,7 +79,78 @@ export default {
       contentOptionsBottom: {
         color: '#ff6231',
         text: 'Предприятие-изготовитель гарантирует соответствие панелей звукопоглощающих и звукоизолирующих, панелей светопрозрачных, а также комплектующих изделий требованиям технических условий и сохранение основных технических параметров экранов, при соблюдении потребителем условий транспортировки, хранения, монтажа, эксплуатации, а также отсутствии каких-либо механических повреждений на срок не менее 10 лет с момента установки'
-      }
+      },
+      screenRouterList: [
+        {
+          id: 0,
+          path: '/screen/noise-screens-and-acoustic-barriers',
+          name: 'Шумовые экраны и акустические барьеры'
+        },
+        {
+          id: 1,
+          path: '/screen/acoustic-screen',
+          name: 'Акустический экран'
+        },
+        {
+          id: 2,
+          path: '/screen/noise-barriers',
+          name: 'Шумозащитные заборы'
+        },
+        {
+          id: 3,
+          path: '/screen/noise-screen',
+          name: 'Шумозащитные экраны'
+        },
+        {
+          id: 4,
+          path: '/screen/production-of-noise-screens',
+          name: 'Производство шумозащитных экранов'
+        },
+        {
+          id: 5,
+          path: '/screen/noise-screens-at-russian-railways',
+          name: 'Шумозащитные экраны на РЖД'
+        },
+        {
+          id: 6,
+          path: '/screen/installation-of-noise-screens',
+          name: 'Монтаж шумозащитных экранов'
+        },
+        {
+          id: 7,
+          path: '/screen/transparent-noise-screens',
+          name: 'Прозрачные шумозащитные экраны'
+        },
+        {
+          id: 8,
+          path: '/screen/calculation-noise-shield',
+          name: 'Расчет шумозащитного экрана'
+        },
+        {
+          id: 9,
+          path: '/screen/noise-screens-top10',
+          name: 'Шумозащитные экраны Топ 10'
+        },
+        {
+          id: 10,
+          path: '/screen/noise-screen-made-of-polycarbonate',
+          name: 'Шумозащитный экран из поликарбоната'
+        },
+        {
+          id: 12,
+          path: '/screen/noise-screen-made-of-sandwich-panels',
+          name: 'Шумозащитный экран из сэндвич-панелей'
+        },
+      ]
+    }
+  },
+  computed: {
+    screenRouterListSort() {
+      return this.screenRouterList.sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      })
     }
   }
 }

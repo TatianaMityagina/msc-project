@@ -60,7 +60,7 @@ export default {
       return this.productScreenContent.find(e => e.path === this.$route.path);
     },
     subtitles() {
-      this.getContent.href = '/fence';
+      this.getContent.href = '/screen';
       return this.getContent
     }
   }

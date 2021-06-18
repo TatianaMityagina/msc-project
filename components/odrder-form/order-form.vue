@@ -1,26 +1,26 @@
 <template>
   <section class="order-form">
     <div class="order-form__container">
-      <form action="" class="order-form__form-wrapper">
+      <form action="" class="order-form__form-wrapper" @submit.prevent="submitForm">
         <h2 class="order-form__form-title">Заполните форму и получите наш полный каталог</h2>
         <div class="order-form__form-row">
           <div class="order-form__form-col">
             <label for="name">Имя</label>
-            <input id="name" placeholder="Александр" type="text">
+            <input id="name" placeholder="Александр" type="text" v-model="form.name">
           </div>
           <div class="order-form__form-col">
             <label for="phone">Телефон</label>
-            <input id="phone" placeholder="+7(ххх) ххх - хх - хх" type="tel">
+            <input id="phone" v-mask="'+7 (###) ### ## ##'" placeholder="+7(ххх) ххх - хх - хх" type="tel" v-model="form.phone">
           </div>
           <div class="order-form__form-col">
             <label for="email">Почта</label>
-            <input id="email" placeholder="info@mail.ru" type="email">
+            <input id="email" placeholder="info@mail.ru" type="email" v-model="form.email">
           </div>
         </div>
         <div class="order-form__form-row">
           <div class="order-form__form-col order-form__form-col--message">
             <label for="message">Сообщение</label>
-            <textarea id="message" type="text"></textarea>
+            <textarea id="message" type="text" v-model="form.message"></textarea>
           </div>
           <div class="order-form__form-col">
             <button class="order-form__form-btn" type="submit">Отправить заявку</button>
@@ -34,12 +34,40 @@
 </template>
 
 <script>
+import {mask} from 'vue-the-mask'
 
 export default {
   name: 'OrderForm',
+  directives: {mask},
   components: {},
   data() {
-    return {}
+    return {
+      form: {
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
+      }
+    }
+  },
+  methods:{
+    submitForm() {
+      this.$axios.$post(url + '/test', this.form)
+          .then(() => {
+            alert('Заявка отправлена, для продолжения нажмите ОК');
+          })
+          .catch((error) => {
+            alert('Произошла ошибка, форма не оправлена');
+          })
+          .finally(() => {
+            this.form = {
+              name: '',
+              phone: '',
+              email: '',
+              message: ''
+            }
+          });
+    }
   }
 }
 </script>
@@ -106,6 +134,13 @@ export default {
     background-color: $main-bg-color;
     border: none;
     outline: none;
+
+    &::placeholder {
+      font-family: $main-font-family;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+    }
   }
 
   & textarea {

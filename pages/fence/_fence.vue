@@ -52,11 +52,6 @@ export default {
   },
   data() {
     return {
-      //subtitles: {
-      //  href: '/fence',
-      //  title: '',
-      //  text: ''
-      //},
       productFenceContent
     }
   },

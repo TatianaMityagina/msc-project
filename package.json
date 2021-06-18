@@ -29,7 +29,8 @@
     "nuxt-webfontloader": "^1.1.0",
     "sass-loader": "^10.0.4",
     "swiper": "^5.4.5",
-    "vue-lazy-hydration": "^1.0.0-beta.14"
+    "vue-lazy-hydration": "^1.0.0-beta.14",
+    "vue-the-mask": "^0.11.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

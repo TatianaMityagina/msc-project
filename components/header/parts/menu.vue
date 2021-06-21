@@ -33,7 +33,7 @@
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
             <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in pipeRouterListSort" :key="item.id"
+                v-for="item in screenRouterListSort" :key="item.id"
                 @click="close">
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>
@@ -54,7 +54,7 @@
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
             <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in screenRouterListSort" :key="item.id"
+                v-for="item in pipeRouterListSort" :key="item.id"
                 @click="close">
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>

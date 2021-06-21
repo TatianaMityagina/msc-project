@@ -3,7 +3,7 @@
     <subtitle :subtitles="subtitles"/>
     <about-product :content-text="getContent"/>
     <Navigation :navigation-list="articleRouterListSort"/>
-<!--    ь-->
+<!--    <order-form />-->
   </main>
 </template>
 

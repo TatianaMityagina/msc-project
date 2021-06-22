@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import productFenceContent from '../../static/mock/productFenceContent.json'
-import subtitle from '../../components/subtitle/subtitle'
-import AboutProduct from '../../components/about-product/about-product'
-import OrderForm from '../../components/odrder-form/order-form'
+import productPipeContent from 'static/mock/productPipeContent.json'
+import subtitle from '../../../components/subtitle/subtitle'
+import AboutProduct from '../../../components/about-product/about-product'
+import OrderForm from '../../../components/odrder-form/order-form'
 
 export default {
-  name: 'Fence',
+  name: 'PipeProduct',
   components: {
     subtitle,
     AboutProduct,
@@ -52,15 +52,15 @@ export default {
   },
   data() {
     return {
-      productFenceContent
+      productPipeContent
     }
   },
   computed: {
     getContent() {
-      return this.productFenceContent.find(e => e.path === this.$route.path);
+      return this.productPipeContent.find(e => e.path === this.$route.path);
     },
     subtitles() {
-      this.getContent.href = '/fence';
+      this.getContent.href = '/pipe';
       return this.getContent
     }
   }

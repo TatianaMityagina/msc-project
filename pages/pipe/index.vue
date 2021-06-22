@@ -41,7 +41,7 @@ export default {
   },
   head() {
     return {
-      title: 'Трубы спиральновитые',
+      title: 'Заказать спиральновитую трубу с доставкой по Краснодару и услугой сборки',
       meta: [
         {
           hid: 'title',
@@ -141,12 +141,12 @@ export default {
         },
         {
           id: 6,
-          path: '/pipe/metal-corrugated-culverts',
+          path: '/pipe/corrugated-culverts/metal-corrugated-culverts',
           name: 'Металлические гофрированные водопропускные трубы'
         },
         {
           id: 7,
-          path: '/pipe/metal-corrugated-all-metal-culverts',
+          path: '/pipe/corrugated-culverts/metal-corrugated-all-metal-culverts',
           name: 'Металлические гофрированные цельновитые водопропускные трубы'
         },
         {
@@ -166,12 +166,12 @@ export default {
         },
         {
           id: 11,
-          path: '/pipe/spiral-corrugated-metal-pipes',
+          path: '/pipe/spiral-pipe/spiral-corrugated-metal-pipes',
           name: 'Спиральновитые гофрированные металлические трубы'
         },
         {
           id: 12,
-          path: '/pipe/spiral-corrugated-metal-pipes-0.5',
+          path: '/pipe/spiral-pipe/spiral-corrugated-metal-pipes-0.5',
           name: 'Спиральновитые гофрированные металлические трубы с диаметром 0,5 м'
         },
         {

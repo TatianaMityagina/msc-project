@@ -66,7 +66,7 @@
 
       <li class="menu__list-item" @click="close">
         <a class="menu__list-link">
-          <span>Информационные статьи</span>
+          <span>Статьи</span>
           <svg class="menu__icon-open" fill="none" height="9" viewBox="0 0 14 9" width="14"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
@@ -105,113 +105,108 @@ export default {
     return {
       fenceRouterList: [
         {
-          id: 0,
-          path: '/fence/barrier-fence',
-          name: 'Барьерное ограждение'
-        },
-        {
           id: 1,
-          path: '/fence/barrier-fence-11DO',
+          path: '/fence/barrier-fence/barrier-fence-11DO',
           name: 'Барьерное ограждение 11 ДО'
         },
         {
           id: 2,
-          path: '/fence/barrier-fence-21DO',
+          path: '/fence/barrier-fence/barrier-fence-21DO',
           name: 'Барьерное ограждение 21 ДО'
         },
         {
           id: 3,
-          path: '/fence/barrier-fence-wave',
+          path: '/fence/barrier-fence/barrier-fence-wave',
           name: 'Барьерное ограждение Волна'
         },
         {
           id: 4,
-          path: '/fence/barrier-road-fence',
+          path: '/fence/barrier-fence/barrier-road-fence',
           name: 'Барьерное дорожное ограждение'
         },
         {
           id: 5,
-          path: '/fence/barrier-fence-with-separating-beam',
+          path: '/fence/barrier-fence/barrier-fence-with-separating-beam',
           name: 'Барьерное ограждение с отделяющейся балкой'
         },
         {
           id: 6,
-          path: '/fence/barrier-fence-U2',
+          path: '/fence/barrier-fence/barrier-fence-U2',
           name: 'Барьерное ограждение У2'
         },
         {
           id: 7,
-          path: '/fence/barrier-fence-U3',
+          path: '/fence/barrier-fence/barrier-fence-U3',
           name: 'Барьерное ограждение У3'
         },
         {
           id: 8,
-          path: '/fence/barrier-fence-U4',
+          path: '/fence/barrier-fence/barrier-fence-U4',
           name: 'Барьерное ограждение У4'
         },
         {
           id: 9,
-          path: '/fence/barrier-fence-SB-1',
+          path: '/fence/barrier-fence/barrier-fence-SB-1',
           name: 'Барьерное ограждение СБ-1'
         },
         {
           id: 10,
-          path: '/fence/barrier-fence-EC-1',
+          path: '/fence/barrier-fence/barrier-fence-EC-1',
           name: 'Барьерное ограждение ЭК-1'
         },
         {
           id: 11,
-          path: '/fence/barrier-fence-for-painting',
+          path: '/fence/barrier-fence/barrier-fence-for-painting',
           name: 'Барьерные ограждения под покраску'
         },
         {
           id: 12,
-          path: '/fence/barrier-fence-with-no-console',
+          path: '/fence/barrier-fence/barrier-fence-with-no-console',
           name: 'Бесконсольное барьерное ограждение'
         },
         {
           id: 13,
-          path: '/fence/galvanized-road-barriers',
+          path: '/fence/barrier-fence/galvanized-road-barriers',
           name: 'Оцинкованные дорожные ограждения'
         },
         {
           id: 14,
-          path: '/fence/road-barriers-guiding-devices',
+          path: '/fence/barrier-fence/road-barriers-guiding-devices',
           name: 'Дорожные ограждения и направляющие устройства'
         },
         {
           id: 15,
-          path: '/fence/metal-barrier-fence',
+          path: '/fence/barrier-fence/metal-barrier-fence',
           name: 'Металлическое барьерное ограждение'
         },
         {
           id: 16,
-          path: '/fence/bridge-barrier',
+          path: '/fence/barrier-fence/bridge-barrier',
           name: 'Мостовое барьерное ограждение'
         },
         {
           id: 17,
-          path: '/fence/bridge-barrier-fence-11MO',
+          path: '/fence/barrier-fence/bridge-barrier-fence-11MO',
           name: 'Мостовое барьерное ограждение 11МО'
         },
         {
           id: 18,
-          path: '/fence/one-sided-barrier-fence',
+          path: '/fence/barrier-fence/one-sided-barrier-fence',
           name: 'Одностороннее барьерное ограждение'
         },
         {
           id: 19,
-          path: '/fence/barrier-fence-calculation',
+          path: '/fence/barrier-fence/barrier-fence-calculation',
           name: 'Расчет барьерного ограждения'
         },
         {
           id: 20,
-          path: '/fence/barrier-fence-installation',
+          path: '/fence/barrier-fence/barrier-fence-installation',
           name: 'Установка барьерного ограждения'
         },
         {
           id: 21,
-          path: '/fence/front-barrier-fence',
+          path: '/fence/barrier-fence/front-barrier-fence',
           name: 'Фронтальное барьерное ограждение'
         },
         {
@@ -221,62 +216,62 @@ export default {
         },
         {
           id: 23,
-          path: '/fence/metal-pedestrian-fence',
+          path: '/fence/pedestrian-fences/metal-pedestrian-fence',
           name: 'Металлическое пешеходное ограждение'
         },
         {
           id: 24,
-          path: '/fence/guide-pedestrian-barriers',
+          path: '/fence/pedestrian-fences/guide-pedestrian-barriers',
           name: 'Направляющие пешеходные ограждения'
         },
         {
           id: 25,
-          path: '/fence/restricting-pedestrian-fence',
+          path: '/fence/pedestrian-fences/restricting-pedestrian-fence',
           name: 'Ограничивающее пешеходное ограждение'
         },
         {
           id: 26,
-          path: '/fence/pedestrian-barrier-cross',
+          path: '/fence/pedestrian-fences/pedestrian-barrier-cross',
           name: 'Пешеходное ограждение Крест'
         },
         {
           id: 27,
-          path: '/fence/pedestrian-barrier-ORUD',
+          path: '/fence/pedestrian-fences/pedestrian-barrier-ORUD',
           name: 'Пешеходное ограждение ОРУД'
         },
         {
           id: 28,
-          path: '/fence/pedestrian-barrier-PO-1-cross',
+          path: '/fence/pedestrian-fences/pedestrian-barrier-PO-1-cross',
           name: 'Пешеходное ограждение ПО-1 Крест'
         },
         {
           id: 29,
-          path: '/fence/pedestrian-barrier-PO-2',
+          path: '/fence/pedestrian-fences/pedestrian-barrier-PO-2',
           name: 'Пешеходное ограждение ПО-2'
         },
         {
           id: 30,
-          path: '/fence/pedestrian-barrier-PO-6',
+          path: '/fence/pedestrian-fences/pedestrian-barrier-PO-6',
           name: 'Пешеходное ограждение ПО-6'
         },
         {
           id: 31,
-          path: '/fence/pedestrian-railings',
+          path: '/fence/pedestrian-fences/pedestrian-railings',
           name: 'Пешеходное перильное ограждение'
         },
         {
           id: 32,
-          path: '/fence/retaining-pedestrian-fence',
+          path: '/fence/pedestrian-fences/retaining-pedestrian-fence',
           name: 'Удерживающие пешеходные ограждения'
         },
         {
           id: 33,
-          path: '/fence/installing-pedestrian-barriers',
+          path: '/fence/pedestrian-fences/installing-pedestrian-barriers',
           name: 'Установка пешеходных ограждений'
         },
         {
           id: 34,
-          path: '/fence/barrier-fence-end-piece',
+          path: '/fence/barrier-fence/barrier-fence-end-piece',
           name: 'Концевой элемент барьерного ограждения'
         }
       ],
@@ -303,42 +298,42 @@ export default {
         },
         {
           id: 4,
-          path: '/screen/production-of-noise-screens',
+          path: '/screen/noise-screen/production-of-noise-screens',
           name: 'Производство шумозащитных экранов'
         },
         {
           id: 5,
-          path: '/screen/noise-screens-at-russian-railways',
+          path: '/screen/noise-screen/noise-screens-at-russian-railways',
           name: 'Шумозащитные экраны на РЖД'
         },
         {
           id: 6,
-          path: '/screen/installation-of-noise-screens',
+          path: '/screen/noise-screen/installation-of-noise-screens',
           name: 'Монтаж шумозащитных экранов'
         },
         {
           id: 7,
-          path: '/screen/transparent-noise-screens',
+          path: '/screen/noise-screen/transparent-noise-screens',
           name: 'Прозрачные шумозащитные экраны'
         },
         {
           id: 8,
-          path: '/screen/calculation-noise-shield',
+          path: '/screen/noise-screen/calculation-noise-shield',
           name: 'Расчет шумозащитного экрана'
         },
         {
           id: 9,
-          path: '/screen/noise-screens-top10',
+          path: '/screen/noise-screen/noise-screens-top10',
           name: 'Шумозащитные экраны Топ 10'
         },
         {
           id: 10,
-          path: '/screen/noise-screen-made-of-polycarbonate',
+          path: '/screen/noise-screen/noise-screen-made-of-polycarbonate',
           name: 'Шумозащитный экран из поликарбоната'
         },
         {
           id: 12,
-          path: '/screen/noise-screen-made-of-sandwich-panels',
+          path: '/screen/noise-screen/noise-screen-made-of-sandwich-panels',
           name: 'Шумозащитный экран из сэндвич-панелей'
         },
       ],
@@ -375,12 +370,12 @@ export default {
         },
         {
           id: 6,
-          path: '/pipe/metal-corrugated-culverts',
+          path: '/pipe/corrugated-culverts/metal-corrugated-culverts',
           name: 'Металлические гофрированные водопропускные трубы'
         },
         {
           id: 7,
-          path: '/pipe/metal-corrugated-all-metal-culverts',
+          path: '/pipe/corrugated-culverts/metal-corrugated-all-metal-culverts',
           name: 'Металлические гофрированные цельновитые водопропускные трубы'
         },
         {
@@ -400,12 +395,12 @@ export default {
         },
         {
           id: 11,
-          path: '/pipe/spiral-corrugated-metal-pipes',
+          path: '/pipe/spiral-pipe/spiral-corrugated-metal-pipes',
           name: 'Спиральновитые гофрированные металлические трубы'
         },
         {
           id: 12,
-          path: '/pipe/spiral-corrugated-metal-pipes-0.5',
+          path: '/pipe/spiral-pipe/spiral-corrugated-metal-pipes-0.5',
           name: 'Спиральновитые гофрированные металлические трубы с диаметром 0,5 м'
         },
         {

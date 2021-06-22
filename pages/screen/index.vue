@@ -36,7 +36,7 @@ export default {
   },
   head() {
     return {
-      title: 'Шумовые экраны и акустические барьеры',
+      title: 'Продажа шумовых экранов и акустических барьеров от ведущих производителей',
       meta: [
         {
           hid: 'title',
@@ -103,42 +103,42 @@ export default {
         },
         {
           id: 4,
-          path: '/screen/production-of-noise-screens',
+          path: '/screen/noise-screen/production-of-noise-screens',
           name: 'Производство шумозащитных экранов'
         },
         {
           id: 5,
-          path: '/screen/noise-screens-at-russian-railways',
+          path: '/screen/noise-screen/noise-screens-at-russian-railways',
           name: 'Шумозащитные экраны на РЖД'
         },
         {
           id: 6,
-          path: '/screen/installation-of-noise-screens',
+          path: '/screen/noise-screen/installation-of-noise-screens',
           name: 'Монтаж шумозащитных экранов'
         },
         {
           id: 7,
-          path: '/screen/transparent-noise-screens',
+          path: '/screen/noise-screen/transparent-noise-screens',
           name: 'Прозрачные шумозащитные экраны'
         },
         {
           id: 8,
-          path: '/screen/calculation-noise-shield',
+          path: '/screen/noise-screen/calculation-noise-shield',
           name: 'Расчет шумозащитного экрана'
         },
         {
           id: 9,
-          path: '/screen/noise-screens-top10',
+          path: '/screen/noise-screen/noise-screens-top10',
           name: 'Шумозащитные экраны Топ 10'
         },
         {
           id: 10,
-          path: '/screen/noise-screen-made-of-polycarbonate',
+          path: '/screen/noise-screen/noise-screen-made-of-polycarbonate',
           name: 'Шумозащитный экран из поликарбоната'
         },
         {
           id: 12,
-          path: '/screen/noise-screen-made-of-sandwich-panels',
+          path: '/screen/noise-screen/noise-screen-made-of-sandwich-panels',
           name: 'Шумозащитный экран из сэндвич-панелей'
         },
       ]

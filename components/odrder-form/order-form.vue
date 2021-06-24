@@ -24,8 +24,8 @@
           </div>
           <div class="order-form__form-col">
             <button class="order-form__form-btn" type="submit">Отправить заявку</button>
-            <p class="order-form__form-accept">Нажимая на кнопку я подтверждаю, что я ознакомлен с условиями <a href="">политики
-              конфиденциальности</a></p>
+<!--            <p class="order-form__form-accept">Нажимая на кнопку я подтверждаю, что я ознакомлен с условиями <a href="">политики-->
+<!--              конфиденциальности</a></p>-->
           </div>
         </div>
       </form>
@@ -47,12 +47,13 @@ export default {
         phone: '',
         email: '',
         message: ''
-      }
+      },
+      url: 'http://localhost:3007'
     }
   },
   methods:{
     submitForm() {
-      this.$axios.$post(url + '/test', this.form)
+      this.$axios.$post(this.url + '/mail', this.form)
           .then(() => {
             alert('Заявка отправлена, для продолжения нажмите ОК');
           })

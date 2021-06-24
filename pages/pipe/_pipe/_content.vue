@@ -2,7 +2,7 @@
   <main class="page-main">
     <subtitle :subtitles="subtitles"/>
     <about-product :content-text="getContent"/>
-<!--    <order-form/>-->
+    <order-form/>
   </main>
 </template>
 

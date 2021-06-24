@@ -4,16 +4,26 @@
       <li class="menu__list-item" @click="close">
         <nuxt-link to="/fence" class="menu__list-link" :class="{'menu__list-link--active-path' : $route.path === '/fence' }">
           <span>Ограждения</span>
-          <svg class="menu__icon-open" fill="none" height="9" viewBox="0 0 14 9" width="14"
-               xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
+          <svg
+            class="menu__icon-open"
+            fill="none"
+            height="9"
+            viewBox="0 0 14 9"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2" />
           </svg>
         </nuxt-link>
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
-            <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in fenceRouterListSort" :key="item.id"
-                @click="close">
+            <li
+              v-for="item in fenceRouterListSort"
+              :key="item.id"
+              :class="{'menu__sublist-item--active' : $route.path === item.path }"
+              class="menu__sublist-item"
+              @click="close"
+            >
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>
               </nuxt-link>
@@ -25,16 +35,26 @@
       <li class="menu__list-item" @click="close">
         <nuxt-link to="/screen" class="menu__list-link" :class="{'menu__list-link--active-path' : $route.path === '/screen' }">
           <span>Экраны</span>
-          <svg class="menu__icon-open" fill="none" height="9" viewBox="0 0 14 9" width="14"
-               xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
+          <svg
+            class="menu__icon-open"
+            fill="none"
+            height="9"
+            viewBox="0 0 14 9"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2" />
           </svg>
         </nuxt-link>
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
-            <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in screenRouterListSort" :key="item.id"
-                @click="close">
+            <li
+              v-for="item in screenRouterListSort"
+              :key="item.id"
+              :class="{'menu__sublist-item--active' : $route.path === item.path }"
+              class="menu__sublist-item"
+              @click="close"
+            >
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>
               </nuxt-link>
@@ -46,16 +66,26 @@
       <li class="menu__list-item" @click="close">
         <nuxt-link to="/pipe" class="menu__list-link" :class="{'menu__list-link--active-path' : $route.path === '/pipe' }">
           <span>Трубы</span>
-          <svg class="menu__icon-open" fill="none" height="9" viewBox="0 0 14 9" width="14"
-               xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
+          <svg
+            class="menu__icon-open"
+            fill="none"
+            height="9"
+            viewBox="0 0 14 9"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2" />
           </svg>
         </nuxt-link>
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
-            <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in pipeRouterListSort" :key="item.id"
-                @click="close">
+            <li
+              v-for="item in pipeRouterListSort"
+              :key="item.id"
+              :class="{'menu__sublist-item--active' : $route.path === item.path }"
+              class="menu__sublist-item"
+              @click="close"
+            >
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>
               </nuxt-link>
@@ -67,16 +97,26 @@
       <li class="menu__list-item" @click="close">
         <a class="menu__list-link">
           <span>Статьи</span>
-          <svg class="menu__icon-open" fill="none" height="9" viewBox="0 0 14 9" width="14"
-               xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
+          <svg
+            class="menu__icon-open"
+            fill="none"
+            height="9"
+            viewBox="0 0 14 9"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2" />
           </svg>
         </a>
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
-            <li :class="{'menu__sublist-item--active' : $route.path === item.path }" class="menu__sublist-item"
-                v-for="item in articleRouterListSort" :key="item.id"
-                @click="close">
+            <li
+              v-for="item in articleRouterListSort"
+              :key="item.id"
+              :class="{'menu__sublist-item--active' : $route.path === item.path }"
+              class="menu__sublist-item"
+              @click="close"
+            >
               <nuxt-link class="menu__sublist-link" :to="item.path">
                 <span>{{ item.name }}</span>
               </nuxt-link>
@@ -101,7 +141,7 @@
 <script>
 export default {
   name: 'Menu',
-  data() {
+  data () {
     return {
       fenceRouterList: [
         {
@@ -335,7 +375,7 @@ export default {
           id: 12,
           path: '/screen/noise-screen/noise-screen-made-of-sandwich-panels',
           name: 'Шумозащитный экран из сэндвич-панелей'
-        },
+        }
       ],
       pipeRouterList: [
         {
@@ -508,39 +548,39 @@ export default {
       ]
     }
   },
-  methods: {
-    close() {
-      this.$emit('close')
+  computed: {
+    fenceRouterListSort () {
+      return this.fenceRouterList.sort(function (a, b) {
+        if (a.name < b.name) { return -1 }
+        if (a.name > b.name) { return 1 }
+        return 0
+      })
+    },
+    screenRouterListSort () {
+      return this.screenRouterList.sort(function (a, b) {
+        if (a.name < b.name) { return -1 }
+        if (a.name > b.name) { return 1 }
+        return 0
+      })
+    },
+    pipeRouterListSort () {
+      return this.pipeRouterList.sort(function (a, b) {
+        if (a.name < b.name) { return -1 }
+        if (a.name > b.name) { return 1 }
+        return 0
+      })
+    },
+    articleRouterListSort () {
+      return this.articleRouterList.sort(function (a, b) {
+        if (a.name < b.name) { return -1 }
+        if (a.name > b.name) { return 1 }
+        return 0
+      })
     }
   },
-  computed: {
-    fenceRouterListSort() {
-      return this.fenceRouterList.sort(function(a, b){
-        if(a.name < b.name) { return -1; }
-        if(a.name > b.name) { return 1; }
-        return 0;
-      })
-    },
-    screenRouterListSort() {
-      return this.screenRouterList.sort(function(a, b){
-        if(a.name < b.name) { return -1; }
-        if(a.name > b.name) { return 1; }
-        return 0;
-      })
-    },
-    pipeRouterListSort() {
-      return this.pipeRouterList.sort(function(a, b){
-        if(a.name < b.name) { return -1; }
-        if(a.name > b.name) { return 1; }
-        return 0;
-      })
-    },
-    articleRouterListSort() {
-      return this.articleRouterList.sort(function(a, b){
-        if(a.name < b.name) { return -1; }
-        if(a.name > b.name) { return 1; }
-        return 0;
-      })
+  methods: {
+    close () {
+      this.$emit('close')
     }
   }
 }
@@ -691,15 +731,10 @@ export default {
     margin-bottom: 0;
   }
 
-  &:hover {
+  &:hover, {
     .menu__sublist-link {
       padding-left: 25px;
       color: $font-color-orange;
-
-      &::before {
-        opacity: 1;
-        transition: $style-change-duration;
-      }
     }
   }
 }
@@ -772,7 +807,6 @@ export default {
     pointer-events: auto;
     transition: $style-change-duration;
   }
-
 
   .main-header__container .menu--open {
     opacity: 0;

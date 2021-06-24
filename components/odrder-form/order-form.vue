@@ -48,7 +48,7 @@ export default {
         email: '',
         message: ''
       },
-      url: 'http://localhost:3007'
+      url: 'https://msk23.ru'
     }
   },
   methods:{

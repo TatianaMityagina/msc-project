@@ -759,6 +759,10 @@ export default {
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 270px;
+
+    .menu__sublist-list-item {
+      max-width: 300px;
+    }
   }
 
   &--fourth {

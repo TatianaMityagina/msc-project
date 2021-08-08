@@ -1,9 +1,9 @@
 <template>
   <section :class="contentText.class" class="about-product">
     <div class="about-product__container">
-      <div class="about-product__row about-product__row--first"  v-if="contentText.row_first.text1 != ''">
+      <div v-if="contentText.row_first.text1 != ''" class="about-product__row about-product__row--first">
         <div class="about-product__row-text">
-          <h3 v-if="contentText.row_first.title != ''">{{ contentText.row_first.title }}</h3>
+          <h2 v-if="contentText.row_first.title != ''">{{ contentText.row_first.title }}</h2>
           <p>{{ contentText.row_first.text1 }}</p>
           <ul v-if="contentText.row_first.list_first.item1 != ''">
             <li>{{ contentText.row_first.list_first.item1 }}</li>
@@ -18,16 +18,18 @@
           </ul>
           <p>{{ contentText.row_first.text3 }}</p>
         </div>
-        <img v-if="contentText.pictures.image1 != ''" :src="require(`../../assets/img/about-product/${contentText.pictures.image1}`)"
+        <img v-if="contentText.pictures.image1 != ''"
+             :src="require(`../../assets/img/about-product/${contentText.pictures.image1}`)"
              alt="Photo product" class="right-image"
              height="400px" width="400px">
       </div>
       <div v-if="contentText.row_second.text1 != ''" class="about-product__row about-product__row--second">
-        <img v-if="contentText.pictures.image2 != ''" :src="require(`../../assets/img/about-product/${contentText.pictures.image2}`)"
+        <img v-if="contentText.pictures.image2 != ''"
+             :src="require(`../../assets/img/about-product/${contentText.pictures.image2}`)"
              alt="Photo product" class="left-image"
              height="400px" width="400px">
         <div class="about-product__row-text">
-          <h3 v-if="contentText.row_second.title != ''">{{ contentText.row_second.title }}</h3>
+          <h2 v-if="contentText.row_second.title != ''">{{ contentText.row_second.title }}</h2>
           <p>{{ contentText.row_second.text1 }}</p>
           <ul v-if="contentText.row_second.list_first.item1 != ''">
             <li>{{ contentText.row_second.list_first.item1 }}</li>
@@ -56,7 +58,7 @@
       <div class="about-product__container">
         <div class="about-product__row">
           <div class="about-product__row-text">
-            <h3 v-if="contentText.row_third.title != ''">{{ contentText.row_third.title }}</h3>
+            <h2 v-if="contentText.row_third.title != ''">{{ contentText.row_third.title }}</h2>
             <p>{{ contentText.row_third.text1 }}</p>
             <ul v-if="contentText.row_third.list.item1 != ''">
               <li>{{ contentText.row_third.list.item1 }}</li>
@@ -71,7 +73,7 @@
     <div class="about-product__container">
       <div v-if="contentText.row_fourth.text1 != ''" class="about-product__row about-product__row--fourth">
         <div class="about-product__row-text">
-          <h3 v-if="contentText.row_fourth.title != ''">{{ contentText.row_fourth.title }}</h3>
+          <h2 v-if="contentText.row_fourth.title != ''">{{ contentText.row_fourth.title }}</h2>
           <p>{{ contentText.row_fourth.text1 }}</p>
           <ul v-if="contentText.row_fourth.list_first.item1 != ''">
             <li>{{ contentText.row_fourth.list_first.item1 }}</li>
@@ -83,8 +85,10 @@
           <ul v-if="contentText.row_fourth.list_second.item1 != ''">
             <li>{{ contentText.row_fourth.list_second.item1 }}</li>
             <li>{{ contentText.row_fourth.list_second.item2 }}</li>
-            <li v-if="contentText.row_fourth.list_second.item3 != ''">{{contentText.row_fourth.list_second.item3}}</li>
-            <li v-if="contentText.row_fourth.list_second.item4 != ''">{{contentText.row_fourth.list_second.item4}}</li>
+            <li v-if="contentText.row_fourth.list_second.item3 != ''">{{ contentText.row_fourth.list_second.item3 }}
+            </li>
+            <li v-if="contentText.row_fourth.list_second.item4 != ''">{{ contentText.row_fourth.list_second.item4 }}
+            </li>
           </ul>
           <p>{{ contentText.row_fourth.text3 }}</p>
           <p>{{ contentText.row_fourth.text4 }}</p>
@@ -93,7 +97,7 @@
       </div>
       <div v-if="contentText.row_fifth.text1 != ''" class="about-product__row">
         <div class="about-product__row-text  about-product__row-text--fifth">
-          <h3 v-if="contentText.row_fifth.title != ''">{{ contentText.row_fifth.title }}</h3>
+          <h2 v-if="contentText.row_fifth.title != ''">{{ contentText.row_fifth.title }}</h2>
           <p>{{ contentText.row_fifth.text1 }}</p>
           <ul v-if="contentText.row_fifth.list_first.item1 != ''">
             <li>{{ contentText.row_fifth.list_first.item1 }}</li>
@@ -112,9 +116,23 @@
           </ul>
           <p>{{ contentText.row_fifth.text3 }}</p>
         </div>
-        <img v-if="contentText.pictures.image3 != ''" :src="require(`../../assets/img/about-product/${contentText.pictures.image3}`)"
+        <img v-if="contentText.pictures.image3 != ''"
+             :src="require(`../../assets/img/about-product/${contentText.pictures.image3}`)"
              alt="Photo product" class="right-image"
              height="400px" width="400px">
+      </div>
+
+      <div v-if="$route.path === '/fence' " class="about-product__row">
+        <div class="about-product__row-text  about-product__row-text--fifth">
+          <h2>Пешеходные ограничители</h2>
+          <p>Изготавливают в «МСК» барьеры для пешеходов, которые обычно называют направляющими. С их помощью получается перенаправлять толпу по нужному направлению. Они бывают:</p>
+          <ul>
+            <li>стационарными:</li>
+            <li>мобильными.</li>
+          </ul>
+          <p>Съемные нужны для мероприятий с большим скоплением людей вроде концертов. Пользуются ими и ремонтники, когда огораживают территорию, по которой запрещено ходить.</p>
+          <p>Стационарные аналоги монтируют на участках, где пешеходы любят нарушать правила дорожного движения. Чтобы они не перебегали проезжую часть в неположенном месте, производится монтаж таких блокираторов. Подобный подход призван сократить количество наездов на пешеходов, что особенно часто имеет место быть в темное время суток.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -178,7 +196,7 @@ export default {
 }
 
 .about-product__row-text {
-  & h3 {
+  & h2 {
     margin-bottom: 30px;
     font-weight: 600;
     font-size: 28px;
@@ -236,7 +254,7 @@ export default {
   }
 
   .about-product__row-text {
-    & h3 {
+    & h2 {
       color: $font-color-white;
     }
 

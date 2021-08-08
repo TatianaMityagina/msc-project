@@ -40,7 +40,8 @@
       </div>
     </div>
     <img alt="Photo pipe application" class="pipe-application__image"
-         height="950" src="../../assets/img/pipe-application/pipe-application@1x.webp" srcset="../../assets/img/pipe-application/pipe-application@2x.webp"
+         height="950" src="../../assets/img/pipe-application/pipe-application@1x.webp"
+         srcset="../../assets/img/pipe-application/pipe-application@2x.webp"
          width="960">
   </section>
 </template>

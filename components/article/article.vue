@@ -3,10 +3,12 @@
     <div class="article__container">
       <h2 class="article__title"> {{ contentArticle.subtitle }} </h2>
       <p class="article__text"> {{ contentArticle.text1 }} </p>
-      <img :src="require(`../../assets/img/article/${contentArticle.image1}`)" alt="Photo article" class="article__image"
+      <img :src="require(`../../assets/img/article/${contentArticle.image1}`)" alt="Photo article"
+           class="article__image"
            height="360" width="1120"/>
       <p class="article__text"> {{ contentArticle.text2 }} </p>
-      <img :src="require(`../../assets/img/article/${contentArticle.image2}`)" alt="Photo article" class="article__image"
+      <img :src="require(`../../assets/img/article/${contentArticle.image2}`)" alt="Photo article"
+           class="article__image"
            height="747" width="1120"/>
     </div>
   </article>

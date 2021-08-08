@@ -2,93 +2,132 @@
   <nav class="menu menu--open">
     <ul class="menu__list">
       <li class="menu__list-item" @click="close">
-        <nuxt-link to="/fence" class="menu__list-link" :class="{'menu__list-link--active-path' : $route.path === '/fence' }">
+        <nuxt-link :class="{'menu__list-link--active-path' : $route.path === '/fence' }" class="menu__list-link"
+                   to="/fence">
           <span>Ограждения</span>
           <svg
-            class="menu__icon-open"
-            fill="none"
-            height="9"
-            viewBox="0 0 14 9"
-            width="14"
-            xmlns="http://www.w3.org/2000/svg"
+              class="menu__icon-open"
+              fill="none"
+              height="9"
+              viewBox="0 0 14 9"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2" />
+            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
           </svg>
         </nuxt-link>
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
             <li
-              v-for="item in fenceRouterListSort"
-              :key="item.id"
-              :class="{'menu__sublist-item--active' : $route.path === item.path }"
-              class="menu__sublist-item"
-              @click="close"
+                v-for="item in fenceRouterListSort"
+                :key="item.id"
+                :class="{'menu__sublist-item--active' : $route.path === item.path }"
+                class="menu__sublist-item"
+                @click="close"
             >
-              <nuxt-link class="menu__sublist-link" :to="item.path">
+              <nuxt-link :to="item.path" class="menu__sublist-link">
                 <span>{{ item.name }}</span>
               </nuxt-link>
+              <ul class="menu__sublist-list">
+                <li
+                    v-for="item in item.sublist"
+                    :key="item.id"
+                    class="menu__sublist-list-item"
+                    @click="close"
+                >
+                  <nuxt-link :to="item.path" class="menu__sublist-list-link">
+                    <span>{{ item.name }}</span>
+                  </nuxt-link>
+                </li>
+              </ul>
             </li>
           </div>
         </ul>
       </li>
 
       <li class="menu__list-item" @click="close">
-        <nuxt-link to="/screen" class="menu__list-link" :class="{'menu__list-link--active-path' : $route.path === '/screen' }">
+        <nuxt-link :class="{'menu__list-link--active-path' : $route.path === '/screen' }" class="menu__list-link"
+                   to="/screen">
           <span>Экраны</span>
           <svg
-            class="menu__icon-open"
-            fill="none"
-            height="9"
-            viewBox="0 0 14 9"
-            width="14"
-            xmlns="http://www.w3.org/2000/svg"
+              class="menu__icon-open"
+              fill="none"
+              height="9"
+              viewBox="0 0 14 9"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2" />
+            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
           </svg>
         </nuxt-link>
         <ul class="menu__sublist menu__sublist--second">
           <div class="menu__sublist-container">
             <li
-              v-for="item in screenRouterListSort"
-              :key="item.id"
-              :class="{'menu__sublist-item--active' : $route.path === item.path }"
-              class="menu__sublist-item"
-              @click="close"
+                v-for="item in screenRouterList"
+                :key="item.id"
+                :class="{'menu__sublist-item--active' : $route.path === item.path }"
+                class="menu__sublist-item"
+                @click="close"
             >
-              <nuxt-link class="menu__sublist-link" :to="item.path">
+              <nuxt-link :to="item.path" class="menu__sublist-link">
                 <span>{{ item.name }}</span>
               </nuxt-link>
+              <ul class="menu__sublist-list">
+                <li
+                    v-for="item in item.sublist"
+                    :key="item.id"
+                    class="menu__sublist-list-item"
+                    @click="close"
+                >
+                  <nuxt-link :to="item.path" class="menu__sublist-list-link">
+                    <span>{{ item.name }}</span>
+                  </nuxt-link>
+                </li>
+              </ul>
             </li>
           </div>
         </ul>
       </li>
 
       <li class="menu__list-item" @click="close">
-        <nuxt-link to="/pipe" class="menu__list-link" :class="{'menu__list-link--active-path' : $route.path === '/pipe' }">
+        <nuxt-link :class="{'menu__list-link--active-path' : $route.path === '/pipe' }" class="menu__list-link"
+                   to="/pipe">
           <span>Трубы</span>
           <svg
-            class="menu__icon-open"
-            fill="none"
-            height="9"
-            viewBox="0 0 14 9"
-            width="14"
-            xmlns="http://www.w3.org/2000/svg"
+              class="menu__icon-open"
+              fill="none"
+              height="9"
+              viewBox="0 0 14 9"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2" />
+            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
           </svg>
         </nuxt-link>
         <ul class="menu__sublist menu__sublist--second">
-          <div class="menu__sublist-container">
+          <div class="menu__sublist-container menu__sublist-container--third">
             <li
-              v-for="item in pipeRouterListSort"
-              :key="item.id"
-              :class="{'menu__sublist-item--active' : $route.path === item.path }"
-              class="menu__sublist-item"
-              @click="close"
+                v-for="item in pipeRouterList"
+                :key="item.id"
+                :class="{'menu__sublist-item--active' : $route.path === item.path }"
+                class="menu__sublist-item"
+                @click="close"
             >
-              <nuxt-link class="menu__sublist-link" :to="item.path">
+              <nuxt-link :to="item.path" class="menu__sublist-link">
                 <span>{{ item.name }}</span>
               </nuxt-link>
+              <ul class="menu__sublist-list">
+                <li
+                    v-for="item in item.sublist"
+                    :key="item.id"
+                    class="menu__sublist-list-item"
+                    @click="close"
+                >
+                  <nuxt-link :to="item.path" class="menu__sublist-list-link">
+                    <span>{{ item.name }}</span>
+                  </nuxt-link>
+                </li>
+              </ul>
             </li>
           </div>
         </ul>
@@ -98,26 +137,26 @@
         <a class="menu__list-link">
           <span>Статьи</span>
           <svg
-            class="menu__icon-open"
-            fill="none"
-            height="9"
-            viewBox="0 0 14 9"
-            width="14"
-            xmlns="http://www.w3.org/2000/svg"
+              class="menu__icon-open"
+              fill="none"
+              height="9"
+              viewBox="0 0 14 9"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2" />
+            <path d="M1 1L7 7L13 1" stroke="#3F3F3F" stroke-width="2"/>
           </svg>
         </a>
         <ul class="menu__sublist menu__sublist--second">
-          <div class="menu__sublist-container">
+          <div class="menu__sublist-container menu__sublist-container--fourth">
             <li
-              v-for="item in articleRouterListSort"
-              :key="item.id"
-              :class="{'menu__sublist-item--active' : $route.path === item.path }"
-              class="menu__sublist-item"
-              @click="close"
+                v-for="item in articleRouterListSort"
+                :key="item.id"
+                :class="{'menu__sublist-item--active' : $route.path === item.path }"
+                class="menu__sublist-item"
+                @click="close"
             >
-              <nuxt-link class="menu__sublist-link" :to="item.path">
+              <nuxt-link :to="item.path" class="menu__sublist-link">
                 <span>{{ item.name }}</span>
               </nuxt-link>
             </li>
@@ -141,185 +180,232 @@
 <script>
 export default {
   name: 'Menu',
-  data () {
+  data() {
     return {
       fenceRouterList: [
         {
-          id: 1,
-          path: '/fence/barrier-fence/barrier-fence-11DO',
-          name: 'Барьерное ограждение 11 ДО'
-        },
-        {
-          id: 2,
-          path: '/fence/barrier-fence/barrier-fence-21DO',
-          name: 'Барьерное ограждение 21 ДО'
-        },
-        {
-          id: 3,
-          path: '/fence/barrier-fence/barrier-fence-wave',
-          name: 'Барьерное ограждение Волна'
-        },
-        {
-          id: 4,
+          id: 0,
           path: '/fence/barrier-fence/barrier-road-fence',
-          name: 'Барьерное дорожное ограждение'
+          name: 'Барьерное дорожное ограждение',
+          sublist: [
+            {
+              id: 0,
+              path: '/fence/barrier-fence/barrier-fence-11DO',
+              name: 'Барьерное ограждение 11 ДО'
+            },
+            {
+              id: 1,
+              path: '/fence/barrier-fence/barrier-fence-21DO',
+              name: 'Барьерное ограждение 21 ДО'
+            },
+            {
+              id: 2,
+              path: '/fence/barrier-fence/barrier-fence-wave',
+              name: 'Барьерное ограждение Волна'
+            },
+
+            {
+              id: 3,
+              path: '/fence/barrier-fence/barrier-fence-with-separating-beam',
+              name: 'Барьерное ограждение с отделяющейся балкой'
+            },
+            {
+              id: 4,
+              path: '/fence/barrier-fence/barrier-fence-U2',
+              name: 'Барьерное ограждение У2'
+            },
+            {
+              id: 5,
+              path: '/fence/barrier-fence/barrier-fence-U3',
+              name: 'Барьерное ограждение У3'
+            },
+            {
+              id: 6,
+              path: '/fence/barrier-fence/barrier-fence-U4',
+              name: 'Барьерное ограждение У4'
+            },
+            {
+              id: 7,
+              path: '/fence/barrier-fence/barrier-fence-SB-1',
+              name: 'Барьерное ограждение СБ-1'
+            },
+            {
+              id: 8,
+              path: '/fence/barrier-fence/barrier-fence-EC-1',
+              name: 'Барьерное ограждение ЭК-1'
+            },
+            {
+              id: 9,
+              path: '/fence/barrier-fence/barrier-fence-for-painting',
+              name: 'Барьерные ограждения под покраску'
+            },
+            {
+              id: 10,
+              path: '/fence/barrier-fence/barrier-fence-with-no-console',
+              name: 'Бесконсольное барьерное ограждение'
+            },
+            {
+              id: 11,
+              path: '/fence/barrier-fence/galvanized-road-barriers',
+              name: 'Оцинкованные дорожные ограждения'
+            },
+            {
+              id: 12,
+              path: '/fence/barrier-fence/road-barriers-guiding-devices',
+              name: 'Дорожные ограждения и направляющие устройства'
+            },
+            {
+              id: 13,
+              path: '/fence/barrier-fence/metal-barrier-fence',
+              name: 'Металлическое барьерное ограждение'
+            },
+            {
+              id: 14,
+              path: '/fence/barrier-fence/bridge-barrier',
+              name: 'Мостовое барьерное ограждение'
+            },
+            {
+              id: 15,
+              path: '/fence/barrier-fence/bridge-barrier-fence-11MO',
+              name: 'Мостовое барьерное ограждение 11МО'
+            },
+            {
+              id: 16,
+              path: '/fence/barrier-fence/one-sided-barrier-fence',
+              name: 'Одностороннее барьерное ограждение'
+            },
+            {
+              id: 17,
+              path: '/fence/barrier-fence/barrier-fence-calculation',
+              name: 'Расчет барьерного ограждения'
+            },
+            {
+              id: 18,
+              path: '/fence/barrier-fence/barrier-fence-installation',
+              name: 'Установка барьерного ограждения'
+            },
+            {
+              id: 19,
+              path: '/fence/barrier-fence/front-barrier-fence',
+              name: 'Фронтальное барьерное ограждение'
+            },
+            {
+              id: 20,
+              path: '/fence/barrier-fence/barrier-fence-end-piece',
+              name: 'Концевой элемент барьерного ограждения'
+            }
+          ]
         },
         {
-          id: 5,
-          path: '/fence/barrier-fence/barrier-fence-with-separating-beam',
-          name: 'Барьерное ограждение с отделяющейся балкой'
-        },
-        {
-          id: 6,
-          path: '/fence/barrier-fence/barrier-fence-U2',
-          name: 'Барьерное ограждение У2'
-        },
-        {
-          id: 7,
-          path: '/fence/barrier-fence/barrier-fence-U3',
-          name: 'Барьерное ограждение У3'
-        },
-        {
-          id: 8,
-          path: '/fence/barrier-fence/barrier-fence-U4',
-          name: 'Барьерное ограждение У4'
-        },
-        {
-          id: 9,
-          path: '/fence/barrier-fence/barrier-fence-SB-1',
-          name: 'Барьерное ограждение СБ-1'
-        },
-        {
-          id: 10,
-          path: '/fence/barrier-fence/barrier-fence-EC-1',
-          name: 'Барьерное ограждение ЭК-1'
-        },
-        {
-          id: 11,
-          path: '/fence/barrier-fence/barrier-fence-for-painting',
-          name: 'Барьерные ограждения под покраску'
-        },
-        {
-          id: 12,
-          path: '/fence/barrier-fence/barrier-fence-with-no-console',
-          name: 'Бесконсольное барьерное ограждение'
-        },
-        {
-          id: 13,
-          path: '/fence/barrier-fence/galvanized-road-barriers',
-          name: 'Оцинкованные дорожные ограждения'
-        },
-        {
-          id: 14,
-          path: '/fence/barrier-fence/road-barriers-guiding-devices',
-          name: 'Дорожные ограждения и направляющие устройства'
-        },
-        {
-          id: 15,
-          path: '/fence/barrier-fence/metal-barrier-fence',
-          name: 'Металлическое барьерное ограждение'
-        },
-        {
-          id: 16,
-          path: '/fence/barrier-fence/bridge-barrier',
-          name: 'Мостовое барьерное ограждение'
-        },
-        {
-          id: 17,
-          path: '/fence/barrier-fence/bridge-barrier-fence-11MO',
-          name: 'Мостовое барьерное ограждение 11МО'
-        },
-        {
-          id: 18,
-          path: '/fence/barrier-fence/one-sided-barrier-fence',
-          name: 'Одностороннее барьерное ограждение'
-        },
-        {
-          id: 19,
-          path: '/fence/barrier-fence/barrier-fence-calculation',
-          name: 'Расчет барьерного ограждения'
-        },
-        {
-          id: 20,
-          path: '/fence/barrier-fence/barrier-fence-installation',
-          name: 'Установка барьерного ограждения'
-        },
-        {
-          id: 21,
-          path: '/fence/barrier-fence/front-barrier-fence',
-          name: 'Фронтальное барьерное ограждение'
-        },
-        {
-          id: 22,
+          id: 1,
           path: '/fence/pedestrian-fences',
-          name: 'Пешеходные ограждения'
-        },
-        {
-          id: 23,
-          path: '/fence/pedestrian-fences/metal-pedestrian-fence',
-          name: 'Металлическое пешеходное ограждение'
-        },
-        {
-          id: 24,
-          path: '/fence/pedestrian-fences/guide-pedestrian-barriers',
-          name: 'Направляющие пешеходные ограждения'
-        },
-        {
-          id: 25,
-          path: '/fence/pedestrian-fences/restricting-pedestrian-fence',
-          name: 'Ограничивающее пешеходное ограждение'
-        },
-        {
-          id: 26,
-          path: '/fence/pedestrian-fences/pedestrian-barrier-cross',
-          name: 'Пешеходное ограждение Крест'
-        },
-        {
-          id: 27,
-          path: '/fence/pedestrian-fences/pedestrian-barrier-ORUD',
-          name: 'Пешеходное ограждение ОРУД'
-        },
-        {
-          id: 28,
-          path: '/fence/pedestrian-fences/pedestrian-barrier-PO-1-cross',
-          name: 'Пешеходное ограждение ПО-1 Крест'
-        },
-        {
-          id: 29,
-          path: '/fence/pedestrian-fences/pedestrian-barrier-PO-2',
-          name: 'Пешеходное ограждение ПО-2'
-        },
-        {
-          id: 30,
-          path: '/fence/pedestrian-fences/pedestrian-barrier-PO-6',
-          name: 'Пешеходное ограждение ПО-6'
-        },
-        {
-          id: 31,
-          path: '/fence/pedestrian-fences/pedestrian-railings',
-          name: 'Пешеходное перильное ограждение'
-        },
-        {
-          id: 32,
-          path: '/fence/pedestrian-fences/retaining-pedestrian-fence',
-          name: 'Удерживающие пешеходные ограждения'
-        },
-        {
-          id: 33,
-          path: '/fence/pedestrian-fences/installing-pedestrian-barriers',
-          name: 'Установка пешеходных ограждений'
-        },
-        {
-          id: 34,
-          path: '/fence/barrier-fence/barrier-fence-end-piece',
-          name: 'Концевой элемент барьерного ограждения'
+          name: 'Пешеходные ограждения',
+          sublist: [
+            {
+              id: 0,
+              path: '/fence/pedestrian-fences/metal-pedestrian-fence',
+              name: 'Металлическое пешеходное ограждение'
+            },
+            {
+              id: 1,
+              path: '/fence/pedestrian-fences/guide-pedestrian-barriers',
+              name: 'Направляющие пешеходные ограждения'
+            },
+            {
+              id: 2,
+              path: '/fence/pedestrian-fences/restricting-pedestrian-fence',
+              name: 'Ограничивающее пешеходное ограждение'
+            },
+            {
+              id: 3,
+              path: '/fence/pedestrian-fences/pedestrian-barrier-cross',
+              name: 'Пешеходное ограждение Крест'
+            },
+            {
+              id: 4,
+              path: '/fence/pedestrian-fences/pedestrian-barrier-ORUD',
+              name: 'Пешеходное ограждение ОРУД'
+            },
+            {
+              id: 5,
+              path: '/fence/pedestrian-fences/pedestrian-barrier-PO-1-cross',
+              name: 'Пешеходное ограждение ПО-1 Крест'
+            },
+            {
+              id: 6,
+              path: '/fence/pedestrian-fences/pedestrian-barrier-PO-2',
+              name: 'Пешеходное ограждение ПО-2'
+            },
+            {
+              id: 7,
+              path: '/fence/pedestrian-fences/pedestrian-barrier-PO-6',
+              name: 'Пешеходное ограждение ПО-6'
+            },
+            {
+              id: 8,
+              path: '/fence/pedestrian-fences/pedestrian-railings',
+              name: 'Пешеходное перильное ограждение'
+            },
+            {
+              id: 9,
+              path: '/fence/pedestrian-fences/retaining-pedestrian-fence',
+              name: 'Удерживающие пешеходные ограждения'
+            },
+            {
+              id: 10,
+              path: '/fence/pedestrian-fences/installing-pedestrian-barriers',
+              name: 'Установка пешеходных ограждений'
+            }
+          ]
         }
       ],
       screenRouterList: [
         {
           id: 0,
-          path: '/screen/noise-screens-and-acoustic-barriers',
-          name: 'Шумовые экраны и акустические барьеры'
+          path: '/screen/noise-screen',
+          name: 'Шумозащитные экраны',
+          sublist: [
+            {
+              id: 0,
+              path: '/screen/noise-screen/production-of-noise-screens',
+              name: 'Производство шумозащитных экранов'
+            },
+            {
+              id: 1,
+              path: '/screen/noise-screen/noise-screens-at-russian-railways',
+              name: 'Шумозащитные экраны на РЖД'
+            },
+            {
+              id: 2,
+              path: '/screen/noise-screen/installation-of-noise-screens',
+              name: 'Монтаж шумозащитных экранов'
+            },
+            {
+              id: 3,
+              path: '/screen/noise-screen/transparent-noise-screens',
+              name: 'Прозрачные шумозащитные экраны'
+            },
+            {
+              id: 4,
+              path: '/screen/noise-screen/calculation-noise-shield',
+              name: 'Расчет шумозащитного экрана'
+            },
+            {
+              id: 5,
+              path: '/screen/noise-screen/noise-screens-top10',
+              name: 'Шумозащитные экраны Топ 10'
+            },
+            {
+              id: 6,
+              path: '/screen/noise-screen/noise-screen-made-of-polycarbonate',
+              name: 'Шумозащитный экран из поликарбоната'
+            },
+            {
+              id: 7,
+              path: '/screen/noise-screen/noise-screen-made-of-sandwich-panels',
+              name: 'Шумозащитный экран из сэндвич-панелей'
+            }
+          ]
         },
         {
           id: 1,
@@ -330,51 +416,6 @@ export default {
           id: 2,
           path: '/screen/noise-barriers',
           name: 'Шумозащитные заборы'
-        },
-        {
-          id: 3,
-          path: '/screen/noise-screen',
-          name: 'Шумозащитные экраны'
-        },
-        {
-          id: 4,
-          path: '/screen/noise-screen/production-of-noise-screens',
-          name: 'Производство шумозащитных экранов'
-        },
-        {
-          id: 5,
-          path: '/screen/noise-screen/noise-screens-at-russian-railways',
-          name: 'Шумозащитные экраны на РЖД'
-        },
-        {
-          id: 6,
-          path: '/screen/noise-screen/installation-of-noise-screens',
-          name: 'Монтаж шумозащитных экранов'
-        },
-        {
-          id: 7,
-          path: '/screen/noise-screen/transparent-noise-screens',
-          name: 'Прозрачные шумозащитные экраны'
-        },
-        {
-          id: 8,
-          path: '/screen/noise-screen/calculation-noise-shield',
-          name: 'Расчет шумозащитного экрана'
-        },
-        {
-          id: 9,
-          path: '/screen/noise-screen/noise-screens-top10',
-          name: 'Шумозащитные экраны Топ 10'
-        },
-        {
-          id: 10,
-          path: '/screen/noise-screen/noise-screen-made-of-polycarbonate',
-          name: 'Шумозащитный экран из поликарбоната'
-        },
-        {
-          id: 12,
-          path: '/screen/noise-screen/noise-screen-made-of-sandwich-panels',
-          name: 'Шумозащитный экран из сэндвич-панелей'
         }
       ],
       pipeRouterList: [
@@ -400,58 +441,57 @@ export default {
         },
         {
           id: 4,
-          path: '/pipe/corrugated-culverts',
-          name: 'Гофрированные водопропускные трубы'
-        },
-        {
-          id: 5,
-          path: '/pipe/metal-culverts',
-          name: 'Металлические водопропускные трубы'
-        },
-        {
-          id: 6,
-          path: '/pipe/corrugated-culverts/metal-corrugated-culverts',
-          name: 'Металлические гофрированные водопропускные трубы'
-        },
-        {
-          id: 7,
           path: '/pipe/corrugated-culverts/metal-corrugated-all-metal-culverts',
           name: 'Металлические гофрированные цельновитые водопропускные трубы'
         },
         {
-          id: 8,
+          id: 5,
           path: '/pipe/round-culverts',
           name: 'Круглые водопропускные трубы'
         },
         {
-          id: 9,
+          id: 6,
           path: '/pipe/culvert-installation',
           name: 'Монтаж водопропускных труб'
         },
         {
-          id: 10,
+          id: 7,
           path: '/pipe/calculation-of-culverts',
           name: 'Расчет водопропускных труб'
         },
         {
-          id: 11,
-          path: '/pipe/spiral-pipe/spiral-corrugated-metal-pipes',
-          name: 'Спиральновитые гофрированные металлические трубы'
-        },
-        {
-          id: 12,
-          path: '/pipe/spiral-pipe/spiral-corrugated-metal-pipes-0.5',
-          name: 'Спиральновитые гофрированные металлические трубы с диаметром 0,5 м'
-        },
-        {
-          id: 13,
+          id: 8,
           path: '/pipe/spiral-pipe',
-          name: 'Спиральновитая труба'
+          name: 'Спиральновитая труба',
+          sublist: [
+            {
+              id: 0,
+              path: '/pipe/spiral-pipe/spiral-corrugated-metal-pipes',
+              name: 'Спиральновитые гофрированные металлические трубы'
+            },
+            {
+              id: 1,
+              path: '/pipe/spiral-pipe/spiral-corrugated-metal-pipes-0.5',
+              name: 'Спиральновитые гофрированные металлические трубы с диаметром 0,5 м'
+            },
+          ]
         },
         {
-          id: 14,
-          path: '/pipe/culvert',
-          name: 'Водопропускная труба'
+          id: 9,
+          path: '/pipe/corrugated-culverts',
+          name: 'Гофрированные водопропускные трубы',
+          sublist: [
+            {
+              id: 0,
+              path: '/pipe/metal-culverts',
+              name: 'Металлические водопропускные трубы'
+            },
+            {
+              id: 1,
+              path: '/pipe/corrugated-culverts/metal-corrugated-culverts',
+              name: 'Металлические гофрированные водопропускные трубы'
+            }
+          ]
         }
       ],
       articleRouterList: [
@@ -549,37 +589,31 @@ export default {
     }
   },
   computed: {
-    fenceRouterListSort () {
+    fenceRouterListSort() {
       return this.fenceRouterList.sort(function (a, b) {
-        if (a.name < b.name) { return -1 }
-        if (a.name > b.name) { return 1 }
+        if (a.name < b.name) {
+          return -1
+        }
+        if (a.name > b.name) {
+          return 1
+        }
         return 0
       })
     },
-    screenRouterListSort () {
-      return this.screenRouterList.sort(function (a, b) {
-        if (a.name < b.name) { return -1 }
-        if (a.name > b.name) { return 1 }
-        return 0
-      })
-    },
-    pipeRouterListSort () {
-      return this.pipeRouterList.sort(function (a, b) {
-        if (a.name < b.name) { return -1 }
-        if (a.name > b.name) { return 1 }
-        return 0
-      })
-    },
-    articleRouterListSort () {
+    articleRouterListSort() {
       return this.articleRouterList.sort(function (a, b) {
-        if (a.name < b.name) { return -1 }
-        if (a.name > b.name) { return 1 }
+        if (a.name < b.name) {
+          return -1
+        }
+        if (a.name > b.name) {
+          return 1
+        }
         return 0
       })
     }
   },
   methods: {
-    close () {
+    close() {
       this.$emit('close')
     }
   }
@@ -685,6 +719,7 @@ export default {
 
   svg {
     transform: rotate(0);
+
     path {
       stroke: $font-color-orange;
     }
@@ -715,17 +750,30 @@ export default {
 }
 
 .menu__sublist-container {
+  display: flex;
+  justify-content: space-between;
   max-width: 1280px;
   width: 100%;
-  columns: 3;
+
+  &--third {
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 270px;
+  }
+
+  &--fourth {
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 300px;
+  }
 }
 
 .menu__sublist-item {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 15px;
-  padding-right: 25px;
+  margin-right: 25px;
 
   &:last-child {
     margin-bottom: 0;
@@ -733,7 +781,6 @@ export default {
 
   &:hover, {
     .menu__sublist-link {
-      padding-left: 25px;
       color: $font-color-orange;
     }
   }
@@ -772,10 +819,60 @@ export default {
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
+  white-space: nowrap;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
   transition: $style-change-duration;
+}
+
+.menu .menu__sublist-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 320px;
+  padding-left: 25px;
+  padding-top: 15px;
+
+  &-item {
+    position: relative;
+    margin-bottom: 5px;
+    margin-right: 25px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 7px;
+      left: -12px;
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      background-color: $bg-color-orange;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover, {
+      .menu__sublist-list-link {
+        color: $font-color-orange;
+      }
+    }
+
+  }
+
+  &-link {
+    display: inline-block;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: $style-change-duration;
+  }
 }
 
 @include desktop-small {

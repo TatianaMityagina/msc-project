@@ -4,7 +4,8 @@
       <h2 class="fence-types__title">Виды барьерных ограждений</h2>
       <figure class="fence-types__item">
         <img alt="Photo fence type" class="fence-types__item-image"
-             height="260" src="../../assets/img/fence-types/fence-types@1x.webp" srcset="../../assets/img/fence-types/fence-types@2x.webp 2x"
+             height="260" src="../../assets/img/fence-types/fence-types@1x.webp"
+             srcset="../../assets/img/fence-types/fence-types@2x.webp 2x"
              width="260">
         <div class="fence-types__item-content">
           <div class="fence-types__content">
@@ -36,7 +37,8 @@
 
       <figure class="fence-types__item">
         <img alt="Photo fence type" class="fence-types__item-image"
-             height="260" src="../../assets/img/fence-types/fence-types-2@1x.webp" srcset="../../assets/img/fence-types/fence-types-2@2x.webp 2x"
+             height="260" src="../../assets/img/fence-types/fence-types-2@1x.webp"
+             srcset="../../assets/img/fence-types/fence-types-2@2x.webp 2x"
              width="260">
         <div class="fence-types__item-content">
           <div class="fence-types__content">

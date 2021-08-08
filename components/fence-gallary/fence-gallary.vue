@@ -2,11 +2,14 @@
   <section class="fence-gallary">
     <div class="fence-gallary__container">
       <img alt="Photo" class="fence-gallary__image"
-           height="400" src="../../assets/img/fence-gallary/photo-1@1x.jpg" srcset="../../assets/img/fence-gallary/photo-1@2x.jpg" width="400">
+           height="400" src="../../assets/img/fence-gallary/photo-1@1x.jpg"
+           srcset="../../assets/img/fence-gallary/photo-1@2x.jpg" width="400">
       <img alt="Photo" class="fence-gallary__image"
-           height="400" src="../../assets/img/fence-gallary/photo-2@1x.jpg" srcset="../../assets/img/fence-gallary/photo-2@2x.jpg" width="400">
+           height="400" src="../../assets/img/fence-gallary/photo-2@1x.jpg"
+           srcset="../../assets/img/fence-gallary/photo-2@2x.jpg" width="400">
       <img alt="Photo" class="fence-gallary__image"
-           height="400" src="../../assets/img/fence-gallary/photo-3@1x.jpg" srcset="../../assets/img/fence-gallary/photo-3@2x.jpg" width="400">
+           height="400" src="../../assets/img/fence-gallary/photo-3@1x.jpg"
+           srcset="../../assets/img/fence-gallary/photo-3@2x.jpg" width="400">
     </div>
   </section>
 </template>

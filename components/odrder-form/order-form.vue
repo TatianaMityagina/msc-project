@@ -6,26 +6,27 @@
         <div class="order-form__form-row">
           <div class="order-form__form-col">
             <label for="name">Имя</label>
-            <input id="name" placeholder="Александр" type="text" v-model="form.name">
+            <input id="name" v-model="form.name" placeholder="Александр" type="text">
           </div>
           <div class="order-form__form-col">
             <label for="phone">Телефон</label>
-            <input id="phone" v-mask="'+7 (###) ### ## ##'" placeholder="+7(ххх) ххх - хх - хх" type="tel" v-model="form.phone">
+            <input id="phone" v-model="form.phone" v-mask="'+7 (###) ### ## ##'" placeholder="+7(ххх) ххх - хх - хх"
+                   type="tel">
           </div>
           <div class="order-form__form-col">
             <label for="email">Почта</label>
-            <input id="email" placeholder="info@mail.ru" type="email" v-model="form.email">
+            <input id="email" v-model="form.email" placeholder="info@mail.ru" type="email">
           </div>
         </div>
         <div class="order-form__form-row">
           <div class="order-form__form-col order-form__form-col--message">
             <label for="message">Сообщение</label>
-            <textarea id="message" type="text" v-model="form.message"></textarea>
+            <textarea id="message" v-model="form.message" type="text"></textarea>
           </div>
           <div class="order-form__form-col">
             <button class="order-form__form-btn" type="submit">Отправить заявку</button>
-<!--            <p class="order-form__form-accept">Нажимая на кнопку я подтверждаю, что я ознакомлен с условиями <a href="">политики-->
-<!--              конфиденциальности</a></p>-->
+            <!--            <p class="order-form__form-accept">Нажимая на кнопку я подтверждаю, что я ознакомлен с условиями <a href="">политики-->
+            <!--              конфиденциальности</a></p>-->
           </div>
         </div>
       </form>
@@ -51,7 +52,7 @@ export default {
       url: 'https://msk23.ru'
     }
   },
-  methods:{
+  methods: {
     submitForm() {
       this.$axios.$post(this.url + '/mail', this.form)
           .then(() => {

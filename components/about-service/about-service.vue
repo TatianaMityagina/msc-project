@@ -7,7 +7,8 @@
         <p v-show="aboutService.text2 != ''" class="about-service__text">{{ aboutService.text2 }}</p>
       </div>
     </div>
-    <img :src="require(`../../assets/img/about-service/${aboutService.src}`)" :srcset="require(`../../assets/img/about-service/${aboutService.srcset}`)"
+    <img :src="require(`../../assets/img/about-service/${aboutService.src}`)"
+         :srcset="require(`../../assets/img/about-service/${aboutService.srcset}`)"
          alt="Photo fence" class="about-service__image" height="628"
          width="900">
   </section>

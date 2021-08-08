@@ -6,7 +6,8 @@
       <source media="(max-width: 1919px)"
               srcset="../../assets/img/pipe-structure/pipe-structure-1360@1x.webp 1x, ../../assets/img/pipe-structure/pipe-structure-1360@1x.webp 2x">
       <img alt="Photo pipe"
-           height="900" src="../../assets/img/pipe-structure/pipe-structure-1920@1x.webp" srcset="../../assets/img/pipe-structure/pipe-structure-1920@2x.webp 2x"
+           height="900" src="../../assets/img/pipe-structure/pipe-structure-1920@1x.webp"
+           srcset="../../assets/img/pipe-structure/pipe-structure-1920@2x.webp 2x"
            width="960">
     </picture>
 

@@ -8,6 +8,7 @@
     <ScreenPanel/>
     <ScreenProduction/>
     <CentralContent v-bind:content-options="contentOptionsBottom"/>
+    <about-product :content-text="contentBottomBlock" style="padding-top: 80px"/>
     <Navigation :navigation-list="screenRouterListSort" style="padding-top: 60px"/>
   </main>
 </template>
@@ -141,7 +142,100 @@ export default {
           path: '/screen/noise-screen/noise-screen-made-of-sandwich-panels',
           name: 'Шумозащитный экран из сэндвич-панелей'
         },
-      ]
+      ],
+      contentBottomBlock: {
+        title: "Заказать шумовые экраны и акустические барьеры. Принцип работы",
+        class: "noise-screens-and-acoustic-barriers",
+        row_first: {
+          title: "",
+          text1: "",
+          list_first: {
+            item1: "",
+            item2: "",
+            item3: ""
+          },
+          text2: "",
+          list_second: {
+            item1: "",
+            item2: "",
+            item3: ""
+          },
+          text3: ""
+        },
+        row_second: {
+          title: "",
+          text1: "Шумовые экраны и акустические барьеры представляют собой неотъемлемую часть инструментов для обеспечения комфортных условий проживания и работы тех, кто много времени проводит в зданиях вдоль оживленных дорог. Шумозащитные заборы можно встретить также возле:",
+          list_first: {
+            item1: "аэропортов;",
+            item2: "ж/д;",
+            item3: "стадионов;",
+            item4: "строительных площадок, цехов и т.д."
+          },
+          text2: "",
+          list_second: {
+            item1: "",
+            item2: "",
+            item3: "",
+            item4: ""
+          },
+          text3: ""
+        },
+        row_third: {
+          title: "",
+          text1: "",
+          text2: "",
+          list: {
+            item1: "",
+            item2: "",
+            item3: ""
+          }
+        },
+        row_fourth: {
+          title: "",
+          text1: "Главной их задачей выступает снижение громкости звуков, мешающих окружающим людям. При этом акустические барьеры не всегда направлены на гашение звуковой волны. Существуют такие модели экранов, которые отражают шум, отправляя волны обратно к источнику гула. Их обычно монтируют около технических помещений вроде трансформаторных подсобок.",
+          list_first: {
+            item1: "",
+            item2: "",
+            item3: "",
+            item4: ""
+          },
+          text2: "Отдельно существует классификация по внешнему виду. Спросом пользуются непрозрачные сэндвич-панели, внутри которых находится слой базальтовой ваты, а также прозрачные плиты из поликарбоната. В некоторых случаях их дополнительно тонируют.",
+          list_second: {
+            item1: "",
+            item2: "",
+            item3: "",
+            item4: ""
+          },
+          text3: "В «МСК» можно приобрести барьеры любого типа и заказать услугу монтажа. Сборкой займутся опытные специалисты, которые придерживаются ГОСТа. В будущем это поможет успешно пройти проверку, которую осуществляют контролирующие органы.",
+          text4: "",
+          text5: ""
+        },
+        row_fifth: {
+          title: "",
+          text1: "",
+          list_first: {
+            item1: "",
+            item2: "",
+            item3: "",
+            item4: "",
+            item5: ""
+          },
+          text2: "",
+          list_second: {
+            item1: "",
+            item2: "",
+            item3: "",
+            item4: "",
+            item5: ""
+          },
+          text3: ""
+        },
+        pictures: {
+          image1: "",
+          image2: "screen-photo16.jpg",
+          image3: ""
+        },
+      }
     }
   },
   computed: {

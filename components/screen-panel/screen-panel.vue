@@ -28,7 +28,8 @@
       </div>
 
       <img alt="Photo structure" class="screen-panel__image"
-           height="530" src="../../assets/img/screen-panel/screen-panel@1x.png" srcset="../../assets/img/screen-panel/screen-panel@2x.png" width="800">
+           height="530" src="../../assets/img/screen-panel/screen-panel@1x.png"
+           srcset="../../assets/img/screen-panel/screen-panel@2x.png" width="800">
     </div>
   </section>
 </template>

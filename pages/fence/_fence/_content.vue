@@ -1,8 +1,8 @@
 <template>
   <main class="page-main">
-    <subtitle :subtitles="subtitles"/>
-    <about-product :content-text="getContent"/>
-    <order-form/>
+    <subtitle :subtitles="subtitles" />
+    <about-product :content-text="getContent" />
+    <order-form />
   </main>
 </template>
 
@@ -19,7 +19,21 @@ export default {
     AboutProduct,
     OrderForm
   },
-  head() {
+  data () {
+    return {
+      productFenceContent
+    }
+  },
+  computed: {
+    getContent () {
+      return this.productFenceContent.find(e => e.path === this.$route.path)
+    },
+    subtitles () {
+      this.getContent.href = '/fence'
+      return this.getContent
+    }
+  },
+  head () {
     return {
       title: this.getContent.meta.og_title,
       meta: [
@@ -43,25 +57,11 @@ export default {
           property: 'og:description',
           content: this.getContent.meta.og_description
         },
-        {hid: 'og:url', property: 'og:url', content: `https://msk23.ru${this.getContent.path}`}
+        { hid: 'og:url', property: 'og:url', content: `https://msk23.ru${this.getContent.path}` }
       ],
       link: [
-        {rel: 'canonical', href: `https://msk23.ru${this.getContent.path}`}
+        { rel: 'canonical', href: `https://msk23.ru${this.getContent.path}` }
       ]
-    }
-  },
-  data() {
-    return {
-      productFenceContent
-    }
-  },
-  computed: {
-    getContent() {
-      return this.productFenceContent.find(e => e.path === this.$route.path);
-    },
-    subtitles() {
-      this.getContent.href = '/fence';
-      return this.getContent
     }
   }
 }

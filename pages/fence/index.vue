@@ -84,107 +84,107 @@ export default {
       fenceRouterList: [
         {
           id: 1,
-          path: '/fence/barrier-fence/barrier-fence-11DO',
+          path: '/fence/barrier-fence-11DO',
           name: 'Барьерное ограждение 11 ДО'
         },
         {
           id: 2,
-          path: '/fence/barrier-fence/barrier-fence-21DO',
+          path: '/fence/barrier-fence-21DO',
           name: 'Барьерное ограждение 21 ДО'
         },
         {
           id: 3,
-          path: '/fence/barrier-fence/barrier-fence-wave',
+          path: '/fence/barrier-fence-wave',
           name: 'Барьерное ограждение Волна'
         },
         {
           id: 4,
-          path: '/fence/barrier-fence/barrier-road-fence',
+          path: '/fence/barrier-road-fence',
           name: 'Барьерное дорожное ограждение'
         },
         {
           id: 5,
-          path: '/fence/barrier-fence/barrier-fence-with-separating-beam',
+          path: '/fence/barrier-fence-with-separating-beam',
           name: 'Барьерное ограждение с отделяющейся балкой'
         },
         {
           id: 6,
-          path: '/fence/barrier-fence/barrier-fence-U2',
+          path: '/fence/barrier-fence-U2',
           name: 'Барьерное ограждение У2'
         },
         {
           id: 7,
-          path: '/fence/barrier-fence/barrier-fence-U3',
+          path: '/fence/barrier-fence-U3',
           name: 'Барьерное ограждение У3'
         },
         {
           id: 8,
-          path: '/fence/barrier-fence/barrier-fence-U4',
+          path: '/fence/barrier-fence-U4',
           name: 'Барьерное ограждение У4'
         },
         {
           id: 9,
-          path: '/fence/barrier-fence/barrier-fence-SB-1',
+          path: '/fence/barrier-fence-SB-1',
           name: 'Барьерное ограждение СБ-1'
         },
         {
           id: 10,
-          path: '/fence/barrier-fence/barrier-fence-EC-1',
+          path: '/fence/barrier-fence-EC-1',
           name: 'Барьерное ограждение ЭК-1'
         },
         {
           id: 11,
-          path: '/fence/barrier-fence/barrier-fence-for-painting',
+          path: '/fence/barrier-fence-for-painting',
           name: 'Барьерные ограждения под покраску'
         },
         {
           id: 12,
-          path: '/fence/barrier-fence/barrier-fence-with-no-console',
+          path: '/fence/barrier-fence-with-no-console',
           name: 'Бесконсольное барьерное ограждение'
         },
         {
           id: 13,
-          path: '/fence/barrier-fence/galvanized-road-barriers',
+          path: '/fence/galvanized-road-barriers',
           name: 'Оцинкованные дорожные ограждения'
         },
         {
           id: 14,
-          path: '/fence/barrier-fence/road-barriers-guiding-devices',
+          path: '/fence/road-barriers-guiding-devices',
           name: 'Дорожные ограждения и направляющие устройства'
         },
         {
           id: 15,
-          path: '/fence/barrier-fence/metal-barrier-fence',
+          path: '/fence/metal-barrier-fence',
           name: 'Металлическое барьерное ограждение'
         },
         {
           id: 16,
-          path: '/fence/barrier-fence/bridge-barrier',
+          path: '/fence/bridge-barrier',
           name: 'Мостовое барьерное ограждение'
         },
         {
           id: 17,
-          path: '/fence/barrier-fence/bridge-barrier-fence-11MO',
+          path: '/fence/bridge-barrier-fence-11MO',
           name: 'Мостовое барьерное ограждение 11МО'
         },
         {
           id: 18,
-          path: '/fence/barrier-fence/one-sided-barrier-fence',
+          path: '/fence/one-sided-barrier-fence',
           name: 'Одностороннее барьерное ограждение'
         },
         {
           id: 19,
-          path: '/fence/barrier-fence/barrier-fence-calculation',
+          path: '/fence/barrier-fence-calculation',
           name: 'Расчет барьерного ограждения'
         },
         {
           id: 20,
-          path: '/fence/barrier-fence/barrier-fence-installation',
+          path: '/fence/barrier-fence-installation',
           name: 'Установка барьерного ограждения'
         },
         {
           id: 21,
-          path: '/fence/barrier-fence/front-barrier-fence',
+          path: '/fence/front-barrier-fence',
           name: 'Фронтальное барьерное ограждение'
         },
         {
@@ -249,7 +249,7 @@ export default {
         },
         {
           id: 34,
-          path: '/fence/barrier-fence/barrier-fence-end-piece',
+          path: '/fence/barrier-fence-end-piece',
           name: 'Концевой элемент барьерного ограждения'
         }
       ],

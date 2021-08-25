@@ -1,8 +1,9 @@
 <template>
   <main class="page-main">
-    <subtitle :subtitles="subtitles"/>
-    <about-product :content-text="getContent"/>
-    <order-form/>
+    <subtitle :subtitles="subtitles" />
+    <about-product :content-text="getContent" />
+    <Navigation v-show="$route.fullPath === '/fence/pedestrian-fences'" :navigation-list="fenceRouterListSort" style="padding-top: 60px" />
+    <order-form />
   </main>
 </template>
 
@@ -19,7 +20,85 @@ export default {
     AboutProduct,
     OrderForm
   },
-  head() {
+  data () {
+    return {
+      productFenceContent,
+      fenceRouterList: [
+        {
+          id: 23,
+          path: '/fence/pedestrian-fences/metal-pedestrian-fence',
+          name: 'Металлическое пешеходное ограждение'
+        },
+        {
+          id: 24,
+          path: '/fence/pedestrian-fences/guide-pedestrian-barriers',
+          name: 'Направляющие пешеходные ограждения'
+        },
+        {
+          id: 25,
+          path: '/fence/pedestrian-fences/restricting-pedestrian-fence',
+          name: 'Ограничивающее пешеходное ограждение'
+        },
+        {
+          id: 26,
+          path: '/fence/pedestrian-fences/pedestrian-barrier-cross',
+          name: 'Пешеходное ограждение Крест'
+        },
+        {
+          id: 27,
+          path: '/fence/pedestrian-fences/pedestrian-barrier-ORUD',
+          name: 'Пешеходное ограждение ОРУД'
+        },
+        {
+          id: 28,
+          path: '/fence/pedestrian-fences/pedestrian-barrier-PO-1-cross',
+          name: 'Пешеходное ограждение ПО-1 Крест'
+        },
+        {
+          id: 29,
+          path: '/fence/pedestrian-fences/pedestrian-barrier-PO-2',
+          name: 'Пешеходное ограждение ПО-2'
+        },
+        {
+          id: 30,
+          path: '/fence/pedestrian-fences/pedestrian-barrier-PO-6',
+          name: 'Пешеходное ограждение ПО-6'
+        },
+        {
+          id: 31,
+          path: '/fence/pedestrian-fences/pedestrian-railings',
+          name: 'Пешеходное перильное ограждение'
+        },
+        {
+          id: 32,
+          path: '/fence/pedestrian-fences/retaining-pedestrian-fence',
+          name: 'Удерживающие пешеходные ограждения'
+        },
+        {
+          id: 33,
+          path: '/fence/pedestrian-fences/installing-pedestrian-barriers',
+          name: 'Установка пешеходных ограждений'
+        }
+      ]
+    }
+  },
+  computed: {
+    getContent () {
+      return this.productFenceContent.find(e => e.path === this.$route.path)
+    },
+    fenceRouterListSort () {
+      return this.fenceRouterList.sort(function (a, b) {
+        if (a.name < b.name) { return -1 }
+        if (a.name > b.name) { return 1 }
+        return 0
+      })
+    },
+    subtitles () {
+      this.getContent.href = '/fence'
+      return this.getContent
+    }
+  },
+  head () {
     return {
       title: this.getContent.meta.og_title,
       meta: [
@@ -43,25 +122,11 @@ export default {
           property: 'og:description',
           content: this.getContent.meta.og_description
         },
-        {hid: 'og:url', property: 'og:url', content: `https://msk23.ru${this.getContent.path}`}
+        { hid: 'og:url', property: 'og:url', content: `https://msk23.ru${this.getContent.path}` }
       ],
       link: [
-        {rel: 'canonical', href: `https://msk23.ru${this.getContent.path}`}
+        { rel: 'canonical', href: `https://msk23.ru${this.getContent.path}` }
       ]
-    }
-  },
-  data() {
-    return {
-      productFenceContent
-    }
-  },
-  computed: {
-    getContent() {
-      return this.productFenceContent.find(e => e.path === this.$route.path);
-    },
-    subtitles() {
-      this.getContent.href = '/fence';
-      return this.getContent
     }
   }
 }

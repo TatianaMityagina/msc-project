@@ -48,7 +48,18 @@ export default {
     'cookie-universal-nuxt',
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id: '84973597',
+        webvisor: true,
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+      }
+    ],
+    '@nuxtjs/google-analytics'
   ],
   sitemap: {
     hostname: 'https://msk23.ru',
@@ -73,6 +84,9 @@ export default {
       Sitemap: 'https://msk.ru/sitemap.xml'
     }
   ],
+  googleAnalytics: {
+    id: 'G-9KFZ3YQMNK'
+  },
   webfontloader: {
     events: false,
     google: {

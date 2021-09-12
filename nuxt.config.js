@@ -21,7 +21,7 @@ export default {
   rootDir: __dirname,
   router: {
     prefetchLinks: false,
-    middleware: 'trailingSlashRedirect'
+    trailingSlash: false
   },
   loading: { color: '#ddd' },
 

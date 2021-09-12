@@ -14,9 +14,9 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   rootDir: __dirname,
   router: {
@@ -45,7 +45,32 @@ export default {
     'nuxt-trailingslash-module',
     'nuxt-webfontloader',
     'cookie-universal-nuxt',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
+  ],
+  sitemap: {
+    hostname: 'https://msk23.ru',
+    gzip: true,
+    filter ({ routes }) {
+      return routes.map((route) => {
+        route.url = `${route.url}`
+        return route
+      })
+    }
+  },
+  robots: [
+    {
+      UserAgent: 'Googlebot'
+    },
+    {
+      UserAgent: 'Yandex'
+    },
+    {
+      UserAgent: '*',
+      Host: 'www.msk.ru',
+      Sitemap: 'https://msk.ru/sitemap.xml'
+    }
   ],
   webfontloader: {
     events: false,
@@ -78,8 +103,11 @@ export default {
     // }
   },
 
-
   axios: {},
+
+  buildModules: [
+    '@/modules/sitemapRouteGenerator'
+  ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
@@ -144,6 +172,6 @@ export default {
       }),
 
       order: 'cssnanoLast'
-    },
+    }
   }
 }

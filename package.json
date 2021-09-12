@@ -16,6 +16,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "cookie-universal-nuxt": "^2.1.4",
     "core-js": "^3.6.5",

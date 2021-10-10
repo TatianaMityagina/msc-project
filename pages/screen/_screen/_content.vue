@@ -60,8 +60,12 @@ export default {
       return this.productScreenContent.find(e => e.path === this.$route.path);
     },
     subtitles() {
-      this.getContent.href = '/screen';
-      return this.getContent
+      if (this.getContent) {
+        this.getContent.href = '/screen';
+        return this.getContent
+      } else {
+        throw ({status: 404, message: 'error'});
+      }
     }
   }
 }

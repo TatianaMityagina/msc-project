@@ -29,8 +29,12 @@ export default {
       return this.productFenceContent.find(e => e.path === this.$route.path)
     },
     subtitles () {
-      this.getContent.href = '/fence'
-      return this.getContent
+      if (this.getContent) {
+        this.getContent.href = '/fence'
+        return this.getContent
+      } else {
+        throw ({status: 404, message: 'error'});
+      }
     }
   },
   head () {

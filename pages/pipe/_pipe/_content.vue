@@ -60,8 +60,12 @@ export default {
       return this.productPipeContent.find(e => e.path === this.$route.path);
     },
     subtitles() {
-      this.getContent.href = '/pipe';
-      return this.getContent
+      if (this.getContent) {
+        this.getContent.href = '/pipe';
+        return this.getContent
+      } else {
+        throw ({status: 404, message: 'error'});
+      }
     }
   }
 }

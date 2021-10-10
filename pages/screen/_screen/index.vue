@@ -110,8 +110,12 @@ export default {
       })
     },
     subtitles() {
-      this.getContent.href = '/screen';
-      return this.getContent
+      if (this.getContent) {
+        this.getContent.href = '/screen';
+        return this.getContent
+      } else {
+        throw ({status: 404, message: 'error'});
+      }
     }
   }
 }

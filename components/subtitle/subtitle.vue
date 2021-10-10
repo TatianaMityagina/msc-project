@@ -1,7 +1,7 @@
 <template>
   <div class="subtitle">
     <div class="subtitle__container">
-      <nuxt-link :to="subtitles.href" class="subtitle__link">
+      <nuxt-link :to="subtitles.href || ''" class="subtitle__link">
         <svg class="news-info__header-icon" fill="none" height="13" viewBox="0 0 17 13" width="17"
              xmlns="http://www.w3.org/2000/svg">
           <path d="M17 6.5H2M2 6.5L7 1M2 6.5L7 12" stroke="black" stroke-opacity="0.3" stroke-width="2"/>

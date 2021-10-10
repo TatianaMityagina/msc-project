@@ -1,12 +1,20 @@
 <template>
   <section id="services" class="services">
     <div class="services__container">
-      <h2 class="services__title">Мы предлагаем</h2>
+      <h2 class="services__title">
+        Мы предлагаем
+      </h2>
       <div class="services__items-wrapper">
         <div v-for="item in serviceItem" :key="item.id" class="services__item">
           <div class="services__image-wrapper">
-            <img :src="item.src" :srcset="item.srcset" alt="Photo service" class="services__item-image" height="250"
-                 width="210">
+            <img
+              :src="item.src"
+              :srcset="item.srcset"
+              alt="Photo service"
+              class="services__item-image"
+              height="250"
+              width="210"
+            >
           </div>
           <div class="services__item-content">
             <h3> {{ item.title }} </h3>
@@ -14,9 +22,9 @@
             <nuxt-link :to="item.path" class="service__btn">
               <span>Подробнее</span>
               <svg fill="none" height="12" viewBox="0 0 21 14" width="18" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7 7L1 13" stroke="#A3A3A3" stroke-width="2"/>
-                <path d="M7 1L13 7L7 13" stroke="#A3A3A3" stroke-width="2"/>
-                <path d="M13 1L19 7L13 13" stroke="#A3A3A3" stroke-width="2"/>
+                <path d="M1 1L7 7L1 13" stroke="#A3A3A3" stroke-width="2" />
+                <path d="M7 1L13 7L7 13" stroke="#A3A3A3" stroke-width="2" />
+                <path d="M13 1L19 7L13 13" stroke="#A3A3A3" stroke-width="2" />
               </svg>
             </nuxt-link>
           </div>
@@ -30,14 +38,13 @@
         <span>Монтаж барьерного ограждения</span>
       </div>
     </div>
-
   </section>
 </template>
 
 <script>
 export default {
-  name: "Services",
-  data() {
+  name: 'Services',
+  data () {
     return {
       swiper: null,
       serviceItem: [

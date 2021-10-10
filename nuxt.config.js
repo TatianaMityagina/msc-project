@@ -21,7 +21,7 @@ export default {
   rootDir: __dirname,
   router: {
     prefetchLinks: false,
-    trailingSlash: false,
+    trailingSlash: false
   },
   loading: { color: '#ddd' },
 
@@ -80,8 +80,8 @@ export default {
     },
     {
       UserAgent: '*',
-      Host: 'www.msk.ru',
-      Sitemap: 'https://msk.ru/sitemap.xml'
+      Host: 'https://msk23.ru',
+      Sitemap: 'https://msk23.ru/sitemap.xml'
     }
   ],
   googleAnalytics: {

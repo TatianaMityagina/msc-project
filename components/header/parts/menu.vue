@@ -171,7 +171,7 @@
       </li>
 
       <li class="menu__list-item" @click="close">
-        <a v-show="$route.path === '/'" class="menu__list-link" href="#contacts">Контакты</a>
+        <a ref='link' class="menu__list-link" href="#contacts" @click='contacts'>Контакты</a>
       </li>
     </ul>
   </nav>
@@ -612,6 +612,11 @@ export default {
   methods: {
     close() {
       this.$emit('close')
+    },
+    contacts() {
+      if (this.$route.path !== '/') {
+        this.$router.push('/#contacts');
+      }
     }
   }
 }

@@ -10,11 +10,11 @@ export default {
     htmlAttrs: {
       lang: 'ru'
     },
-    title: 'MSC',
+    title: 'Заказать дорожные ограждения, экраны, трубы СГМТ от производителя. Доставка по РФ',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Купить дорожные ограждения от производителя по лучшим ценам с доставкой на Ваш объект. Широкий ассортимент. Соответствие ГОСТам. Монтаж под ключ, доставка по Краснодару и России' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },

@@ -116,7 +116,6 @@ export default {
     //  etag: false
     // }
   },
-  target: 'static',
 
   axios: {},
 

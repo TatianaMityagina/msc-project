@@ -20,13 +20,6 @@ export default {
   router: {
     prefetchLinks: false,
     trailingSlash: false,
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: 'custom',
-        path: '*',
-        component: resolve(__dirname, '404/index.vue')
-      })
-    }
   },
   loading: { color: '#ddd' },
 

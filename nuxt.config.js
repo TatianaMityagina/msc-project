@@ -116,6 +116,9 @@ export default {
     // }
   },
   target: 'static',
+  generate: {
+    fallback: true
+  },
   axios: {},
 
   buildModules: [

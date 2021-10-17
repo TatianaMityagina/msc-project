@@ -119,6 +119,7 @@ export default {
   generate: {
     fallback: true
   },
+  ssr: false,
   axios: {},
 
   buildModules: [

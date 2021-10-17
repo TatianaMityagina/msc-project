@@ -1,11 +1,9 @@
 const isDev = process.env.NODE_ENV !== 'production'
 
 export default {
-  mode: 'universal',
   ...(!isDev && {
     modern: 'client'
   }),
-  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     htmlAttrs: {
       lang: 'ru'
@@ -21,7 +19,14 @@ export default {
   rootDir: __dirname,
   router: {
     prefetchLinks: false,
-    trailingSlash: false
+    trailingSlash: false,
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/index.vue')
+      })
+    }
   },
   loading: { color: '#ddd' },
 
@@ -117,6 +122,7 @@ export default {
     //  etag: false
     // }
   },
+  target: 'static',
 
   axios: {},
 

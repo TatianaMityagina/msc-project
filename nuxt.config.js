@@ -24,7 +24,7 @@ export default {
       routes.push({
         name: 'custom',
         path: '*',
-        component: resolve(__dirname, '404/index.html')
+        component: resolve(__dirname, '404/index.vue')
       })
     }
   },

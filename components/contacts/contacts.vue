@@ -6,8 +6,8 @@
         <dl>
           <dt>Номер телефона</dt>
           <dd class="contacts__default"><a href="tel:+79189808083" rel="noopener" target="_blank">+7 (918) 980-80-83</a>
-          </dd>7 (964) 907-12-77
-          <dd><a href="tel:+79182491219" rel="noopener" target="_blank">+7 (918)-249-12-19</a></dd>
+          </dd>
+          <dd><a href="tel:+79649071277" rel="noopener" target="_blank">+7 (918) 249-12-19</a></dd>
 
           <dt>Email</dt>
           <dd><a href="mailto:msk-18@list.ru" rel="noopener" target="_blank">msk-18@list.ru</a></dd>

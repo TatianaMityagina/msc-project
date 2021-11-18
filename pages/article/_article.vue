@@ -1,14 +1,16 @@
 <template>
   <main class="page-main">
-    <Subtitle v-bind:subtitles="{
-          href: '/news',
-          title: getNews.title,
-          text: ''
-        }"/>
-    <Article v-bind:contentArticle="getNews.content"/>
+    <Subtitle
+      :subtitles="{
+        href: '/news',
+        title: getNews.title,
+        text: ''
+      }"
+    />
+    <Article :content-article="getNews.content" />
 
     <div class="page-main__border">
-      <SliderNews :show-button-more="false" :show-button-next="false" :show-button-prev="false"/>
+      <SliderNews :show-button-more="false" :show-button-next="false" :show-button-prev="false" />
     </div>
   </main>
 </template>
@@ -26,14 +28,14 @@ export default {
     Article,
     SliderNews
   },
-  data() {
+  data () {
     return {
       newsContent
     }
   },
   computed: {
-    getNews() {
-      return this.newsContent.find(e => `/article${e.path}` === this.$route.path);
+    getNews () {
+      return this.newsContent.find(e => `/article${e.path}` === this.$route.path)
     }
   }
 }

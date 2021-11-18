@@ -1,7 +1,7 @@
 <template>
   <main class="page-main">
-    <subtitle v-bind:subtitles="subtitles"/>
-    <NewsInfo/>
+    <subtitle :subtitles="subtitles" />
+    <NewsInfo />
   </main>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     NewsInfo,
     subtitle
   },
-  data() {
+  data () {
     return {
       subtitles: {
         href: '/',

@@ -24,12 +24,12 @@
 </template>
 
 <script>
-//import newsContent from '../../static/mock/newsContent.json'
+import newsContent from '../../static/mock/newsContent.json'
 
 export default {
-  data() {
+  data () {
     return {
-      newsContent: []
+      newsContent
     }
   }
 }

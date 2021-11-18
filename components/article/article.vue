@@ -1,15 +1,29 @@
 <template>
   <article class="article">
     <div class="article__container">
-      <h2 class="article__title"> {{ contentArticle.subtitle }} </h2>
-      <p class="article__text"> {{ contentArticle.text1 }} </p>
-      <img :src="require(`../../assets/img/article/${contentArticle.image1}`)" alt="Photo article"
-           class="article__image"
-           height="360" width="1120"/>
-      <p class="article__text"> {{ contentArticle.text2 }} </p>
-      <img :src="require(`../../assets/img/article/${contentArticle.image2}`)" alt="Photo article"
-           class="article__image"
-           height="747" width="1120"/>
+      <p class="article__text" v-html="contentArticle.text1" />
+      <img
+        v-if="contentArticle.image1"
+        :src="require(`../../assets/img/article/${contentArticle.image1}`)"
+        alt="Photo article"
+        class="article__image"
+        height="360"
+        width="1120"
+      >
+      <div v-else />
+      <h2 class="article__title">
+        {{ contentArticle.subtitle }}
+      </h2>
+      <p class="article__text" v-html="contentArticle.text2" />
+      <img
+        v-if="contentArticle.image2"
+        :src="require(`../../assets/img/article/${contentArticle.image2}`)"
+        alt="Photo article"
+        class="article__image"
+        height="747"
+        width="1120"
+      >
+      <div v-else />
     </div>
   </article>
 </template>
@@ -21,6 +35,23 @@ export default {
     contentArticle: {
       type: Object,
       required: false
+    }
+  },
+  head () {
+    return {
+      title: this.contentArticle.title,
+      meta: [
+        {
+          hid: 'title',
+          name: 'title',
+          content: this.contentArticle.title
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.contentArticle.description
+        }
+      ]
     }
   }
 }
@@ -127,4 +158,3 @@ export default {
 }
 
 </style>
-

@@ -62,12 +62,16 @@ export default {
     subtitles() {
       if (this.getContent) {
         this.getContent.href = '/pipe';
-        return this.getContent
-      } else {
-        throw ({status: 404, message: 'error'});
       }
+      return this.getContent;
     }
-  }
+  },
+  async asyncData({ route, error }) {
+    const isPath = productPipeContent.find(e => e.path === route.path)
+    if (!isPath) {
+      error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
 }
 </script>
 

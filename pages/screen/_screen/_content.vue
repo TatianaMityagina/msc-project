@@ -67,7 +67,13 @@ export default {
         throw ({status: 404, message: 'error'});
       }
     }
-  }
+  },
+  async asyncData({ route, error }) {
+    const isPath = productScreenContent.find(e => e.path === route.path)
+    if (!isPath) {
+      error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
 }
 </script>
 

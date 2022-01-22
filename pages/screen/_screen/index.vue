@@ -12,6 +12,7 @@ import productScreenContent from 'static/mock/productScreenContent.json'
 import subtitle from '../../../components/subtitle/subtitle'
 import AboutProduct from '../../../components/about-product/about-product'
 import OrderForm from '../../../components/odrder-form/order-form'
+import productPipeContent from '~/static/mock/productPipeContent.json'
 
 export default {
   name: 'ScreenProduct',
@@ -117,7 +118,13 @@ export default {
         throw ({status: 404, message: 'error'});
       }
     }
-  }
+  },
+  async asyncData({ route, error }) {
+    const isPath = productScreenContent.find(e => e.path === route.path)
+    if (!isPath) {
+      error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
 }
 </script>
 

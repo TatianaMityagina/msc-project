@@ -43,10 +43,10 @@ export default {
           property: 'og:description',
           content: this.getContent.meta.og_description
         },
-        {hid: 'og:url', property: 'og:url', content: `https://msk23.ru${this.getContent.path}`}
+        { hid: 'og:url', property: 'og:url', content: `https://msk23.ru${this.getContent.path}` }
       ],
       link: [
-        {rel: 'canonical', href: `https://msk23.ru${this.getContent.path}`}
+        { rel: 'canonical', href: `https://msk23.ru${this.getContent.path}` }
       ]
     }
   },
@@ -62,12 +62,16 @@ export default {
     subtitles() {
       if (this.getContent) {
         this.getContent.href = '/pipe';
-        return this.getContent
-      } else {
-        throw ({status: 404, message: 'error'});
       }
+      return this.getContent;
     }
-  }
+  },
+  async asyncData({ route, error }) {
+    const isPath = productPipeContent.find(e => e.path === route.path)
+    if (!isPath) {
+      error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
 }
 </script>
 

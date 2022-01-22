@@ -13,6 +13,7 @@ import subtitle from '../../components/subtitle/subtitle'
 import AboutProduct from '../../components/about-product/about-product'
 import OrderForm from '../../components/odrder-form/order-form'
 import Navigation from  '../../components/navigation/navigation'
+import productScreenContent from '~/static/mock/productScreenContent.json'
 
 export default {
   name: 'InformativeArticles',
@@ -169,7 +170,13 @@ export default {
         return 0;
       })
     }
-  }
+  },
+  async asyncData({ route, error }) {
+    const isPath = informativeArticlesContent.find(e => e.path === route.path)
+    if (!isPath) {
+      error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
 }
 </script>
 

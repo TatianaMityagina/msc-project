@@ -2,7 +2,7 @@ const isDev = process.env.NODE_ENV !== 'production'
 
 export default {
   ...(!isDev && {
-    modern: 'client'
+    modern: 'server'
   }),
   head: {
     htmlAttrs: {
@@ -104,23 +104,12 @@ export default {
     stylus: []
   },
   render: {
-    // http2: {
-    //     push: true,
-    //     pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
-    //     .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
-    //   },
-    // compressor: false,
     resourceHints: false
-    // etag: false,
-    // static: {
-    //  etag: false
-    // }
   },
   target: 'static',
   generate: {
     fallback: true
   },
-  ssr: false,
   axios: {},
 
   buildModules: [
@@ -153,6 +142,9 @@ export default {
         }
       }
     }),
+    mode: {
+      ssr: true
+    },
     splitChunks: {
       layouts: true,
       pages: true,

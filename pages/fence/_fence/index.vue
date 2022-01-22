@@ -12,6 +12,7 @@ import productFenceContent from 'static/mock/productFenceContent.json'
 import subtitle from '../../../components/subtitle/subtitle'
 import AboutProduct from '../../../components/about-product/about-product'
 import OrderForm from '../../../components/odrder-form/order-form'
+import informativeArticlesContent from '~/static/mock/informativeArticlesContent.json'
 
 export default {
   name: 'Fence',
@@ -100,6 +101,12 @@ export default {
       } else {
         throw ({status: 404, message: 'error'});
       }
+    }
+  },
+  async asyncData({ route, error }) {
+    const isPath = productFenceContent.find(e => e.path === route.path)
+    if (!isPath) {
+      error({ statusCode: 404, message: 'Page not found' })
     }
   },
   head () {

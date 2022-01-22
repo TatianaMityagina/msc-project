@@ -280,7 +280,7 @@ export default {
         { rel: 'canonical', href: 'https://msk23.ru/pipe' }
       ]
     }
-  }
+  },
 }
 </script>
 

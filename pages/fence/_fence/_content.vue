@@ -37,6 +37,12 @@ export default {
       }
     }
   },
+  async asyncData({ route, error }) {
+    const isPath = productFenceContent.find(e => e.path === route.path)
+    if (!isPath) {
+      error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
   head () {
     return {
       title: this.getContent.meta.og_title,

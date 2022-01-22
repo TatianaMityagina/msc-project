@@ -103,6 +103,12 @@ export default {
       }
     }
   },
+  mounted() {
+    const isPath = this.productFenceContent.find(e => e.path === this.$route.path)
+    if (!isPath) {
+      this.$nuxt.error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
   async asyncData({ route, error }) {
     const isPath = productFenceContent.find(e => e.path === route.path)
     if (!isPath) {

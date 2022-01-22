@@ -66,10 +66,10 @@ export default {
       return this.getContent;
     }
   },
-  async asyncData({ route, error }) {
-    const isPath = productPipeContent.find(e => e.path === route.path)
+  created() {
+    const isPath = this.productPipeContent.find(e => e.path === this.$route.path)
     if (!isPath) {
-      error({ statusCode: 404, message: 'Page not found' })
+      this.$nuxt.error({ statusCode: 404, message: 'Page not found' })
     }
   },
 }

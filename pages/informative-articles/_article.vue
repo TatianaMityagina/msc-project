@@ -171,10 +171,10 @@ export default {
       })
     }
   },
-  async asyncData({ route, error }) {
-    const isPath = informativeArticlesContent.find(e => e.path === route.path)
+  created() {
+    const isPath = this.informativeArticlesContent.find(e => e.path === this.$route.path)
     if (!isPath) {
-      error({ statusCode: 404, message: 'Page not found' })
+      this.$nuxt.error({ statusCode: 404, message: 'Page not found' })
     }
   },
 }

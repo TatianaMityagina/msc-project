@@ -2,7 +2,7 @@ const isDev = process.env.NODE_ENV !== 'production'
 
 export default {
   ...(!isDev && {
-    modern: 'server'
+    modern: 'universal'
   }),
   head: {
     htmlAttrs: {
@@ -58,17 +58,101 @@ export default {
         accurateTrackBounce: true
       }
     ],
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    ['nuxt-canonical', { baseUrl: 'https://msk23.ru' }]
   ],
   sitemap: {
     hostname: 'https://msk23.ru',
     gzip: true,
-    filter ({ routes }) {
-      return routes.map((route) => {
-        route.url = `${route.url}`
-        return route
-      })
-    }
+    routes: [
+      '/fence',
+      '/pipe',
+      '/screen',
+      '/',
+      '/fence/barrier-road-fence',
+      '/fence/barrier-fence-11DO',
+      '/fence/barrier-fence-21DO',
+      '/fence/barrier-fence-wave',
+      '/fence/barrier-fence-with-separating-beam',
+      '/fence/barrier-fence-U2',
+      '/fence/barrier-fence-U3',
+      '/fence/barrier-fence-U4',
+      '/fence/barrier-fence-SB-1',
+      '/fence/barrier-fence-EC-1',
+      '/fence/barrier-fence-for-painting',
+      '/fence/barrier-fence-with-no-console',
+      '/fence/galvanized-road-barriers',
+      '/fence/road-barriers-guiding-devices',
+      '/fence/metal-barrier-fence',
+      '/fence/bridge-barrier',
+      '/fence/bridge-barrier-fence-11MO',
+      '/fence/one-sided-barrier-fence',
+      '/fence/barrier-fence-calculation',
+      '/fence/barrier-fence-installation',
+      '/fence/front-barrier-fence',
+      '/fence/barrier-fence-end-piece',
+      '/fence/pedestrian-fences',
+      '/fence/pedestrian-fences/metal-pedestrian-fence',
+      '/fence/pedestrian-fences/guide-pedestrian-barriers',
+      '/fence/pedestrian-fences/restricting-pedestrian-fence',
+      '/fence/pedestrian-fences/pedestrian-barrier-cross',
+      '/fence/pedestrian-fences/pedestrian-barrier-ORUD',
+      '/fence/pedestrian-fences/pedestrian-barrier-PO-1-cross',
+      '/fence/pedestrian-fences/pedestrian-barrier-PO-2',
+      '/fence/pedestrian-fences/pedestrian-barrier-PO-6',
+      '/fence/pedestrian-fences/pedestrian-railings',
+      '/fence/pedestrian-fences/retaining-pedestrian-fence',
+      '/fence/pedestrian-fences/installing-pedestrian-barriers',
+      '/screen/noise-screen',
+      '/screen/noise-screen/production-of-noise-screens',
+      '/screen/noise-screen/noise-screens-at-russian-railways',
+      '/screen/noise-screen/installation-of-noise-screens',
+      '/screen/noise-screen/transparent-noise-screens',
+      '/screen/noise-screen/calculation-noise-shield',
+      '/screen/noise-screen/noise-screens-top10',
+      '/screen/noise-screen/noise-screen-made-of-polycarbonate',
+      '/screen/noise-screen/noise-screen-made-of-sandwich-panels',
+      '/screen/acoustic-screen',
+      '/screen/noise-barriers',
+      '/pipe/pipe-underneath-sidewalk',
+      '/pipe/culvert-under-the-road',
+      '/pipe/culvert-on-the-railway',
+      '/pipe/culvert-under-embankments',
+      '/pipe/corrugated-culverts/metal-corrugated-all-metal-culverts',
+      '/pipe/round-culverts',
+      '/pipe/culvert-installation',
+      '/pipe/calculation-of-culverts',
+      '/pipe/spiral-pipe',
+      '/pipe/spiral-pipe/spiral-corrugated-metal-pipes',
+      '/pipe/corrugated-culverts',
+      '/pipe/metal-culverts',
+      '/pipe/corrugated-culverts/metal-corrugated-culverts',
+      '/informative-articles/guardrail-weight',
+      '/informative-articles/weight-pedestrian-fence-per-1m',
+      '/informative-articles/types-of-culverts',
+      '/informative-articles/types-of-road-barriers',
+      '/informative-articles/barrier-fence-installation-tolerances',
+      '/informative-articles/design-culvert',
+      '/informative-articles/applications-for-culverts',
+      '/informative-articles/rules-for-use-pedestrian-barriers',
+      '/informative-articles/designing-culverts',
+      '/informative-articles/dimensions-road-barriers',
+      '/informative-articles/culvert-operation-mode',
+      '/informative-articles/recommended-ratio-culvert-diameter-length',
+      '/informative-articles/installation-barrier-fence-on-highways',
+      '/informative-articles/culvert-installation',
+      '/informative-articles/installation-metal-pedestrian-barriers',
+      '/informative-articles/characteristics-road-culverts',
+      '/informative-articles/barrier-fence-elements',
+      '/informative-articles/culvert-elements',
+      '/news',
+      '/pipe/culvert',
+      '/screen/noise-screens-and-acoustic-barriers',
+      '/article/article1',
+      '/article/article2',
+      '/article/article3',
+      '/article/article4'
+    ]
   },
   robots: [
     {
@@ -106,7 +190,7 @@ export default {
   render: {
     resourceHints: false
   },
-  target: 'static',
+  target: 'server',
   generate: {
     fallback: true
   },

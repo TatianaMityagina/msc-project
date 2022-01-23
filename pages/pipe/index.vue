@@ -277,7 +277,19 @@ export default {
         { hid: 'og:url', property: 'og:url', content: 'https://msk23.ru/pipe' }
       ],
       link: [
-        { rel: 'canonical', href: 'https://msk23.ru/pipe' }
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/pipe-underneath-sidewalk' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/culvert-under-the-road' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/culvert-on-the-railway' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/culvert-under-embankments' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/corrugated-culverts/metal-corrugated-all-metal-culverts' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/round-culverts' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/culvert-installation' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/calculation-of-culverts' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/spiral-pipe' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/spiral-pipe/spiral-corrugated-metal-pipes' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/corrugated-culverts' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/metal-culverts' },
+        { rel: 'canonical', href: 'https://msk23.ru/pipe/corrugated-culverts/metal-corrugated-culverts' }
       ]
     }
   },

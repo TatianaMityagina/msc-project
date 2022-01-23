@@ -243,17 +243,7 @@ export default {
         { hid: 'og:url', property: 'og:url', content: 'https://msk23.ru/screen' }
       ],
       link: [
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-screen' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-screen/production-of-noise-screens' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-screen/noise-screens-at-russian-railways' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-screen/installation-of-noise-screens' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-screen/transparent-noise-screens' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-screen/calculation-noise-shield' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-screen/noise-screens-top10' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-screen/noise-screen-made-of-polycarbonate' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-screen/noise-screen-made-of-sandwich-panels' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/acoustic-screen' },
-        { rel: 'canonical', href: 'https://msk23.ru/screen/noise-barriers' }
+        { rel: 'canonical', href: 'https://msk23.ru/screen' }
       ]
     }
   }

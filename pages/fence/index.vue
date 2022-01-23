@@ -352,40 +352,7 @@ export default {
         { hid: 'og:url', property: 'og:url', content: 'https://msk23.ru/fence' }
       ],
       link: [
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-road-fence' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-11DO' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-21DO' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-wave' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-with-separating-beam' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-U2' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-U3' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-U4' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-SB-1' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-EC-1' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-for-painting' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-with-no-console' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/galvanized-road-barriers' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/road-barriers-guiding-devices' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/metal-barrier-fence' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/bridge-barrier' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/bridge-barrier-fence-11MO' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/one-sided-barrier-fence' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-calculation' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-installation' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/front-barrier-fence' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/barrier-fence-end-piece' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/metal-pedestrian-fence' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/guide-pedestrian-barriers' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/restricting-pedestrian-fence' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/pedestrian-barrier-cross' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/pedestrian-barrier-ORUD' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/pedestrian-barrier-PO-1-cross' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/pedestrian-barrier-PO-2' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/pedestrian-barrier-PO-6' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/pedestrian-railings' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/retaining-pedestrian-fence' },
-        { rel: 'canonical', href: 'https://msk23.ru/fence/pedestrian-fences/installing-pedestrian-barriers' }
+        { rel: 'canonical', href: 'https://msk23.ru/fence' }
       ]
     }
   }

@@ -2,16 +2,25 @@
   <section class="order-form">
     <div class="order-form__container">
       <form action="" class="order-form__form-wrapper" @submit.prevent="submitForm">
-        <h2 class="order-form__form-title">Заполните форму и получите наш полный каталог</h2>
+        <h2 class="order-form__form-title">
+          Заполните форму и получите наш полный каталог
+        </h2>
         <div class="order-form__form-row">
           <div class="order-form__form-col">
             <label for="name">Имя</label>
-            <input id="name" v-model="form.name" placeholder="Александр" type="text">
+            <input id="name" v-model="form.name" placeholder="Александр" type="text" @change="changeInput" required>
           </div>
           <div class="order-form__form-col">
             <label for="phone">Телефон</label>
-            <input id="phone" v-model="form.phone" v-mask="'+7 (###) ### ## ##'" placeholder="+7(ххх) ххх - хх - хх"
-                   type="tel">
+            <input
+              id="phone"
+              v-model="form.phone"
+              v-mask="'+7 (###) ### ## ##'"
+              placeholder="+7(ххх) ххх - хх - хх"
+              type="tel"
+              pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}"
+              required
+            >
           </div>
           <div class="order-form__form-col">
             <label for="email">Почта</label>
@@ -21,10 +30,13 @@
         <div class="order-form__form-row">
           <div class="order-form__form-col order-form__form-col--message">
             <label for="message">Сообщение</label>
-            <textarea id="message" v-model="form.message" type="text"></textarea>
+            <textarea id="message" v-model="form.message" type="text" @change="changeTextArea" />
           </div>
           <div class="order-form__form-col">
-            <button class="order-form__form-btn" type="submit">Отправить заявку</button>
+            <button class="order-form__form-btn" type="submit">
+              Отправить заявку
+            </button>
+            <p v-show="errorTextArea || errorTextInput" class="order-form__form-accept">{{errorTextArea || errorTextInput}}</p>
             <!--            <p class="order-form__form-accept">Нажимая на кнопку я подтверждаю, что я ознакомлен с условиями <a href="">политики-->
             <!--              конфиденциальности</a></p>-->
           </div>
@@ -35,13 +47,13 @@
 </template>
 
 <script>
-import {mask} from 'vue-the-mask'
+import { mask } from 'vue-the-mask'
 
 export default {
   name: 'OrderForm',
-  directives: {mask},
+  directives: { mask },
   components: {},
-  data() {
+  data () {
     return {
       form: {
         name: '',
@@ -49,26 +61,41 @@ export default {
         email: '',
         message: ''
       },
-      url: 'https://msk23.ru'
+      url: 'https://msk23.ru',
+      regex: /^((ftp|http|https|Https|Http):\/\/)?(www\.)?([A-Za-zА-Яа-я0-9]{1}[A-Za-zА-Яа-я0-9\-]*\.?)*\.{1}[A-Za-zА-Яа-я0-9-]{2,8}(\/([\w#!:.?+=&%@!\-\/])*)?/,
+      errorTextArea: null,
+      errorTextInput: null
     }
   },
   methods: {
-    submitForm() {
+    submitForm (e) {
+      e.preventDefault()
+      if (this.errorTextArea || this.errorTextInput) {
+        return
+      }
       this.$axios.$post(this.url + '/mail', this.form)
-          .then(() => {
-            alert('Заявка отправлена, для продолжения нажмите ОК');
-          })
-          .catch((error) => {
-            alert('Произошла ошибка, форма не оправлена');
-          })
-          .finally(() => {
-            this.form = {
-              name: '',
-              phone: '',
-              email: '',
-              message: ''
-            }
-          });
+        .then(() => {
+          alert('Заявка отправлена, для продолжения нажмите ОК')
+        })
+        .catch(() => {
+          alert('Произошла ошибка, форма не оправлена')
+        })
+        .finally(() => {
+          this.form = {
+            name: '',
+            phone: '',
+            email: '',
+            message: ''
+          }
+        })
+    },
+    changeTextArea (e) {
+      const str = e.target.value
+      this.errorTextArea = this.regex.test(str) ? '*Вводить ссылки запрещено' : null
+    },
+    changeInput (e) {
+      const str = e.target.value
+      this.errorTextInput = this.regex.test(str) ? '*Вводить ссылки запрещено' : null
     }
   }
 }
@@ -186,7 +213,7 @@ export default {
 }
 
 .order-form__form-accept {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   letter-spacing: 0.05em;
